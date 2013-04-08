@@ -1,0 +1,25 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title tips_view 提示页面
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .xm_app
+            .viewport
+                include _header
+                // mitu_01 空购物车
+                // mitu_02 系统繁忙
+                .tips_view.mitu_01
+                    .tips_msg
+                        h3 提示文字
+                        p 提示文字
+                    .tips_btn
+                        a.button.disable_button(href="javascript:;") 按钮文字
+                include _footer

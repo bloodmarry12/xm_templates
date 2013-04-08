@@ -1,0 +1,53 @@
+// tips_view 提示模板
+.tips_view
+    .tips_msg
+        text-align: center
+        h3
+            font-size: $fz34
+            color: #50555B
+            margin-bottom: (15em/34)
+        p
+            font-size: $fz25
+            color: #87888C
+        &:before
+            content: '\0020'
+            display: block
+            margin: (140em/20) auto (60em/20)
+    .tips_btn
+        width: (340em/20)
+        margin: (100em/20) auto (100em/20)
+    &.mitu_01
+        .tips_msg
+            &:before
+                width: (361em/20)
+                height: (336em/20)
+                background: url($imgurl+'emptycart.png') 0 0 no-repeat
+                +background-size(cover)
+    &.mitu_02
+        .tips_msg
+            &:before
+                width: (320em/20)
+                height: (322em/20)
+                background: url($imgurl+'mitu_02.png') 0 0 no-repeat
+                +background-size(cover)
+    .tips_msg
+        &.ernie_1
+            &:before
+                width: (345em/20)
+                height: (324em/20)
+                background: url($imgurl+'ernie_1.png') 0 0 no-repeat
+                +background-size(cover)
+    .tips_msg
+        &.ernie_2
+            &:before
+                width: (351em/20)
+                height: (324em/20)
+                background: url($imgurl+'ernie_2.png') 0 0 no-repeat
+                +background-size(cover)
+    .tips_msg
+        &.ernie_3
+            &:before
+                width: (345em/20)
+                height: (324em/20)
+                background: url($imgurl+'ernie_3.png') 0 0 no-repeat
+                +background-size(cover)

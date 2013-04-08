@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>App_download app下载入口</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon-precomposed" href="http://p.www.xiaomi.com/m/app/touch-icon.png">
+    <link rel="stylesheet" href="css/xmapp.css?skJHdj">
+  </head>
+  <body>
+    <div class="request"></div>
+    <div style="display:none" class="maskLoad"><span>正在加载...</span></div>
+    <div style="display:none" class="mask loading"><span>&nbsp;</span></div>
+    <div class="xm_app">
+      <div class="viewport">
+        <!-- include _appad-->
+        <div id="header" class="header">
+          <h1 class="logo"><a href="javascript:;"><img src="images/logo_m.png?skJHdj"></a></h1>
+          <div class="nav">
+            <ul>
+              <li class="user"><a href="javascript:;">账号</a></li>
+              <li class="category"><a href="javascript:;">分类</a></li>
+              <li class="cart"><a href="javascript:;">购物车</a><span id="ShoppingCartNum">2</span></li>
+            </ul>
+          </div>
+        </div>
+        <div id="crumbs" class="crumbs">
+          <div class="adapt_btn">
+            <!-- 筛选按钮--><a id="adapt_button" href="#">筛选</a>
+          </div>
+          <ul>
+            <li><a href="javascript:;"><span>首页</span></a></li>
+            <li><a href="javascript:;">分类浏览</a></li>
+            <li><a href="javascript:;">分类列表</a></li>
+          </ul>
+        </div>
+        <!--筛选弹层 .adapt_panel_on-->
+        <div class="ad_list">
+          <ul>
+            <li>
+              <div class="type_ad"><a href="product-list.html?v1123123">
+                  <div class="imgurl"><img src="http://img01.mifile.cn/m/images/appad/20130114/1.jpg"></div>
+                  <div class="info">
+                    <div class="product_name"><span class="name">威戈wenger电脑背包</span></div>
+                    <div class="product_detail"><span class="detail">任选2件! 立省60元，下单后即可选择尺码颜色。</span></div>
+                  </div></a></div>
+            </li>
+          </ul>
+        </div>
+        <div id="footer" class="footer">
+          <div class="box box_01"><a href="javascript:;">登录</a><a href="javascript:;">注册</a><a href="#header">返回顶部</a></div>
+          <div class="box box_02"><a href="javascript:;">电脑版</a></div>
+          <div class="box box_03">
+            <p>&copy;2012 m.xiaomi.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="require.js" data-main="appdownload-ck"></script>
+  </body>
+</html>

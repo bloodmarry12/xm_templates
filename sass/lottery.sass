@@ -1,0 +1,120 @@
+@import "compass/utilities"
+@import "compass/css3"
+// 全局变量 必须加载被其他模块继承
+@import "_variables"
+// reset 和基础类
+@import "_base"
+// 页面布局
+@import "_form"
+@import "_button"
+@import "_header"
+@import "_footer"
+@import "_header02"
+body
+    background: #C70102
+.lottery_view
+    background: url($imgurl+'lottery/bg01.png') 0 0 repeat
+    .button
+        &.lottery_button
+            color: #CC0001
+            +background-image(linear-gradient(#FFC000, #FFBF01))
+            +box-shadow(rgba(0,0,0,.1) 0 (1em/34) (4em/34) 0 inset)
+            @include bdcolor(#FFC000,#FFC000,#FFC000,#FFC000)
+.lottery_get
+    overflow: hidden
+    .tit
+        width: (619em/20)
+        height: (339em/20)
+        margin: (60em/20) auto
+        text-indent: -999em
+        overflow: hidden
+        background: url($imgurl+'lottery/tit01.png') 0 0 no-repeat
+        +background-size(cover)
+        h1, h3
+            display: none
+    .box_01
+        width: (478em/20)
+        margin: 0 auto
+        .box02
+            margin-top: (30em/20)
+            margin-bottom: (50em/20)
+    #join
+        text-align: center
+        margin-bottom: (20em/20)
+        p
+            color: $wc
+            margin-bottom: (20em/20)
+    .box_02
+        .box01
+            width: (619em/20)
+            margin: 0 auto
+            color: #FCF2F1
+        h3
+            font-size: (32em/20)
+            padding-bottom: (26em/32)
+            margin-bottom: (26em/32)
+            border-bottom: (2em/32) solid #FCF2F1
+        ol
+            margin-bottom: (30em/20)
+        li
+            font-size: (24em/20)
+            line-height: (48em/24)
+.lottery_result
+    .lottery_no
+        .box_04
+            margin-bottom: (40em/20)
+            .imgurl
+                width: (380em/20)
+                height: (380em/20)
+                margin: 0 auto
+    .lottery_ye
+        overflow: hidden
+        .box_01
+            text-align: center
+            margin-top: (80em/20)
+            margin-bottom: (40em/20)
+            h2
+                font-size: (50em/20)
+                color: #FFC100
+                margin-bottom: (28em/50)
+            p
+                font-size: (32em/20)
+                line-height: (48em/32)
+                color: #FEFFFF
+        .box_02
+            width: (478em/20)
+            height: (478em/20)
+            margin: 0 auto (60em/20)
+            background: $wc
+            overflow: hidden
+            .imgurl
+                width: (300em/20)
+                height: (300em/20)
+                margin: (178em/20)/2 auto 0
+        .box_03
+            width: (478em/20)
+            margin: 0 auto
+            .box01,.box02
+                margin-bottom: (44em/20)
+        .box_04
+            color: $wc
+            width: (478em/20)
+            margin: 0 auto (20em/20)
+            h3
+                font-size: (26em/20)
+                border-bottom: 1px solid #fff
+                padding-bottom: (10em/26)
+                margin-bottom: (20em/26)
+            dl
+                dt
+                    font-size: (24em/20)
+                    margin-top: (30em/24)
+                    margin-bottom: (10em/24)
+                    font-weight: 700
+                    &:first-child
+                        margin-top: 0
+                dd
+                    font-size: (24em/20)
+                    margin-bottom: (10em/20)
+// media query
+@import "_media"

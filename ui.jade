@@ -1,0 +1,55 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title Ui
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="http://p.www.xiaomi.com/m/app/v2/css/xmapp.css?20130222212904876")
+        style
+            h3{ background: #F60; color: #FFF; margin:10px 0}
+            img{ width: 80px; height: 80px; }
+        // script
+        //     function callback(data){
+        //         window.data = data.data.result;
+        //     };
+        // script(src="http://app.shopapi.xiaomi.com/v1/shopping/stylelist?callback=callback&product_id=1867&client_id=180100031013&_=1359008890699")
+    body.hasAppTitle
+        #maskLoading
+            .mask-wrap
+                .loading 正在加载
+        #apptitle.toolbar
+            .title 这里是title
+        #msgMask
+            .msg_pay
+                p 正在支付...
+                .h_box
+                    a.button.disable_button.flex_1(href="javascript:;") 支付失败
+                    .spacer &nbsp;
+                    a.button.active_button.flex_1(href="javascript:;") 支付成功
+        #popup
+            p 你好
+        h3 .more_button 查看更多
+        a.more_button(href="javascript:;") 查看更多 _button.sass
+        h3 .button.active_button 橙色按钮 _button.sass
+        a.button.active_button(href="javascript:;") 加入购物车
+        h3 .button.disable_button 灰色按钮 _button.sass
+        a.button.disable_button(href="javascript:;") 加入购物车
+        h3 .button.del_button 红色按钮 _button.sass
+        a.button.del_button(href="javascript:;") 删除
+        h3 .pick_panel 机型适用 _panel.sass
+        .pick_panel
+            dl
+                dt
+                    a(href="javascript:;") 全部机型适用
+                dd.xm_1
+                    a(href="javascript:;") 小米手机1
+                dd.xm_1s
+                    a(href="javascript:;") 小米手机1S
+                dd.xm_2
+                    a(href="javascript:;") 小米手机2
+        script(src="require.js", data-main="main")

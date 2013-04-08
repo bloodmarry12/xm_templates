@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>order_view2 订单详情（等待付款）</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon-precomposed" href="http://p.www.xiaomi.com/m/app/touch-icon.png">
+    <link rel="stylesheet" href="css/xmapp.css?skJHdj">
+  </head>
+  <body>
+    <div class="xm_app">
+      <div class="viewport">
+        <div id="header" class="header">
+          <h1 class="logo"><a href="javascript:;"><img src="images/logo_m.png?skJHdj"></a></h1>
+          <div class="nav">
+            <ul>
+              <li class="user"><a href="javascript:;">账号</a></li>
+              <li class="category"><a href="javascript:;">分类</a></li>
+              <li class="cart"><a href="javascript:;">购物车</a><span id="ShoppingCartNum">2</span></li>
+            </ul>
+          </div>
+        </div>
+        <div id="crumbs" class="crumbs">
+          <div class="adapt_btn">
+            <!-- 筛选按钮--><a id="adapt_button" href="#">筛选</a>
+          </div>
+          <ul>
+            <li><a href="javascript:;"><span>首页</span></a></li>
+            <li><a href="javascript:;">分类浏览</a></li>
+            <li><a href="javascript:;">分类列表</a></li>
+          </ul>
+        </div>
+        <div class="order_view mlr20 mb40 has_bottom_panel">
+          <div class="envelope_paper">
+            <div class="envelope_paper_bd">
+              <div class="envelope_paper_content">
+                <div class="box box_01 order_tit">
+                  <ul>
+                    <li><strong>订单状态</strong><span class="order_status">等待付款</span></li>
+                    <li><strong>应付总额</strong><span class="goods_amount">&yen;29</span></li>
+                  </ul><a href="javascript:;" class="del_order">删除</a>
+                </div>
+                <div class="box box_02 order_info">
+                  <ul>
+                    <li><strong>下单日期</strong><span class="add_time">2012/12/25 12:41:33</span></li>
+                    <li><strong>订单编号</strong><span class="order_id">5130121004329122</span></li>
+                    <li><strong>手机号码</strong><span class="tel">13844072222</span></li>
+                    <li><strong>收货地址</strong><span class="address">长春大街1177号,住房公积金管理中心南关分中心（中信银行2楼）</span></li>
+                    <li><strong>送货时间</strong><span class="best_time">不限</span></li>
+                    <li><strong>发票信息</strong><span class="invoice_title">不开发票</span></li>
+                  </ul>
+                </div>
+                <div class="box box_03">
+                  <div class="list_order_tmp">
+                    <ul>
+                      <li>
+                        <div class="items h_box">
+                          <div class="imgurl"><img src="http://p.www.xiaomi.com/images/0/1338_1_1345647550_3.jpg"></div>
+                          <div class="info">
+                            <p class="name">AKG K4200折叠式头戴动圈折叠式头戴动圈耳机</p>
+                            <div class="order_items">
+                              <div class="price_info"><span class="sale_price">售价：&yen; 98</span><span class="num">数量：1</span><span class="subtotal">小计：&yen; 99</span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bottom_panel">
+            <div class="settle_panel">
+              <div class="goods_amount">
+                <div class="price"><span>应付总额:</span><strong>&yen;299</strong></div>
+              </div>
+              <div class="settle_btn"><a href="javascript:;" class="button active_button">立即付款</a></div>
+            </div>
+          </div>
+          <!-- .bottom_panel-->
+          <!--     .pay_panel.h_box-->
+          <!--         .flex_1-->
+          <!--             a.button.disable_button(href="javascript:;") 取消订单-->
+          <!--         .flex_1-->
+          <!--             a.button.active_button(href="javascript:;") 立即付款-->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Imgedi</title>
+    <link rel="stylesheet" href="css/xmapp.css">
+    <script src="http://p.www.xiaomi.com/m/newUI/js/jquery.min.js"></script><!--script(src="jquery.pep.js")-->
+    <script src="pinch.min.js"></script>
+    <style>#a{background:rgba(255,0,0,.05)}</style>
+  </head>
+  <body><img src="http://www.placekitten.com/600" id="a">
+    <script>
+      $(document).on("touchstart", false)
+      $("#a").on("pinchchange", function(e) {
+          var translate = "translate(" + e.offsetLeft + "px," + e.offsetTop + "px)"
+          var scale = "scale(" + e.scale + "," + e.scale + ")"
+          var rotate = "rotate(" + e.angle + "deg)"
+          var value = translate + " " + scale + " " + rotate
+          this.style[e.prefix + "transform"] = value
+      })
+      
+    </script>
+  </body>
+</html>

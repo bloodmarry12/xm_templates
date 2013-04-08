@@ -1,0 +1,1 @@
+require(["jquery"],function(e){(function(e){e(function(){var t=e(".loading_view"),n=t.find(".close"),r=e(".mask");n.on("click",function(e){r.hide();t.hide()})})})(e)});

@@ -1,0 +1,56 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title Product-view 商品相关/product 通过分类ID获得产品列表
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .xm_app
+            .viewport
+                include _header
+                .product_view
+                    .product_info
+                        .info
+                            span.price &yen; 666
+                            h3.name 马歇尔Marshall Major签名版头戴--白色
+                        .adapt
+                            p
+                                span 适配机型：
+                                img(src="images/adapt_1.png#{r}", alt="小米手机1")
+                                img(src="images/adapt_2.png#{r}", alt="小米手机1S")
+                                img(src="images/adapt_4.png#{r}", alt="小米手机2")
+                    .product_nav
+                        ul
+                            li.on
+                                a(href="javascript:;") 商品信息
+                            li
+                                a(href="javascript:;") 评价（30）
+                    .product_main
+                        // 单品介绍图片
+                        .product_desc
+                            ul
+                                li
+                                    .imgurl
+                                        img(src="http://p.www.xiaomi.com/images/1202/Marshall-1.jpg")
+                                li
+                                    .imgurl
+                                li
+                                    .imgurl
+                                        img(src="http://p.www.xiaomi.com/images/1202/Marshall-2.jpg")
+                            .desc_more
+                                a.more_button(href="javascript:;") 查看更多
+                        .product_comment(style="display:none")
+                            p 评论
+                    .product_addCart
+                        a.button.active_button(href="ui_list_cart.html?vlkjsdlfjasd") 加入购物车
+                        br
+                        a.button.disable_button(href="ui_list_cart.html?vlaksjdlf") 加入购物车
+                        br
+                        a.button.del_button(href="ui_form.html?vlaksjdlf") 删除
+                include _footer

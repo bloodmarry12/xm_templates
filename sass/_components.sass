@@ -1,0 +1,174 @@
+// 列表 子分类
+.list_column
+    ul
+        +legacy-pie-clearfix
+        li
+            float: left
+            display: inline
+            width: 50%
+// 分类 模板
+.list_tmp
+    padding: (20em/20) (12.5em/20) (5em/20)
+    overflow: hidden
+    li
+        margin-bottom: (15em/20)
+    .items
+        @include boxsh
+        margin: 0 (7.5em/20)
+        a
+            display: block
+            padding: (10em/20) (10em/20) (20em/20)
+.list_nav
+    & > ul
+        border: 1px solid $bc2
+        border-bottom: none
+        +border-radius(8em/20)
+        +box-sizing(border-box)
+        +box-shadow(rgba(0,0,0,.1) 0 (2em/20) (1em/20))
+        overflow: hidden
+        & > li
+            background: $wc
+            border-bottom: 1px solid $bc2
+    .items
+        position: relative
+        padding: 0 (20em/20)
+        +box-sizing(border-box)
+        a.lnk
+            display: block
+            color: $c
+            height: 100%
+            background: url($imgurl+'arrow.png') 100% 50% no-repeat
+            +background-size((19em/20) (33em/20))
+        .note
+            font-size: $fz20
+            position: absolute
+            top: 50%
+            right: (60em/20)
+            line-height: (31em/20)
+            height: (31em/20)
+            padding: 0 (18em/20)
+            margin-top: -(31em/20)/2
+            +border-radius((31em/20))
+            +text-shadow(rgba(0,0,0,.2) 0 1px 0)
+            &.note_1
+                background: $oc2
+                color: $wc
+            &.note_2
+                background: #C8CDD1
+                color: $wc
+// 导航列表 需继承.list_nav 模板
+.list_nav_tmp
+    .items
+        height: (110em/20)
+        line-height: (110em/20)
+        a.lnk
+            color: $c
+            // margin-left: (20em/20)
+        .name
+            font-size: $fz32
+// 订单列表 需继承.list_nav 模板
+.list_order_tmp
+    .items
+        height: (156em/20)
+        position: relative
+        padding: 0
+        padding-right: (20em/20)
+        +box-sizing(border-box)
+        &.gift:after,
+        &.kill:after,
+        &.award:after,
+        &.coupon:after
+            content: '\0020'
+            display: block
+            width: (46em/20)
+            height: (46em/20)
+            position: absolute
+            top: 0
+            left: 0
+        &.gift:after
+            background: url($imgurl+'gift.png') 0 0 no-repeat
+            +background-size((46em/20) (46em/20))
+        &.kill:after
+            background: url($imgurl+'kill.png') 0 0 no-repeat
+            +background-size((46em/20) (46em/20))
+        &.award:after
+            background: url($imgurl+'award.png') 0 0 no-repeat
+            +background-size((46em/20) (46em/20))
+        &.coupon:after
+            background: url($imgurl+'coupon.png') 0 0 no-repeat
+            +background-size((46em/20) (46em/20))
+        a.lnk
+            +display-box
+            +box-align(center)
+            width: 100%
+    .h_box
+        +box-align(center)
+    .imgurl
+        width: (136em/20)
+        height: (136em/20)
+        margin: 0 (10em/20)
+        overflow: hidden
+        +background-size(cover)
+    .info
+        +box-flex(1)
+    .name
+        font-size: $fz32
+        color: $c
+        margin-right: (24em/32)
+        margin-bottom: (10em/32)
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+        width: (478em/32)
+    .price_info
+        font-size: $fz27
+        color: $gc
+        span
+            margin-right: (10em/27)
+            &:last-child
+                margin-right: 0
+.envelope_paper
+    width: (690em/20)
+    margin: 0 auto
+    background: url($imgurl+'paper_02.png') 0 0 repeat-y
+    +background-size((690em/20) 1px)
+    &:before
+        content: '\0020'
+        display: block
+        height: (15em/20)
+        background: url($imgurl+'paper_01.png') 0 0 no-repeat
+        +background-size(cover)
+    .envelope_paper_bd
+        background: url($imgurl+'paper_03.png') 0 100% no-repeat
+        +background-size((690em/20) (323em/20))
+        padding-bottom: (120em/20)
+        position: relative
+        bottom: -(20em/20)
+    .envelope_paper_content
+        padding: 0 (29em/20) 0 (22em/20)
+// 列表 订单
+.list_order
+    .order_info
+        .add_time
+            font-size: $fz30
+            color: $c
+            margin-bottom: (12em/30)
+        dd
+            font-size: $fz20
+            color: $gc
+            margin-bottom: (10em/20)
+        .goods_amount,
+        .order_type
+            margin-right: (10em/20)
+// 列表 收货地址
+.list_address
+    .items
+        padding-top: (38em/20)
+        padding-bottom: (38em/20)
+    .address_info,
+    .address_detail
+        font-size: $fz30
+        line-height: (42em/30)
+        padding-right: (33em/30)
+// 列表 套餐列表
+.list_stylelist

@@ -1,0 +1,55 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title select_address 选择收货地址
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .xm_app
+            .viewport
+                include _header
+                .select_address.mlr20
+                    .box.box_01
+                        .radio_01#radio_group_01
+                            .list_nav
+                                ul
+                                    li
+                                        .radio.selected(data-type="radio", data-value="01", data-name="a")
+                                            label
+                                                .label
+                                                    .address_info
+                                                        span.province 北京
+                                                        span.city 北京市
+                                                        span.district 朝阳区
+                                                    .address_detail
+                                                        span.adrress 望京西路甲50号-1卷石天地大厦A座9层502
+                                                        span.consignee 恩雷
+                                                        span.tel 13581512104
+                                    li
+                                        .radio(data-type="radio", data-value="01", data-name="a")
+                                            label
+                                                .label
+                                                    .address_info
+                                                        span.province 北京
+                                                        span.city 北京市
+                                                        span.district 朝阳区
+                                                    .address_detail
+                                                        span.adrress 望京西路甲50号-1卷石天地大厦A座9层502
+                                                        span.consignee 恩雷
+                                                        span.tel 13581512104
+                    .box.box_02
+                        .list_nav.list_nav_tmp
+                            ul
+                                li
+                                    .items
+                                        a.lnk(href="javascript:;")
+                                            span.name 添加地址
+                    .box.box_03
+                        a.button.active_button(href="javascript:;") 确认使用
+                include _footer

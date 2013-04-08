@@ -1,0 +1,38 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title App_download app下载入口
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .request
+        .maskLoad(style="display:none")
+            span 正在加载...
+        .mask.loading(style="display:none")
+            span &nbsp;
+        .xm_app
+            .viewport
+                // include _appad
+                include _header
+                include _crumbs
+                //筛选弹层 .adapt_panel_on
+                .ad_list
+                    ul
+                        li
+                            .type_ad
+                                a(href="product-list.html?v1123123")
+                                    .imgurl
+                                        img(src="http://img01.mifile.cn/m/images/appad/20130114/1.jpg")
+                                    .info
+                                        .product_name
+                                            span.name 威戈wenger电脑背包
+                                        .product_detail
+                                            span.detail 任选2件! 立省60元，下单后即可选择尺码颜色。
+                include _footer
+        script(src="require.js", data-main="appdownload-ck")

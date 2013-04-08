@@ -1,0 +1,56 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title receive.html 预约领取F码
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/receive_index.css#{r}")
+    body
+        .xm_app
+            .viewport
+                include _header2
+                .receive_index.mlr20
+                    .title
+                        h3 请无比填写您的真实信息，购买时需验证
+                    .formbox
+                        ul
+                            li
+                                .input
+                                    input(type="text", placeholder="姓名")
+                            li.mt20
+                                .input
+                                    input(type="text", placeholder="姓名")
+                            li.mt20
+                                .input
+                                    input(type="text", placeholder="姓名")
+                    .mt20
+                        div
+                            .select(data-type="select")
+                                .option(data-value="01") 选择购买意向版本，购买时可更改
+                                select
+                                    option(value="01") 01
+                                    option(value="02") 02
+                    .mt20
+                        .list_nav
+                            ul
+                                li
+                                    .checkbox(data-type="checkbox", data-value="01")
+                                        label
+                                            .label.check_hbox
+                                                .name
+                                                    p ccheckboxcheckboxchec这这是一个是是一个是一个一个
+                                                    p aaa
+                                                    p aaa
+                                                    p aaa
+                                                .more
+                                                    a.lnk(href="ad_list.html")
+                                                        img(src="images/arrow_2.png")
+                    .mt20
+                        p 验证码
+                    .mt20
+                        a(href="javascript:;").button.active_button 立即提交

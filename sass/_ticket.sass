@@ -1,0 +1,60 @@
+// 2013-03-22米粉节购票
+.ticket_view
+    position: relative
+.ticket
+    overflow: hidden
+    .title
+        h3
+            font-size: (30em/20)
+            text-align: center
+            color: $oc3
+    .box_01
+        .input
+            width: 100%
+            margin-bottom: (20em/20)
+            &:last-child
+                margin-bottom: 0
+    .box_02
+        position: relative
+        #upload
+            display: block
+            +opacity(0)
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+    .box_03
+        margin-bottom: (20em/20)
+    .box_04
+        text-align: center
+        .tips
+            margin: (20em/20) 0 (40em/20)
+            color: $gc
+        img
+            display: block
+            width: (500em/20)
+            height: (500em/20)
+            margin: 0 auto
+.maskLoad
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: rgba(0,0,0,.05)
+    z-index: 11
+    span
+        font-size: $fz25
+        color: $wc
+        background: rgba(0,0,0,.8)
+        display: block
+        white-space: nowrap
+        padding: (40em/25) (80em/25)
+        +box-shadow()
+        +box-sizing(border-box)
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-left: -(278em/25)/2
+        margin-top: -(109em/25)/2
+        z-index: 12

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ui</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon-precomposed" href="http://p.www.xiaomi.com/m/app/touch-icon.png">
+    <link rel="stylesheet" href="css/xmapp.css?skJHdj">
+    <style>
+      h3{ background: #F60; color: #FFF; margin:  20px }
+      // .imgurl img{ width: 80px; height: 80px; }
+    </style>
+    <script>
+      function a(){
+          var a = document.getElementsByClassName('mask');
+          var b = document.getElementsByClassName('pop_panel');
+          a[0].style.display = 'none';
+          b[0].style.display = 'none';
+      }
+    </script>
+  </head>
+  <body class="has_bottom_panel">
+    <div class="mask"></div>
+    <div class="pop_panel">
+      <div class="content">
+        <div class="bd">
+          <p>内容部分</p>
+        </div>
+      </div><a href="javascript:;" onclick="a()" class="close"><img src="images/close.png"></a>
+    </div>
+    <div class="bottom_panel">
+      <div class="settle_panel">
+        <div class="goods_amount">
+          <div class="price">应付金额<strong>&yen;299</strong></div>
+          <div class="detail">
+            <p><span>商品总价&yen;2999</span><strong>+</strong><span>配送费&yen;5</span><strong>-</strong><span>优惠劵&yen;29</span></p>
+          </div>
+        </div>
+        <div class="settle_btn"><a href="ad_list.html" class="button active_button">去结算</a></div>
+      </div>
+    </div>
+    <h3>.list_nav 导航列表</h3>
+    <div class="list_nav">
+      <ul>
+        <li>
+          <div class="items"><a href="javascript:;" class="lnk">aaaa</a></div>
+        </li>
+        <li>
+          <div class="items"><a href="javascript:;" class="lnk">aaaa</a></div>
+        </li>
+      </ul>
+    </div><br>
+    <h3>.list_nav_tmp</h3>
+    <div class="list_nav list_nav_tmp">
+      <ul>
+        <li>
+          <div class="items"><a href="ui_form.html?dasljflasjdf" class="lnk"><span class="name">使用优惠劵</span></a></div>
+        </li>
+      </ul>
+    </div><br>
+    <div class="list_order list_order_tmp">
+      <ul>
+        <li>
+          <div class="order items"><a href="javascript:;" class="lnk">
+              <div class="imgurl"><img src="http://p.www.xiaomi.com/images/1/1493_1_1351333878_3.jpg"></div>
+              <div class="order_info">
+                <dl>
+                  <dt class="add_time">订单日期：2012-11-23 11:15:31</dt>
+                  <dd class="order_id">订单编号：1211112298563920</dd>
+                  <dd><span class="goods_amount">总价：&yen; 229</span><span class="order_type">状态：已收货</span><span class="note note_1">代付款</span></dd>
+                </dl>
+              </div></a></div>
+        </li>
+      </ul>
+    </div><br>
+    <h3>.list_order 订单列表</h3>
+    <div class="list_order list_order_tmp">
+      <ul>
+        <li>
+          <div class="order items"><a href="javascript:;" class="lnk">
+              <div class="imgurl"><img src="http://p.www.xiaomi.com/images/1/1493_1_1351333878_3.jpg"></div>
+              <div class="order_info">
+                <dl>
+                  <dt class="add_time">订单日期：2012-11-23 11:15:31</dt>
+                  <dd class="order_id">订单编号：1211112298563920</dd>
+                  <dd><span class="goods_amount">总价：&yen; 229</span><span class="order_type">状态：已收货</span><span class="note note_1">代付款</span></dd>
+                </dl>
+              </div></a></div>
+        </li>
+        <li>
+          <div class="order items"><a href="javascript:;" class="lnk">
+              <div class="imgurl"></div>
+              <div class="order_info">
+                <dl>
+                  <dt class="add_time">订单日期：2012-11-23 11:15:31</dt>
+                  <dd class="order_id">订单编号：1211112298563920</dd>
+                  <dd><span class="goods_amount">总价：&yen; 229</span><span class="order_type">状态：已收货</span></dd>
+                </dl>
+              </div></a></div>
+        </li>
+        <li>
+          <div class="order items"><a href="javascript:;" class="lnk">
+              <div class="imgurl"><img src="http://p.www.xiaomi.com/images/f/1313_1_1344938702_3.jpg"></div>
+              <div class="order_info">
+                <dl>
+                  <dt class="add_time">订单日期：2012-11-23 11:15:31</dt>
+                  <dd class="order_id">订单编号：1211112298563920</dd>
+                  <dd><span class="goods_amount">总价：&yen; 229</span><span class="order_type">状态：已收货</span><span class="note note_2">代付款</span></dd>
+                </dl>
+              </div></a></div>
+        </li>
+      </ul>
+    </div>
+    <h3>.list_nav_tmp 继承.list_nav导航列表</h3>
+    <div class="list_nav list_nav_tmp">
+      <ul>
+        <li>
+          <div class="items"><a href="javascript:;" class="lnk"><span class="note note_1">43</span><span class="name">代付款订单</span></a></div>
+        </li>
+        <li>
+          <div class="items"><a href="javascript:;" class="lnk"><span class="note note_2">已付款</span><span class="name">代付款订单</span></a></div>
+        </li>
+        <li>
+          <div class="items"><a href="javascript:;" class="lnk"><span class="note note_1">代付款</span><span class="name">代付款订单</span></a></div>
+        </li>
+      </ul>
+    </div><br>
+    <div class="list_nav list_nav_tmp">
+      <ul>
+        <li>
+          <div class="items"><a href="javascript:;" class="lnk"><span class="name">收货地址</span></a></div>
+        </li>
+      </ul>
+    </div>
+    <h3>.list_order_tmp 继承.list_nav 订单列表模板</h3>
+    <div class="list_order_tmp">
+      <ul>
+        <li>
+          <div class="items"><a href="ad_list.html" class="lnk">
+              <div class="imgurl"><img src="http://p.www.xiaomi.com/images/c/1468_1_1351516045_3.jpg"></div>
+              <div class="info">
+                <p class="name">AKG K420折叠式头戴动圈耳机</p>
+                <div class="order_items">
+                  <div class="price_info"><span class="sale_price">售价：&yen; 98</span><span class="num">数量：1</span><span class="subtotal">小计：&yen; 99</span></div>
+                </div>
+              </div></a></div>
+        </li>
+        <li>
+          <div class="items gift"><a href="javascript:;" class="lnk">
+              <div class="imgurl"></div>
+              <div class="info">
+                <p class="name">AKG K420折叠式头戴动圈耳机</p>
+                <div class="order_items">
+                  <div class="price_info"><span class="sale_price">售价：&yen; 98</span><span class="num">数量：1</span><span class="subtotal">小计：&yen; 99</span></div>
+                </div>
+              </div></a></div>
+        </li>
+        <li>
+          <div class="items h_box">
+            <div class="imgurl"><img src="http://p.www.xiaomi.com/images/4/1059_1_1345618309_3.jpg"></div>
+            <div class="info">
+              <p class="name">AKG K420折叠式头戴动圈耳机</p>
+              <div class="order_items">
+                <div class="price_info"><span class="sale_price">售价：&yen; 98</span><span class="num">数量：1</span><span class="subtotal">小计：&yen; 99</span></div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div><br>
+    <div class="list_order_tmp">
+      <ul>
+        <li>
+          <div class="items"><a href="javascript:;" class="lnk">
+              <div class="imgurl"><img src="http://p.www.xiaomi.com/images/a/1299_1_1344938511_3.jpg"></div>
+              <div class="info">
+                <p class="name">AKG K420折叠式头戴动圈耳机</p>
+                <div class="order_items">
+                  <div class="price_info"><span class="sale_price">售价：&yen; 98</span><span class="num">数量：1</span><span class="subtotal">小计：&yen; 99</span></div>
+                </div>
+              </div></a></div>
+        </li>
+      </ul>
+    </div><br>
+    <div class="list_order_tmp">
+      <ul>
+        <li>
+          <div class="items gift h_box">
+            <div class="imgurl"><img src="http://p.www.xiaomi.com/images/0/1338_1_1345647550_3.jpg"></div>
+            <div class="info">
+              <p class="name">AKG K4200折叠式头戴动圈折叠式头戴动圈耳机</p>
+              <div class="order_items">
+                <div class="price_info"><span class="sale_price">售价：&yen; 98</span><span class="num">数量：1</span><span class="subtotal">小计：&yen; 99</span></div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div><br>
+    <div class="list_nav address_list">
+      <ul>
+        <li>
+          <div class="items"><a href="javascript:;" class="lnk">
+              <div><span class="province">陕西</span><span class="city">阳泉市</span><span class="district"></span></div>
+              <p>望京西路甲50号-1卷石天地大厦A座9层502 刁美玲 184123123</p></a></div>
+        </li>
+      </ul>
+    </div>
+    <div style="display:none" class="list_cart_submit">
+      <ul>
+        <li>
+          <div class="cart"><a href="javascript:;">
+              <div class="imgurl"><img src="http://p.www.xiaomi.com/images/0/1338_1_1345647550_3.jpg"></div>
+              <div class="info">
+                <p class="name">AKG K420折叠式头戴动圈耳机</p>
+                <div class="order_items">
+                  <div class="price_info"><span class="sale_price">售价：&yen; 98</span><span class="num">数量：1</span><span class="subtotal">小计：&yen; 99</span></div>
+                </div>
+              </div></a></div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

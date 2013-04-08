@@ -1,0 +1,25 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title shake 摇一摇
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body.hasAppTitle
+        #apptitle.toolbar
+            .title 这里是title
+        .xm_app
+            .viewport
+                .shake_view.xm-unlucky.mlr20
+                    .box_01
+                        img#shakeimg(src="http://p.www.xiaomi.com/m/oapp/images/ideal.png")
+                    div
+                        h3.oc 摇一摇手机或者点击按钮
+                        p 会有惊喜出现哦
+                    .mt20
+                        a.button.active_button 我要抽奖

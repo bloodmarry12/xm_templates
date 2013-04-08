@@ -1,0 +1,41 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title shopping_stylelist 套餐选择 商品相关/shopping
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .xm_app
+            .viewport
+                include _header
+                .shopping_stylelist.mlr20
+                    .list_nav.list_stylelist_tmp
+                        ul
+                            li
+                                .items
+                                    .h_box
+                                        .imgurl
+                                            img(src="http://p.www.xiaomi.com/images/c/1669_1_1358751453_3.jpg")
+                                        .stylelist_info
+                                            p.product_name
+                                                span MI2大电池（蓝色3100mAh）蓝色
+                                            .pick_styles
+                                                .select#select_group_01(data-type="select")
+                                                    .option(data-value="01") 蓝色
+                                                    select
+                                                        option(value="01") 蓝色
+                                                        option(value="02") 银色
+                            li
+                                .items
+                                    .h_box
+                                        .imgurl
+                                            img(src="http://p.www.xiaomi.com/images/e/1679_1_1358566869_3.jpg")
+                                        .stylelist_info
+                                            p.product_name MI2大电池盖
+                include _footer

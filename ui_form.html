@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ui</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon-precomposed" href="http://p.www.xiaomi.com/m/app/touch-icon.png">
+    <link rel="stylesheet" href="css/xmapp.css?skJHdj">
+    <script src="http://p.www.xiaomi.com/m/oapp/js/jquery.min.js?v20121018"></script>
+    <style>
+      // h3{ background: #F60; color: #FFF; margin:  20px }
+      // .imgurl img{ width: 80px; height: 80px; }
+      body{padding:20px}
+    </style>
+  </head>
+  <body>
+    <script>
+      $(function(){
+          var ckb = $('#checkbox_group_01').find('.checkbox');
+          ckb.click(function(){
+              $(this).toggleClass('selected');
+              return false;
+          });
+          ckb.find('.more').find('a').click(function(e){
+              e.stopPropagation();
+              url = $(this).attr('href');
+              window.location.href = url;
+          });
+          var ckb2 = $('#checkbox_group_02').find('.checkbox');
+          ckb2.click(function(){
+              $(this).toggleClass('selected');
+              return false;
+          });
+          
+          var rdb = $('#radio_group_01').find('.radio');
+          rdb.click(function(){
+              rdb.removeClass('selected');
+              $(this).addClass('selected');
+          });
+          var rdb2 = $('#radio_group_02').find('.radio');
+          rdb2.click(function(){
+              rdb2.removeClass('selected');
+              $(this).addClass('selected');
+          });
+          
+      });
+    </script>
+    <h3>下拉选择框 .select</h3>
+    <div id="select_group_01">
+      <div data-type="select" class="select">
+        <div data-value="01" class="option">北京市</div>
+        <select>
+          <option value="01">option1</option>
+          <option value="02">option2</option>
+        </select>
+      </div>
+    </div>
+    <div class="list_column">
+      <ul>
+        <li>
+          <div data-type="select" class="select">
+            <div data-value="01" class="option">北京市</div>
+            <select>
+              <option value="01">option1</option>
+              <option value="02">option2</option>
+            </select>
+          </div>
+        </li>
+        <li>
+          <div data-type="select" class="select">
+            <div data-value="01" class="option">北京市</div>
+            <select>
+              <option value="01">option1</option>
+              <option value="02">option2</option>
+            </select>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <h3>文本框 .input</h3>
+    <div class="input">
+      <input type="text" placeholder="文本框">
+    </div>
+    <h3>\0020</h3>
+    <div class="input error">
+      <input type="tel" placeholder="出错.error">
+    </div>
+    <h3>文本域 .textarea</h3>
+    <div class="textarea">
+      <textarea placeholder="路名或街道地址，门牌号，不少于10个字"></textarea>
+    </div>
+    <h3>.checkbox 多选框 继承.list_nav样式</h3>
+    <!-- input(type="checkbox", value="01")-->
+    <!-- input(type="checkbox", value="01")-->
+    <!-- input(type="checkbox", value="01")-->
+    <div id="checkbox_group_01" class="checkbox_02">
+      <div class="list_nav">
+        <ul>
+          <li>
+            <div data-type="checkbox" data-value="01" class="checkbox">
+              <label>
+                <div class="label check_hbox">
+                  <div class="name">
+                    <p>ccheckboxcheckboxchec这这是一个是是一个是一个一个</p>
+                    <p>aaa</p>
+                    <p>aaa</p>
+                    <p>aaa</p>
+                  </div>
+                  <div class="more"><a href="ad_list.html" class="lnk"><span class="arrow">&nbsp;</span>
+                      <!-- img(src="images/arrow_2.png")--></a></div>
+                </div>
+              </label>
+            </div>
+          </li>
+          <li>
+            <div data-type="checkbox" data-value="01" class="checkbox">
+              <label>
+                <div class="label">ccheckbox-2checkbox-2checkbox-2checkbox-2heckbox-2</div>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div><br>
+    <div id="checkbox_group_02" class="checkbox_01">
+      <div class="list_nav">
+        <ul>
+          <li>
+            <div data-type="checkbox" data-value="01" class="checkbox">
+              <label>
+                <div class="label">checkbox-1</div>
+              </label>
+            </div>
+          </li>
+          <li>
+            <div data-type="checkbox" data-value="01" class="checkbox">
+              <label>
+                <div class="label">checkbox-2</div>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div data-type="checkbox" data-value="01">
+      <label>checkbox-2</label>
+    </div>
+    <h3>.radio 单选框 继承.list_nav样式</h3>
+    <!-- input(type="radio", value="01", name="a")-->
+    <!-- input(type="radio", value="02", name="a")-->
+    <!-- input(type="radio", value="03", name="a")-->
+    <div id="radio_group_01" class="radio_01">
+      <div class="list_nav">
+        <ul>
+          <li>
+            <div data-type="radio" data-value="01" data-name="a" class="radio selected">
+              <label>
+                <div class="label">
+                  <h3>双休日、假日送货（适合家庭地址）</h3>
+                  <p>北京市朝阳区望京西路甲50号-1卷石天地大厦 A座 13层（010-56343701）</p>
+                </div>
+              </label>
+            </div>
+          </li>
+          <li>
+            <div data-type="radio" data-value="02" data-name="a" class="radio">
+              <label>
+                <div class="label">radio-2</div>
+              </label>
+            </div>
+          </li>
+          <li>
+            <div data-type="radio" data-value="03" data-name="a" class="radio">
+              <label>
+                <div class="label">radio-3</div>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="list_nav">
+        <ul>
+          <li>
+            <div data-type="radio" data-value="02" data-name="a" class="radio">
+              <label>
+                <div class="label">在线支付</div>
+              </label>
+            </div>
+          </li>
+          <li>
+            <div data-type="radio" data-value="03" data-name="a" class="radio">
+              <label>
+                <div class="label">快递（免费配送）</div>
+              </label>
+            </div>
+          </li>
+          <li>
+            <div data-type="radio" data-value="01" data-name="a" class="radio selected">
+              <label>
+                <div class="label">
+                  <h3>小米自提（免费配送，需在线支付）</h3>
+                  <p>北京市朝阳区望京西路甲50号-1卷石天地大厦 A座 13层（010-56343701）</p>
+                </div>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div><br>
+    <div id="radio_group_02" class="radio_02">
+      <div class="list_nav">
+        <ul>
+          <li>
+            <div data-type="radio" data-value="01" data-name="a" class="radio selected">
+              <label>
+                <div class="radio_hbox">
+                  <div class="imgurl"><img src="http://p.www.xiaomi.com/images/f/1313_1_1344938702_3.jpg"></div>
+                  <div class="name">
+                    <p>label项</p>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </li>
+          <li>
+            <div data-type="radio" data-value="01" data-name="a" class="radio">
+              <label>
+                <div class="radio_hbox">
+                  <div class="imgurl"><img src="http://p.www.xiaomi.com/images/f/1313_1_1344938702_3.jpg"></div>
+                  <div class="name">
+                    <p>label项</p>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div><br>
+    <div data-type="radio" data-value="03" data-name="a" class="radio">
+      <label>form表单元素单选框</label>
+    </div>
+    <div data-type="radio" data-value="03" data-name="a" class="radio selected">
+      <label>form表单元素单选框</label>
+    </div>
+  </body>
+</html>

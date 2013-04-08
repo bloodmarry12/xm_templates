@@ -1,0 +1,108 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title Product-list 商品相关/product 通过分类ID获得产品列表
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .mask.loading(style="display:none")
+            span &nbsp;
+        .xm_app
+            .viewport
+                include _header
+                include _crumbs
+                //筛选弹层 .adapt_panel_on
+                .product_product.mt-20
+                    .list_product.list_column.list_tmp
+                        ul
+                            li
+                                // 缺货
+                                .product.items.is_cos
+                                    a(href="product-view.html?v123lkjsdaf")
+                                        .imgurl
+                                            img(src="http://p.www.xiaomi.com/images/c/1023_1_1344937994_3.jpg")
+                                        .info
+                                            p.name is_cos == true则class+.is_cos
+                                            .price_info
+                                                span.price &yen; 38
+                                                span.cos 暂时缺货
+                            li
+                                // 特惠
+                                .product.items.is_discount
+                                    a(href="ad_list.html?v1kj23")
+                                        .imgurl
+                                            img(src="http://p.www.xiaomi.com/images/2/1015_1_1344948275_3.jpg")
+                                        .info
+                                            p.name 两个价格则class+.is_discount
+                                            .price_info
+                                                del.market_price &yen; 38
+                                                span.price &yen; 38
+                            li
+                                .product.items
+                                    a(href="javascript:;")
+                                        .imgurl
+                                            img(src="http://p.www.xiaomi.com/images/5/1710_1_1355233342_3.jpg")
+                                        .info
+                                            p.name ideaSkin 小米手机全身皮肤贴纸（鲸鱼）
+                                            .price_info
+                                                del.market_price &yen; 38
+                                                span.price &yen; 38
+                            li
+                                .product.items
+                                    a(href="javascript:;")
+                                        .imgurl
+                                            img(src="http://p.www.xiaomi.com/images/e/1018_1_1345605598_3.jpg")
+                                        .info
+                                            p.name ideaSkin 小米手机全身皮肤贴纸（鲸鱼）
+                                            .price_info
+                                                del.market_price &yen; 38
+                                                span.price &yen; 38
+                            li
+                                .product.items
+                                    a(href="javascript:;")
+                                        .imgurl
+                                        .info
+                                            p.name ideaSkin 小米手机全身皮肤贴纸（鲸鱼）
+                                            .price_info
+                                                del.market_price &yen; 38
+                                                span.price &yen; 38
+                            li
+                                .product.items
+                                    a(href="javascript:;")
+                                        .imgurl
+                                            img(src="http://p.www.xiaomi.com/images/5/1432_1_1351514212_3.jpg")
+                                        .info
+                                            p.name ideaSkin 小米手机全身皮肤贴纸（鲸鱼）
+                                            .price_info
+                                                del.market_price &yen; 38
+                                                span.price &yen; 38
+                            li
+                                .product.items
+                                    a(href="javascript:;")
+                                        .imgurl
+                                        .info
+                                            p.name ideaSkin 小米手机全身皮肤贴纸（鲸鱼）
+                                            .price_info
+                                                del.market_price &yen; 38
+                                                span.price &yen; 38
+                    .overlay_adapt_panel#adapt_panel
+                        .pick_panel#pick_panel
+                            dl
+                                dt
+                                    a(href="javascript:;", data-adapt="all", data-txt="筛选") 全部机型适用
+                                dd.xm_1
+                                    a(href="javascript:;", data-adapt="MI1", data-txt="1") 小米手机1
+                                dd.xm_1s
+                                    a(href="javascript:;", data-adapt="MI1S", data-txt="1S") 小米手机1S
+                                dd.xm_2
+                                    a(href="javascript:;", data-adapt="MI2", data-txt="2") 小米手机2
+                                dd.xm_box
+                                    a(href="javascript:;", data-adapt="BOX", data-txt="盒子") 小米盒子
+                include _footer
+        script(src="require.js", data-main="main2")

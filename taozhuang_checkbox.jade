@@ -1,0 +1,104 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title order_checkout 购物车-用户结算
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+        script(src="http://p.www.xiaomi.com/m/oapp/js/jquery.min.js?v20121018")
+    body
+        script
+            $(function(){
+                var ckb = $('#checkbox_group_01').find('.checkbox');
+                ckb.click(function(){
+                    $(this).toggleClass('selected');
+                    return false;
+                });
+                ckb.find('.more').find('a').click(function(){
+                    url = $(this).attr('href');
+                    window.location.href = url;
+                });
+                var ckb2 = $('#checkbox_group_02').find('.checkbox');
+                ckb2.click(function(){
+                    $(this).toggleClass('selected');
+                    return false;
+                });
+
+                var rdb = $('#radio_group_01').find('.radio');
+                rdb.click(function(){
+                    rdb.removeClass('selected');
+                    $(this).addClass('selected');
+                });
+                var rdb2 = $('#radio_group_02').find('.radio');
+                rdb2.click(function(){
+                    rdb2.removeClass('selected');
+                    $(this).addClass('selected');
+                });
+
+            });
+        .xm_app
+            .viewport
+                include _header
+                .taozhuang_checkbox.mlr20
+                    .title
+                        h3 您预约了以下产品：
+                    .checkbox_02#checkbox_group_01
+                        .list_nav
+                            ul
+                                li
+                                    .checkbox(data-type="checkbox", data-value="01")
+                                        label
+                                            .label 
+                                                .imgurl
+                                                    img(src="images/taozhuang_mi2.jpg", alt="您预约的套装")
+                                                .info 
+                                                    .name 小米1S青春版必备套装
+                                                    .price_info
+                                                        span.market_price 原价 &yen;269
+                                                        span.price 预约价 &yen; 179
+                                                    .intro 多彩后盖+多彩后盖+多彩后盖+多彩后盖+多彩后盖+多彩后盖
+
+                                li
+                                    .checkbox(data-type="checkbox", data-value="01")
+                                        label
+                                            .label 
+                                                .imgurl
+                                                    img(src="images/taozhuang_mi2.jpg", alt="您预约的套装")
+                                                .info 
+                                                    .name 小米1S青春版必备套装
+                                                    .price_info
+                                                        span.market_price 原价 &yen;269
+                                                        span.price 预约价 &yen; 179
+                                                    .intro 多彩后盖+多彩后盖+多彩后盖+多彩后盖+多彩后盖+多彩后盖
+                                li
+                                    .checkbox(data-type="checkbox", data-value="01")
+                                        label
+                                            .label 
+                                                .imgurl
+                                                    img(src="images/taozhuang_mi2.jpg", alt="您预约的套装")
+                                                .info 
+                                                    .name 小米1S青春版必备套装
+                                                    .price_info
+                                                        span.market_price 原价 &yen;269
+                                                        span.price 预约价 &yen; 179
+                                                    .intro 多彩后盖+多彩后盖+多彩后盖+多彩后盖+多彩后盖+多彩后盖
+                                li.onlyone
+                                    .imgurl
+                                        img(src="images/taozhuang_mi2.jpg", alt="您预约的套装")
+                                    .checkbox(data-type="checkbox", data-value="01")
+                                        label
+                                            .label1  
+                                                .info 
+                                                    .name 小米1S青春版必备套装
+                                                    .price_info
+                                                        span.market_price 原价 &yen;269
+                                                        span.price 预约价 &yen; 179
+                                                    .intro 多彩后盖+多彩后盖+多彩后盖+多彩后盖+多彩后盖+多彩后盖
+                    .mt20.mb20
+                        a.button.active_button(href="javascript:;") 下一步
+                include _footer

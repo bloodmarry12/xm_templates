@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>style_panel 样式选择弹框</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon-precomposed" href="http://p.www.xiaomi.com/m/app/touch-icon.png">
+    <link rel="stylesheet" href="css/xmapp.css?skJHdj">
+    <script src="http://p.www.xiaomi.com/m/oapp/js/jquery.min.js?v20121018"></script>
+    <style>
+      h3{ background: #F60; color: #FFF; margin:  20px }
+      // .imgurl img{ width: 80px; height: 80px; }
+    </style>
+    <script>
+      function a(){
+          var a = document.getElementsByClassName('mask');
+          var b = document.getElementsByClassName('style_panel');
+          a[0].style.display = 'none';
+          b[0].style.display = 'none';
+          window.history.back();
+      }
+      $(function(){
+          var rdb = $('#radio_group_01').find('.radio');
+          rdb.click(function(){
+              rdb.removeClass('selected');
+              $(this).addClass('selected');
+              setTimeout('a()',200);
+          });
+      });
+    </script>
+  </head>
+  <body class="has_bottom_panel">
+    <div class="mask"></div>
+    <div class="style_panel">
+      <div id="radio_group_01" class="radio_02">
+        <div class="list_nav">
+          <ul>
+            <li>
+              <div data-type="radio" data-value="01" data-name="a" class="radio">
+                <label>
+                  <div class="radio_hbox">
+                    <div class="imgurl"><img src="http://p.www.xiaomi.com/images/f/1313_1_1344938702_3.jpg"></div>
+                    <div class="name">
+                      <p>玫红色</p>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div data-type="radio" data-value="01" data-name="a" class="radio">
+                <label>
+                  <div class="radio_hbox">
+                    <div class="imgurl"><img src="http://p.www.xiaomi.com/images/f/1313_1_1344938702_3.jpg"></div>
+                    <div class="name">
+                      <p>紫色</p>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div data-type="radio" data-value="01" data-name="a" class="radio selected">
+                <label>
+                  <div class="radio_hbox">
+                    <div class="imgurl"><img src="http://p.www.xiaomi.com/images/f/1313_1_1344938702_3.jpg"></div>
+                    <div class="name">
+                      <p>绿色</p>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div data-type="radio" data-value="01" data-name="a" class="radio">
+                <label>
+                  <div class="radio_hbox">
+                    <div class="imgurl"><img src="http://p.www.xiaomi.com/images/f/1313_1_1344938702_3.jpg"></div>
+                    <div class="name">
+                      <p>蓝色</p>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div data-type="radio" data-value="01" data-name="a" class="radio">
+                <label>
+                  <div class="radio_hbox">
+                    <div class="imgurl"><img src="http://p.www.xiaomi.com/images/f/1313_1_1344938702_3.jpg"></div>
+                    <div class="name">
+                      <p>橙色</p>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

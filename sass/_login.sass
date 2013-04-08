@@ -1,0 +1,21 @@
+// login_view 登录页面
+.login_view
+    &:before
+        content: '\0020'
+        display: block
+        width: (377em/20)
+        height: (371em/20)
+        margin: (120em/20) auto (160em/20)
+        background: url($imgurl+'mitu_login.jpg') 0 0 no-repeat
+        +background-size(cover)
+    .title
+        h3
+            // font-size: $fz27
+            color: $oc3
+            padding-bottom: (14em/27)
+            margin-bottom: (20em/27)
+            border-bottom: (2em/27) solid $oc3
+    .loginBtn
+        a
+            // font-size: $fz34
+            margin-bottom: (20em/34)

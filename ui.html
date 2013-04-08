@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ui</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon-precomposed" href="http://p.www.xiaomi.com/m/app/touch-icon.png">
+    <link rel="stylesheet" href="http://p.www.xiaomi.com/m/app/v2/css/xmapp.css?20130222212904876">
+    <style>
+      h3{ background: #F60; color: #FFF; margin:10px 0}
+      img{ width: 80px; height: 80px; }
+    </style>
+    <!-- script-->
+    <!--     function callback(data){-->
+    <!--         window.data = data.data.result;-->
+    <!--     };-->
+    <!-- script(src="http://app.shopapi.xiaomi.com/v1/shopping/stylelist?callback=callback&product_id=1867&client_id=180100031013&_=1359008890699")-->
+  </head>
+  <body class="hasAppTitle">
+    <div id="maskLoading">
+      <div class="mask-wrap">
+        <div class="loading">正在加载</div>
+      </div>
+    </div>
+    <div id="apptitle" class="toolbar">
+      <div class="title">这里是title</div>
+    </div>
+    <div id="msgMask">
+      <div class="msg_pay">
+        <p>正在支付...</p>
+        <div class="h_box"><a href="javascript:;" class="button disable_button flex_1">支付失败</a>
+          <div class="spacer">&nbsp;</div><a href="javascript:;" class="button active_button flex_1">支付成功</a>
+        </div>
+      </div>
+    </div>
+    <div id="popup">
+      <p>你好</p>
+    </div>
+    <h3>.more_button 查看更多</h3><a href="javascript:;" class="more_button">查看更多 _button.sass</a>
+    <h3>.button.active_button 橙色按钮 _button.sass</h3><a href="javascript:;" class="button active_button">加入购物车</a>
+    <h3>.button.disable_button 灰色按钮 _button.sass</h3><a href="javascript:;" class="button disable_button">加入购物车</a>
+    <h3>.button.del_button 红色按钮 _button.sass</h3><a href="javascript:;" class="button del_button">删除</a>
+    <h3>.pick_panel 机型适用 _panel.sass</h3>
+    <div class="pick_panel">
+      <dl>
+        <dt><a href="javascript:;">全部机型适用</a></dt>
+        <dd class="xm_1"><a href="javascript:;">小米手机1</a></dd>
+        <dd class="xm_1s"><a href="javascript:;">小米手机1S</a></dd>
+        <dd class="xm_2"><a href="javascript:;">小米手机2</a></dd>
+      </dl>
+    </div>
+    <script src="require.js" data-main="main"></script>
+  </body>
+</html>

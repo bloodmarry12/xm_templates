@@ -1,0 +1,74 @@
+// Button 控件
+
+
+
+
+.adapt_button
+    a
+        display: block
+        background: rgba(255,0,0,.2)
+        color: $c
+        position: fixed
+        text-align: center
+        font-size: $fz34
+        line-height: (120em/34)
+        width: (120em/34)
+        height: (120em/34)
+        bottom: (20em/34)
+        right: (20em/34)
+        +border-radius(100%)
+// 查看更多按钮样式
+.more_button
+    font-size: $fz27
+    display: block
+    line-height: (82em/27)
+    color: #A4A5A9
+    text-align: center
+    border: 1px solid $bc2
+    +box-shadow(#F3F5F4 0 0 1px 1px inset)
+    background: #EBECEE url($imgurl+'more_button.png') 50% 50% no-repeat
+    +background-size((300em/27) (19em/27))
+// 通用按钮
+.button
+    font-size: $fz34
+    display: block
+    font-weight: 700
+    text-align: center
+    line-height: (89em/34)
+    +border-radius((8em/34))
+    overflow: hidden
+    border-width: 1px
+    border-style: solid
+    +text-shadow(rgba(0,0,0,.3) 0 -1px 0)
+    // 橙色按钮
+    // @include bdcolor(top,left,right,botton) _variables.sass
+    &.active_button
+        color: $wc
+        +background-image(linear-gradient(#FC7000, #E45000))
+        +box-shadow(rgba(0,0,0,.1) 0 (1em/34) (4em/34) 0 inset)
+        @include bdcolor(#DB6100,#E56000,#E56000,#DF4D00)
+        &:active,
+        &:hover
+            +box-shadow(rgba(0,0,0,.3) 0 (2em/34) (4em/34) (1em/34) inset)
+            @include bdcolor(#AD4D00,#AD4D00,#C85100,#D74A00)
+    // 灰色按钮
+    &.disable_button
+        color: #515459
+        +text-shadow(rgba(0,0,0,.1) 0 1px 0)
+        +background-image(linear-gradient(#F3F4F6, #DFE0E2))
+        +box-shadow(rgba(0,0,0,.1) 0 (1em/34) (4em/34) 0 inset)
+        @include bdcolor(#D3D4D5,#DADBDD,#DADBDD,#DADBDD)
+        &:active,
+        &:hover
+            +box-shadow(rgba(0,0,0,.3) 0 (2em/34) (4em/34) (1em/34) inset)
+            @include bdcolor(#A7A8A9,#C4C5C6,#C4C5C6,#D2D3D5)
+    // 删除按钮
+    &.del_button
+        color: $wc
+        +background-image(linear-gradient(#E83636, #B6151D))
+        +box-shadow(rgba(0,0,0,.1) 0 (1em/34) (4em/34) 0 inset)
+        @include bdcolor(#CC2E2A,#CC2725,#CC2725,#B30F12)
+        &:active,
+        &:hover
+            +box-shadow(rgba(0,0,0,.3) 0 (2em/34) (4em/34) (1em/34) inset)
+            @include bdcolor(#AD4D00,#AD4D00,#C85100,#D74A00)

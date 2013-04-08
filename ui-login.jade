@@ -1,0 +1,27 @@
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title login 登录页面
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css")
+        style
+            h3{ background: #F60; color: #FFF; }
+            img{ width: 80px; height: 80px; }
+    body
+        .xm_app
+            .viewport
+                include _header
+                include _crumbs
+                .login
+                    .mitu_flower &nbsp;
+                    .loginBtn
+                        .tit 登录小米账户
+                        .topLine
+                        a(href="javascript:;")#AccountLoginBtn.button.active_button 登录
+                        a(href="javascript:;").button.disable_button 注册
+                include _footer

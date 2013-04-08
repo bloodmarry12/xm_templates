@@ -1,0 +1,68 @@
+// adapt 筛选
+.adapt_btn
+    position: absolute
+    right: (12em/20)
+    top: (17em/20)
+    a
+        display: block
+        font-size: $fz25
+        width: (120em/25)
+        line-height: (50em/25)
+        text-align: center
+        color: #8C8A87
+        background: #E4E4E4
+        border: 1px solid #C6C6C6
+        +border-radius((4em/25))
+        +box-sizing(border-box)
+        +box-shadow(rgba(255,255,255,.1) 0 0 0 1px inset)
+        &.on
+            +box-shadow(rgba(0,0,0,.1) 0 (2em/25) (1em/25) (1em/25) inset)
+            @include bdcolor(#9F9F9F,#B7B7B7,#B7B7B7,#CBCBCB)
+        &.MI1
+            background: #7095C2
+            @include bdcolor(#6685B1,#6C8DB8,#6C8DB8,#7092BF)
+            color: $wc
+        &.MI1S
+            background: #8DAD7C
+            @include bdcolor(#809B6E,#87A474,#87A474,#8CA979)
+            color: $wc
+        &.MI2
+            background: #C36D7A
+            @include bdcolor(#B0636D,#B96773,#B96773,#BF6B78)
+            color: $wc
+        &.BOX
+            background: #757E8E
+            @include bdcolor(#6A727F,#707787,#707787,#747B8B)
+            color: $wc
+.overlay_adapt_panel
+    position: absolute
+    visibility: hidden
+    top: (20em/20)
+    left: 0
+    right: 0
+    z-index: 12
+    background: #E4E4E4 url($imgurl+'adapt_panel_bg2.png') 0 0 repeat-x
+    padding-top: (4em/20)
+    +background-size(1px (4em/20))
+    &.visible
+        visibility: visible
+    &:after
+        content: '\0020'
+        width: (21em/20)
+        height: (14em/20)
+        position: absolute
+        top: -(10em/20)
+        right: (111em/20)/2
+        background: url($imgurl+'adapt_panel_bg3.png') 0 0 no-repeat
+        +background-size(cover)
+.adapt_panel_on
+    position: relative
+    &:before
+        content: '\0020'
+        position: absolute
+        top: (20em/20)
+        bottom: 0
+        left: 0
+        right: 0
+        background: rgba(0,0,0,.7)
+        z-index: 1

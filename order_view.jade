@@ -1,0 +1,112 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title order_view 订单详情（已付款）
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .xm_app
+            .viewport
+                include _header
+                .order_view.mlr20.mb40
+                    .envelope_paper
+                        .envelope_paper_bd
+                            .envelope_paper_content
+                                .box.box_01.order_tit
+                                    ul
+                                        li
+                                            strong 订单状态
+                                            span.order_status 已付款
+                                        li
+                                            strong 应付总额
+                                            span.goods_amount &yen;29
+                                .box.box_04.express_info
+                                    .itmes
+                                        a.lnk(href="javascript:;")
+                                            ul
+                                                li
+                                                    strong 物流信息
+                                                    span 韵达快运（北京）
+                                                li
+                                                    strong 快递单号
+                                                    span 17000158207
+                                .box.box_02.order_info
+                                    ul
+                                        li
+                                            strong 下单日期
+                                            span.add_time 2012/12/25 12:41:33
+                                        li
+                                            strong 订单编号
+                                            span.order_id 5130121004329122
+                                        li
+                                            strong 手机号码
+                                            span.tel 13844072222
+                                        li
+                                            strong 收货地址
+                                            span.address 长春大街1177号,住房公积金管理中心南关分中心（中信银行2楼）
+                                        li
+                                            strong 送货时间
+                                            span.best_time 不限
+                                        li
+                                            strong 发票信息
+                                            span.invoice_title 不开发票
+                                .box.box_03
+                                    .list_order_tmp
+                                        ul
+                                            li
+                                                .items.gift.h_box
+                                                    .imgurl
+                                                        img(src="http://p.www.xiaomi.com/images/0/1338_1_1345647550_3.jpg")
+                                                    .info
+                                                        p.name AKG K4200折叠式头戴动圈折叠式头戴动圈耳机
+                                                        .order_items
+                                                            .price_info
+                                                                span.sale_price 售价：&yen; 98
+                                                                span.num 数量：1
+                                                                span.subtotal 小计：&yen; 99
+                                            li
+                                                .items.kill.h_box
+                                                    .imgurl
+                                                        img(src="http://p.www.xiaomi.com/images/0/1338_1_1345647550_3.jpg")
+                                                    .info
+                                                        p.name AKG K4200折叠式头戴动圈折叠式头戴动圈耳机
+                                                        .order_items
+                                                            .price_info
+                                                                span.sale_price 售价：&yen; 98
+                                                                span.num 数量：1
+                                                                span.subtotal 小计：&yen; 99
+                                            li
+                                                .items.award.h_box
+                                                    .imgurl
+                                                        img(src="http://p.www.xiaomi.com/images/0/1338_1_1345647550_3.jpg")
+                                                    .info
+                                                        p.name AKG K4200折叠式头戴动圈折叠式头戴动圈耳机
+                                                        .order_items
+                                                            .price_info
+                                                                span.sale_price 售价：&yen; 98
+                                                                span.num 数量：1
+                                                                span.subtotal 小计：&yen; 99
+                                            li
+                                                .items.coupon.h_box
+                                                    .imgurl
+                                                        img(src="http://p.www.xiaomi.com/images/0/1338_1_1345647550_3.jpg")
+                                                    .info
+                                                        p.name AKG K4200折叠式头戴动圈折叠式头戴动圈耳机
+                                                        .order_items
+                                                            .price_info
+                                                                span.sale_price 售价：&yen; 98
+                                                                span.num 数量：1
+                                                                span.subtotal 小计：&yen; 99
+                    // .bottom_panel
+                    //     .express_panel
+                    //         a.lnk(href="javascript:;")
+                    //             .items
+                    //                 h3 正在派件...
+                    //                 p 2012/12/25 12:41:34
+                include _footer

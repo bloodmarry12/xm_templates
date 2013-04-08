@@ -1,0 +1,64 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title address_add 新增收货地址
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .xm_app
+            .viewport
+                include _header
+                .address_add.mlr20
+                    .box.box_01
+                        .title
+                            h3 收货人姓名
+                        .input
+                            input(type="text", placeholder="请填写真实姓名")
+                    .box.box_02
+                        .title
+                            h3 收货地址
+                        .box_02_01.h_box
+                            .flex_1
+                                .select(data-type="select")
+                                    .option(data-value="01") 北京市
+                                    select
+                                        option(value="01") option1
+                                        option(value="02") option2
+                            .flex_1
+                                .select(data-type="select")
+                                    .option(data-value="01") 北市
+                                    select
+                                        option(value="01") option1
+                                        option(value="02") option2
+                        .box_02_02
+                            .select(data-type="select")
+                                .option(data-value="01") 呼伦贝尔大草原
+                                select
+                                    option(value="01") option1
+                                    option(value="02") option2
+                        .box_02_03
+                            .textarea.error
+                                textarea(placeholder="路名或街道地址，门牌号，不少于10个字")
+                            .error_tips
+                                p 错误提示信息
+                    .box.box_03
+                        .title
+                            h3 邮政编码
+                        .input.error
+                            input(type="text", placeholder="为6位数字")
+                        .error_tips
+                            p 错误提示信息
+                    .box.box_04
+                        .title
+                            h3 手机号码
+                        .input
+                            input(type="text", placeholder="联系人电话，11位数字")
+                    .box.box_05
+                        a.button.active_button(href="javascript:;") 确认完成
+                include _footer

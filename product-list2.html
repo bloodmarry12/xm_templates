@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Product-list 商品相关/product 通过分类ID获得产品列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon-precomposed" href="http://p.www.xiaomi.com/m/app/touch-icon.png">
+    <link rel="stylesheet" href="css/xmapp.css?skJHdj">
+  </head>
+  <body>
+    <div style="display:none" class="mask loading"><span>&nbsp;</span></div>
+    <div class="xm_app">
+      <div class="viewport">
+        <div id="header" class="header">
+          <h1 class="logo"><a href="javascript:;"><img src="images/logo_m.png?skJHdj"></a></h1>
+          <div class="nav">
+            <ul>
+              <li class="user"><a href="javascript:;">账号</a></li>
+              <li class="category"><a href="javascript:;">分类</a></li>
+              <li class="cart"><a href="javascript:;">购物车</a><span id="ShoppingCartNum">2</span></li>
+            </ul>
+          </div>
+        </div>
+        <div id="crumbs" class="crumbs">
+          <div class="adapt_btn">
+            <!-- 筛选按钮--><a id="adapt_button" href="#">筛选</a>
+          </div>
+          <ul>
+            <li><a href="javascript:;"><span>首页</span></a></li>
+            <li><a href="javascript:;">分类浏览</a></li>
+            <li><a href="javascript:;">分类列表</a></li>
+          </ul>
+        </div>
+        <!--筛选弹层 .adapt_panel_on-->
+        <div class="product_product mt-20">
+          <div class="list_product list_column list_tmp">
+            <ul>
+              <li>
+                <!-- 缺货-->
+                <div class="product items is_cos"><a href="product-view.html?v123lkjsdaf">
+                    <div class="imgurl"><img src="http://p.www.xiaomi.com/images/c/1023_1_1344937994_3.jpg"></div>
+                    <div class="info">
+                      <p class="name">is_cos == true则class+.is_cos</p>
+                      <div class="price_info"><span class="price">&yen; 38</span><span class="cos">暂时缺货</span></div>
+                    </div></a></div>
+              </li>
+              <li>
+                <!-- 特惠-->
+                <div class="product items is_discount"><a href="ad_list.html?v1kj23">
+                    <div class="imgurl"><img src="http://p.www.xiaomi.com/images/2/1015_1_1344948275_3.jpg"></div>
+                    <div class="info">
+                      <p class="name">两个价格则class+.is_discount</p>
+                      <div class="price_info">
+                        <del class="market_price">&yen; 38</del><span class="price">&yen; 38</span>
+                      </div>
+                    </div></a></div>
+              </li>
+              <li>
+                <div class="product items"><a href="javascript:;">
+                    <div class="imgurl"><img src="http://p.www.xiaomi.com/images/5/1710_1_1355233342_3.jpg"></div>
+                    <div class="info">
+                      <p class="name">ideaSkin 小米手机全身皮肤贴纸（鲸鱼）</p>
+                      <div class="price_info">
+                        <del class="market_price">&yen; 38</del><span class="price">&yen; 38</span>
+                      </div>
+                    </div></a></div>
+              </li>
+              <li>
+                <div class="product items"><a href="javascript:;">
+                    <div class="imgurl"><img src="http://p.www.xiaomi.com/images/e/1018_1_1345605598_3.jpg"></div>
+                    <div class="info">
+                      <p class="name">ideaSkin 小米手机全身皮肤贴纸（鲸鱼）</p>
+                      <div class="price_info">
+                        <del class="market_price">&yen; 38</del><span class="price">&yen; 38</span>
+                      </div>
+                    </div></a></div>
+              </li>
+              <li>
+                <div class="product items"><a href="javascript:;">
+                    <div class="imgurl"></div>
+                    <div class="info">
+                      <p class="name">ideaSkin 小米手机全身皮肤贴纸（鲸鱼）</p>
+                      <div class="price_info">
+                        <del class="market_price">&yen; 38</del><span class="price">&yen; 38</span>
+                      </div>
+                    </div></a></div>
+              </li>
+              <li>
+                <div class="product items"><a href="javascript:;">
+                    <div class="imgurl"><img src="http://p.www.xiaomi.com/images/5/1432_1_1351514212_3.jpg"></div>
+                    <div class="info">
+                      <p class="name">ideaSkin 小米手机全身皮肤贴纸（鲸鱼）</p>
+                      <div class="price_info">
+                        <del class="market_price">&yen; 38</del><span class="price">&yen; 38</span>
+                      </div>
+                    </div></a></div>
+              </li>
+              <li>
+                <div class="product items"><a href="javascript:;">
+                    <div class="imgurl"></div>
+                    <div class="info">
+                      <p class="name">ideaSkin 小米手机全身皮肤贴纸（鲸鱼）</p>
+                      <div class="price_info">
+                        <del class="market_price">&yen; 38</del><span class="price">&yen; 38</span>
+                      </div>
+                    </div></a></div>
+              </li>
+            </ul>
+          </div>
+          <div id="adapt_panel" class="overlay_adapt_panel">
+            <div id="pick_panel" class="pick_panel">
+              <dl>
+                <dt><a href="javascript:;" data-adapt="all" data-txt="筛选">全部机型适用</a></dt>
+                <dd class="xm_1"><a href="javascript:;" data-adapt="MI1" data-txt="1">小米手机1</a></dd>
+                <dd class="xm_1s"><a href="javascript:;" data-adapt="MI1S" data-txt="1S">小米手机1S</a></dd>
+                <dd class="xm_2"><a href="javascript:;" data-adapt="MI2" data-txt="2">小米手机2</a></dd>
+                <dd class="xm_box"><a href="javascript:;" data-adapt="BOX" data-txt="盒子">小米盒子</a></dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div id="footer" class="footer">
+          <div class="box box_01"><a href="javascript:;">登录</a><a href="javascript:;">注册</a><a href="#header">返回顶部</a></div>
+          <div class="box box_02"><a href="javascript:;">电脑版</a></div>
+          <div class="box box_03">
+            <p>&copy;2012 m.xiaomi.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="require.js" data-main="main2"></script>
+  </body>
+</html>

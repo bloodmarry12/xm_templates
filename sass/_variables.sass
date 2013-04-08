@@ -1,0 +1,72 @@
+// 全局变量
+
+
+$imgurl: '../images/'
+// 随机数用于清楚图片缓存
+$r: ''
+// $bgc app背景颜色
+$bgc: #ebeced
+// $wc 白色
+$wc: #FFF
+// 字体颜色
+$c: #51545A
+// gray color
+$gc: #87888C
+$gc2: #F7F8FA
+$gc3: #818286
+// orange color
+$oc: #FC6500
+$oc2: #FF6C06
+$oc3: #FD6500
+$oc4: #E74F17
+// boder color
+$bc: #D7D7D7
+$bc2: #E5E5E5
+$bc3: #D4D4D6
+$bc4: #DCDCDC
+// 图片.imgurl灰色背景色
+$imgc: #F5F5F6
+
+// 字体 参考img01.mifile.cn/m/topic/templates/fontsize.png
+$fz20: (20em/20)
+$fz25: (25em/20)
+$fz27: (27em/20)
+$fz34: (34em/20)
+$fz32: (32em/20)
+$fz30: (30em/20)
+$fz36: (36em/20)
+$fz46: (46em/20)
+
+
+// 公用方法
+
+
+// 边框1像素带下投影的盒子
+@mixin boxsh
+    border-bottom: 1px solid #C1C1C1
+    border-left: 1px solid #D8D8D8
+    border-right: 1px solid #D8D8D8
+    border-top: 1px solid #E5E6E8
+    margin-bottom: (20em/20)
+    +box-shadow(#D2D2D4 0 (2em/20) 0)
+    +box-sizing(border-box)
+// 边框颜色设置
+@mixin bdcolor($t,$l,$r,$b)
+    border-top-color: $t
+    border-left-color: $l
+    border-right-color: $r
+    border-bottom-color: $b
+// input 通用样式
+@mixin inputsh
+    +inline-block
+    border: 1px solid $bc3
+    padding: (22em/20)
+    +border-radius((7em/20))
+    +background-image(linear-gradient(#F6F6F6, $wc))
+    +box-shadow(rgba(0,0,0,.2) 0 (2em/20) (4em/20) (1em/20) inset)
+    +box-sizing(border-box)
+    &:focus
+        outline: none
+    &.error
+        +box-shadow(rgba(255,0,0,.5) 0 0 (6em/20) (4em/20) inset)
+        border-color: rgba(255,0,0,.6)

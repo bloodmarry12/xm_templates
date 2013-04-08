@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>F码弹层</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon-precomposed" href="http://p.www.xiaomi.com/m/app/touch-icon.png">
+    <link rel="stylesheet" href="css/xmapp.css?skJHdj">
+    <script>
+      window.onload = function(){
+          a = document.getElementsByClassName('mask');
+          b = document.getElementsByClassName('pop_panel');
+          c = document.getElementsByTagName('input')[0];
+      }
+      function aa(){
+          a[0].style.display = 'none';
+          b[0].style.display = 'none';
+      }
+      function bb(){
+          if(c.value == ''){
+              alert('请输入验证码');
+          }else{
+              alert('验证码：'+c.value);
+              aa();
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="mask"></div>
+    <div class="pop_panel Fpopanel">
+      <div class="content">
+        <div class="bd">
+          <div class="box box_01">
+            <h3>输入验证码</h3>
+            <p>让我们知道你不是机器人，请输入验证码</p>
+          </div>
+          <div class="box box_04 mt20">
+            <div class="flex_1 verifi"><img src="http://secode.hd.xiaomi.com/m/order/79/31bf39ca4c9.png" class="verifimg"><a href="javascript:;" class="verifcode">换一张</a></div>
+          </div>
+          <div class="box box_02 mt20">
+            <div class="input flex_1">
+              <input type="tel" placeholder="请输入验证码">
+            </div>
+          </div>
+          <div class="box box_03 h_box mt20">
+            <div class="flex_1"><a href="javascript:aa();" class="button disable_button">取消</a></div>
+            <div class="spacer">&nbsp;</div>
+            <div class="flex_1"><a href="javascript:bb();" class="button disable_button">确定</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- a.close(href="javascript:;", onclick="a()")-->
+      <!--     img(src="images/close.png")-->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+// open_view 抢购首页样式 S
+.open_view
+    overflow: hidden
+    position: relative
+    ins
+        text-decoration: none
+    .box_01
+        text-align: center
+        margin-top: (70em/20)
+        font-weight: 700
+        h3
+            font-size: (43em/20)
+            line-height: (56em/43)
+        h4
+            font-size: (38em/20)
+            margin: 0
+            margin-bottom: (10em/38)
+        p
+            font-size: (22em/20)
+            line-height: (38em/22)
+    .box_02
+        .imgurl
+            height: (720em/20)
+    .box_04
+        width: (720em/20)
+        a
+            display: block
+            font-size: (32em/20)
+            line-height: (126em/32)
+            color: #4E515A
+            font-weight: 700
+            text-align: center
+            +box-sizing(border-box)
+            border:
+                style: solid 
+                color: #BDBDBF 
+                width: 1px
+                bottom: none
+            +background-image(linear-gradient(#F3F4F6, #DFE0E2))
+            &:hover,
+            &:active
+                +background-image(linear-gradient(#E6E7E9, #D5D6D8))
+                +box-shadow(#CFD0D2 0 0 1px 1px inset)
+    .box_03
+        .button
+            margin-left: (20em/20)
+            margin-right: (20em/20)
+            margin-bottom: (20em/20)
+    #countdownBtn
+        // background: #B2B2B2
+        background: rgba(0,0,0,.3)
+        &>a
+            display: block
+            font-size: (24em/20)
+            font-weight: 700
+            color: $wc
+            text-align: center
+            padding: (10em/20) 0
+            background: url($imgurl+'reload02.png') 80% 50% no-repeat
+            +background-size((28em/20) (28em/20))
+            ins
+                font-size: (30em/20)
+// open_view 抢购首页样式 E
+.open_view_app
+    .box_04
+        position: fixed
+        bottom: 0
+    .box_02
+        margin-bottom: (160em/20)
+    .box_03
+        .button
+            margin: 0
+            font-size: (34em/20)
+            width: (720em/34)
+            position: fixed
+            bottom: 0
+            +border-radius(0)
+            line-height: (130em/34)
+    #countdownBtn
+        width: (720em/20)
+        position: fixed
+        bottom: (127em/20)
+// open_view 2s抢购首页样式 S
+.open_view
+    &.open_view_2s
+        .box_04
+            a
+                color: $wc
+                border:
+                    style: solid 
+                    color: #911E00 
+                    width: 1px
+                    bottom: none
+                +background-image(linear-gradient(#B62601, #BA2400))
+                &:hover,
+                &:active
+                    +background-image(linear-gradient(#BA2400, #B62601))
+                    +box-shadow(#911E00 0 0 1px 1px inset)
+// open_view 2s抢购首页样式 E

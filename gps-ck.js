@@ -1,0 +1,1 @@
+define(function(){var e=null,t=null;return{geolocation:function(n){navigator.geolocation.getCurrentPosition(function(t){e="ok";n(e,t)},function(r){e="error";n(e,t)})}}});

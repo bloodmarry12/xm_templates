@@ -1,0 +1,67 @@
+$outerWidth: 36em
+$outerHeight: 61.5em
+$headAreaWidth: 25em
+$headAreaHeight: 25em
+$offsetX: ($outerWidth - $headAreaWidth)/2
+$offsetY: ($outerHeight - $headAreaHeight)/2
+.imgSelect
+    text-align: center
+    background: #000
+    position: absolute
+    left: 0
+    top: 0
+    .imgWrap
+        margin: 0 auto
+        width: $outerWidth
+        height: $outerHeight
+        overflow: hidden
+        position: relative
+        img
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+        .selectArea
+            position: absolute
+            width: $headAreaWidth
+            height: $headAreaHeight
+            left: $offsetX
+            top: $offsetY
+            border: 1px yellow solid
+        .eventReceiver
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            background-color: transparent
+            z-index: 1000
+    .operations
+        position: fixed
+        bottom: 0
+        width: 100%
+        z-index: 1001
+        .notice
+            color: #FFF
+            font-size: 1.5em
+            line-height: 1.2em
+        .buttonWrap
+            padding: 1em
+            +box-sizing(border-box)
+            overflow: hidden
+            .roundBtn
+                font-weight: normal
+                width: 6em
+                height: 6em
+                +border-radius(6em)
+                display: block
+                &.ok
+                    float: right
+                    background: url('http://p.www.xiaomi.com/m/activities/images/imgEditorOK.png') 0 0 no-repeat
+                    +background-size(6em,auto)
+                    margin-right: 1em
+                &.close
+                    float: left
+                    background: url('http://p.www.xiaomi.com/m/activities/images/imgEditorClose.png?123') 0 0 no-repeat
+                    +background-size(6em,auto)
+                    margin-left: 1em

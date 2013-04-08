@@ -1,0 +1,53 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title F码弹层
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+        script
+            window.onload = function(){
+                a = document.getElementsByClassName('mask');
+                b = document.getElementsByClassName('pop_panel');
+                c = document.getElementsByTagName('input')[0];
+            }
+            function aa(){
+                a[0].style.display = 'none';
+                b[0].style.display = 'none';
+            }
+            function bb(){
+                if(c.value == ''){
+                    alert('请输入验证码');
+                }else{
+                    alert('验证码：'+c.value);
+                    aa();
+                }
+            }
+    body
+        .mask
+        .pop_panel.Fpopanel
+            .content
+                .bd
+                    .box.box_01
+                        h3 输入验证码
+                        p 让我们知道你不是机器人，请输入验证码
+                    .box.box_04.mt20
+                        .flex_1.verifi
+                            img.verifimg(src="http://secode.hd.xiaomi.com/m/order/79/31bf39ca4c9.png")
+                            a(href="javascript:;").verifcode 换一张
+                    .box.box_02.mt20
+                        .input.flex_1
+                            input(type="tel", placeholder="请输入验证码")
+                    .box.box_03.h_box.mt20
+                        .flex_1
+                            a(href="javascript:aa();").button.disable_button 取消
+                        .spacer &nbsp;
+                        .flex_1
+                            a(href="javascript:bb();").button.disable_button 确定
+            // a.close(href="javascript:;", onclick="a()")
+            //     img(src="images/close.png")

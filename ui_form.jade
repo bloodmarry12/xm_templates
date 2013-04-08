@@ -1,0 +1,179 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title Ui
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+        script(src="http://p.www.xiaomi.com/m/oapp/js/jquery.min.js?v20121018")
+        style
+            // h3{ background: #F60; color: #FFF; margin:  20px }
+            // .imgurl img{ width: 80px; height: 80px; }
+            body{padding:20px}
+    body
+        script
+            $(function(){
+                var ckb = $('#checkbox_group_01').find('.checkbox');
+                ckb.click(function(){
+                    $(this).toggleClass('selected');
+                    return false;
+                });
+                ckb.find('.more').find('a').click(function(e){
+                    e.stopPropagation();
+                    url = $(this).attr('href');
+                    window.location.href = url;
+                });
+                var ckb2 = $('#checkbox_group_02').find('.checkbox');
+                ckb2.click(function(){
+                    $(this).toggleClass('selected');
+                    return false;
+                });
+
+                var rdb = $('#radio_group_01').find('.radio');
+                rdb.click(function(){
+                    rdb.removeClass('selected');
+                    $(this).addClass('selected');
+                });
+                var rdb2 = $('#radio_group_02').find('.radio');
+                rdb2.click(function(){
+                    rdb2.removeClass('selected');
+                    $(this).addClass('selected');
+                });
+
+            });
+        h3 下拉选择框 .select
+        #select_group_01
+            .select(data-type="select")
+                .option(data-value="01") 北京市
+                select
+                    option(value="01") option1
+                    option(value="02") option2
+        .list_column
+            ul
+                li
+                    .select(data-type="select")
+                        .option(data-value="01") 北京市
+                        select
+                            option(value="01") option1
+                            option(value="02") option2
+                li
+                    .select(data-type="select")
+                        .option(data-value="01") 北京市
+                        select
+                            option(value="01") option1
+                            option(value="02") option2
+
+        h3 文本框 .input
+        .input
+            input(type="text", placeholder="文本框")
+        h3 \0020
+        .input.error
+            input(type="tel", placeholder="出错.error")
+        h3 文本域 .textarea
+        .textarea
+            textarea(placeholder="路名或街道地址，门牌号，不少于10个字")
+        h3 .checkbox 多选框 继承.list_nav样式
+        // input(type="checkbox", value="01")
+        // input(type="checkbox", value="01")
+        // input(type="checkbox", value="01")
+        .checkbox_02#checkbox_group_01
+            .list_nav
+                ul
+                    li
+                        .checkbox(data-type="checkbox", data-value="01")
+                            label
+                                .label.check_hbox
+                                    .name
+                                        p ccheckboxcheckboxchec这这是一个是是一个是一个一个
+                                        p aaa
+                                        p aaa
+                                        p aaa
+                                    .more
+                                        a.lnk(href="ad_list.html")
+                                            span.arrow &nbsp;
+                                            // img(src="images/arrow_2.png")
+                    li
+                        .checkbox(data-type="checkbox", data-value="01")
+                            label
+                                .label ccheckbox-2checkbox-2checkbox-2checkbox-2heckbox-2
+        br
+        .checkbox_01#checkbox_group_02
+            .list_nav
+                ul
+                    li
+                        .checkbox(data-type="checkbox", data-value="01")
+                            label
+                                .label checkbox-1
+                    li
+                        .checkbox(data-type="checkbox", data-value="01")
+                            label
+                                .label checkbox-2
+        div(data-type="checkbox", data-value="01")
+            label checkbox-2
+        h3 .radio 单选框 继承.list_nav样式
+        // input(type="radio", value="01", name="a")
+        // input(type="radio", value="02", name="a")
+        // input(type="radio", value="03", name="a")
+        .radio_01#radio_group_01
+            .list_nav
+                ul
+                    li
+                        .radio.selected(data-type="radio", data-value="01", data-name="a")
+                            label
+                                .label
+                                    h3 双休日、假日送货（适合家庭地址）
+                                    p 北京市朝阳区望京西路甲50号-1卷石天地大厦 A座 13层（010-56343701）
+                    li
+                        .radio(data-type="radio", data-value="02", data-name="a")
+                            label
+                                .label radio-2
+                    li
+                        .radio(data-type="radio", data-value="03", data-name="a")
+                            label
+                                .label radio-3
+            .list_nav
+                ul
+                    li
+                        .radio(data-type="radio", data-value="02", data-name="a")
+                            label
+                                .label 在线支付
+                    li
+                        .radio(data-type="radio", data-value="03", data-name="a")
+                            label
+                                .label 快递（免费配送）
+                    li
+                        .radio.selected(data-type="radio", data-value="01", data-name="a")
+                            label
+                                .label
+                                    h3 小米自提（免费配送，需在线支付）
+                                    p 北京市朝阳区望京西路甲50号-1卷石天地大厦 A座 13层（010-56343701）
+        br
+        .radio_02#radio_group_02
+            .list_nav
+                ul
+                    li
+                        .radio.selected(data-type="radio", data-value="01", data-name="a")
+                            label
+                                .radio_hbox
+                                    .imgurl
+                                        img(src="http://p.www.xiaomi.com/images/f/1313_1_1344938702_3.jpg")
+                                    .name
+                                        p label项
+                    li
+                        .radio(data-type="radio", data-value="01", data-name="a")
+                            label
+                                .radio_hbox
+                                    .imgurl
+                                        img(src="http://p.www.xiaomi.com/images/f/1313_1_1344938702_3.jpg")
+                                    .name
+                                        p label项
+        br
+        .radio(data-type="radio", data-value="03", data-name="a")
+            label form表单元素单选框
+        .radio.selected(data-type="radio", data-value="03", data-name="a")
+            label form表单元素单选框

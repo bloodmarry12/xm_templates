@@ -1,0 +1,102 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title 小米商城
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/warmup.css#{r}")
+    body
+        .xm_app
+            .viewport
+                .warmup_view
+                    .logo
+                        a(href="javascript:;") 小米商城
+                    .tit
+                        h1 4月9日米粉节
+                        h3 我最期待...
+                    .checkbox_01#checkbox_group_01
+                        .list_nav
+                            ul
+                                li
+                                    .checkbox.selected(data-type="checkbox", data-value="1")
+                                        label
+                                            .label 更给力的MIUI V5 正式版
+                                li
+                                    .checkbox(data-type="checkbox", data-value="2")
+                                        label
+                                            .label 不一样的小米手机、小米盒子开放购买
+                                li
+                                    .checkbox(data-type="checkbox", data-value="3")
+                                        label
+                                            .label 小米网自有品牌配件全场6折
+                        .join
+                            a(href="http://t.hd.xiaomi.com/?_a=20130407_survey&_op=poll&_opt=1&_m=1")#btn 立刻参与 &gt;
+                    .num
+                        | 已有
+                        span#hitnum
+                        | 人参与，分享期待赢手机
+                    .topbackhome.mlr20.mb20.hide
+                        a(href="http://m.xiaomi.com/#ac=home&op=index1").button.disable_button 进入首页
+        script(src="http://tc.hd.xiaomi.com/wwwget")
+        script(src="http://p.www.xiaomi.com/m/oapp/js/jquery.min.js?v20121018")
+        script
+            (function($){
+                $(function(){
+
+                    var ckb = $('#checkbox_group_01').find('.checkbox');
+                    $('#hitnum').html(formatNumber(hitnum));
+
+                    if(!isNative()){
+                        $('.topbackhome').show();
+                    }else{
+                        WebEventTrigger('bottomstyle','button');
+                    }
+
+                    ckb.on('click', function(){
+                        ckb.removeClass('selected');
+                        $(this).addClass('selected');
+                        var w = $(this).attr('data-value');
+                        $('#btn').attr('href', 'http://t.hd.xiaomi.com/?_a=20130407_survey&_op=poll&_opt='+w+'&_m=1');
+                        return false;
+                    });
+
+                    function formatNumber(num) {
+                        if (!/^(\+|-)?(\d+)(\.\d+)?$/.test(num)) {
+                            return num;
+                        }
+                        var a = RegExp.$1, b = RegExp.$2, c = RegExp.$3;
+                        var re = new RegExp();
+                        re.compile("(\\d)(\\d{3})(,|$)");
+                        while (re.test(b)) {
+                            b = b.replace(re, "$1,$2$3");
+                        }
+                        return a + "" + b + "" + c;
+                    }
+
+                    function isNative(){
+                        try{
+                            if(!!WE){
+                                return true;
+                            }
+                        }catch(e){}
+                        return false;
+                    }
+                    function WebEventTrigger(name, data){
+                        try{
+                            if(WE&&WE.trigger){
+                                if(typeof(data)!='string'){
+                                    data = JSON.stringify(data);
+                                }
+                                return WE.trigger(name, data);
+                            }
+                        }catch(e){}
+                        return false;
+                    }
+
+                });
+            })(jQuery);

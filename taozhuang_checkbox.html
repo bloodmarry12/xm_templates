@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>order_checkout 购物车-用户结算</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon-precomposed" href="http://p.www.xiaomi.com/m/app/touch-icon.png">
+    <link rel="stylesheet" href="css/xmapp.css?skJHdj">
+    <script src="http://p.www.xiaomi.com/m/oapp/js/jquery.min.js?v20121018"></script>
+  </head>
+  <body>
+    <script>
+      $(function(){
+          var ckb = $('#checkbox_group_01').find('.checkbox');
+          ckb.click(function(){
+              $(this).toggleClass('selected');
+              return false;
+          });
+          ckb.find('.more').find('a').click(function(){
+              url = $(this).attr('href');
+              window.location.href = url;
+          });
+          var ckb2 = $('#checkbox_group_02').find('.checkbox');
+          ckb2.click(function(){
+              $(this).toggleClass('selected');
+              return false;
+          });
+          
+          var rdb = $('#radio_group_01').find('.radio');
+          rdb.click(function(){
+              rdb.removeClass('selected');
+              $(this).addClass('selected');
+          });
+          var rdb2 = $('#radio_group_02').find('.radio');
+          rdb2.click(function(){
+              rdb2.removeClass('selected');
+              $(this).addClass('selected');
+          });
+          
+      });
+    </script>
+    <div class="xm_app">
+      <div class="viewport">
+        <div id="header" class="header">
+          <h1 class="logo"><a href="javascript:;"><img src="images/logo_m.png?skJHdj"></a></h1>
+          <div class="nav">
+            <ul>
+              <li class="user"><a href="javascript:;">账号</a></li>
+              <li class="category"><a href="javascript:;">分类</a></li>
+              <li class="cart"><a href="javascript:;">购物车</a><span id="ShoppingCartNum">2</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="taozhuang_checkbox mlr20">
+          <div class="title">
+            <h3>您预约了以下产品：</h3>
+          </div>
+          <div id="checkbox_group_01" class="checkbox_02">
+            <div class="list_nav">
+              <ul>
+                <li>
+                  <div data-type="checkbox" data-value="01" class="checkbox">
+                    <label>
+                      <div class="label"> 
+                        <div class="imgurl"><img src="images/taozhuang_mi2.jpg" alt="您预约的套装"></div>
+                        <div class="info"> 
+                          <div class="name">小米1S青春版必备套装</div>
+                          <div class="price_info"><span class="market_price">原价 &yen;269</span><span class="price">预约价 &yen; 179</span></div>
+                          <div class="intro">多彩后盖+多彩后盖+多彩后盖+多彩后盖+多彩后盖+多彩后盖</div>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div data-type="checkbox" data-value="01" class="checkbox">
+                    <label>
+                      <div class="label"> 
+                        <div class="imgurl"><img src="images/taozhuang_mi2.jpg" alt="您预约的套装"></div>
+                        <div class="info"> 
+                          <div class="name">小米1S青春版必备套装</div>
+                          <div class="price_info"><span class="market_price">原价 &yen;269</span><span class="price">预约价 &yen; 179</span></div>
+                          <div class="intro">多彩后盖+多彩后盖+多彩后盖+多彩后盖+多彩后盖+多彩后盖</div>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div data-type="checkbox" data-value="01" class="checkbox">
+                    <label>
+                      <div class="label"> 
+                        <div class="imgurl"><img src="images/taozhuang_mi2.jpg" alt="您预约的套装"></div>
+                        <div class="info"> 
+                          <div class="name">小米1S青春版必备套装</div>
+                          <div class="price_info"><span class="market_price">原价 &yen;269</span><span class="price">预约价 &yen; 179</span></div>
+                          <div class="intro">多彩后盖+多彩后盖+多彩后盖+多彩后盖+多彩后盖+多彩后盖</div>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </li>
+                <li class="onlyone">
+                  <div class="imgurl"><img src="images/taozhuang_mi2.jpg" alt="您预约的套装"></div>
+                  <div data-type="checkbox" data-value="01" class="checkbox">
+                    <label>
+                      <div class="label1"> 
+                        <div class="info"> 
+                          <div class="name">小米1S青春版必备套装</div>
+                          <div class="price_info"><span class="market_price">原价 &yen;269</span><span class="price">预约价 &yen; 179</span></div>
+                          <div class="intro">多彩后盖+多彩后盖+多彩后盖+多彩后盖+多彩后盖+多彩后盖</div>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt20 mb20"><a href="javascript:;" class="button active_button">下一步</a></div>
+        </div>
+        <div id="footer" class="footer">
+          <div class="box box_01"><a href="javascript:;">登录</a><a href="javascript:;">注册</a><a href="#header">返回顶部</a></div>
+          <div class="box box_02"><a href="javascript:;">电脑版</a></div>
+          <div class="box box_03">
+            <p>&copy;2012 m.xiaomi.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

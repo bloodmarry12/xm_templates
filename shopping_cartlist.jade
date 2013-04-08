@@ -1,0 +1,130 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title shopping_cartlist 我的购物车
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .xm_app
+            .viewport.has_bottom_panel
+                include _header
+                .shopping_cartlist.mlr20.mb20
+                    .bargain
+                        .title
+                            h3
+                                | 加价购
+                                span （全场满500减50送1件赠品）
+                        .checkbox_02
+                            .list_nav
+                                ul
+                                    li
+                                        .checkbox.selected(data-type="checkbox", data-value="01")
+                                            label
+                                                .label.check_hbox
+                                                    .name
+                                                        p +9元得原价19元米兔贴纸
+                                                    .more
+                                                        a.lnk(href="javascript:;")
+                                                            span.arrow &nbsp;
+                                                            // img(src="images/arrow_2.png")
+                                    li
+                                        .checkbox(data-type="checkbox", data-value="01")
+                                            label
+                                                .label.check_hbox
+                                                    .name
+                                                        p +9元得原价19元米兔贴纸
+                                                    .more
+                                                        a.lnk(href="javascript:;")
+                                                            img(src="images/arrow_2.png")
+                    .mt20
+                        .list_order_tmp.list_nav
+                            ul
+                                li
+                                    .items.gift
+                                        a.lnk.h_box(href="ad_list.html")
+                                            .imgurl
+                                                img(src="http://p.www.xiaomi.com/images/c/1468_1_1351516045_3.jpg")
+                                            .info
+                                                p.name AKG K420折叠式头戴动圈耳机
+                                                .order_items
+                                                    .price_info
+                                                        span.sale_price 售价：&yen; 98
+                                                        span.num 数量：1
+                                                        span.subtotal 小计：&yen; 99
+                                li
+                                    .items
+                                        a.lnk.h_box(href="javascript:;")
+                                            .imgurl
+                                            .info
+                                                p.name AKG K420折叠式头戴动圈耳机
+                                                .order_items
+                                                    .price_info
+                                                        span.sale_price 售价：&yen; 98
+                                                        span.num 数量：1
+                                                        span.subtotal 小计：&yen; 99
+                                li
+                                    .items.kill
+                                        a.lnk.h_box(href="javascript:;")
+                                            .imgurl
+                                            .info
+                                                p.name AKG K420折叠式头戴动圈耳机
+                                                .order_items
+                                                    .price_info
+                                                        span.sale_price 售价：&yen; 98
+                                                        span.num 数量：1
+                                                        span.subtotal 小计：&yen; 99
+                                li
+                                    .items.award
+                                        a.lnk.h_box(href="javascript:;")
+                                            .imgurl
+                                            .info
+                                                p.name AKG K420折叠式头戴动圈耳机
+                                                .order_items
+                                                    .price_info
+                                                        span.sale_price 售价：&yen; 98
+                                                        span.num 数量：1
+                                                        span.subtotal 小计：&yen; 99
+                                li
+                                    .items.coupon
+                                        a.lnk.h_box(href="javascript:;")
+                                            .imgurl
+                                            .info
+                                                p.name AKG K420折叠式头戴动圈耳机
+                                                .order_items
+                                                    .price_info
+                                                        span.sale_price 售价：&yen; 98
+                                                        span.num 数量：1
+                                                        span.subtotal 小计：&yen; 99
+                                li
+                                    .items
+                                        a.lnk.h_box(href="javascript:;")
+                                            .imgurl
+                                            .info
+                                                p.name AKG K420折叠式头戴动圈耳机
+                                                .order_items
+                                                    .price_info
+                                                        span.sale_price 售价：&yen; 98
+                                                        span.num 数量：1
+                                                        span.subtotal 小计：&yen; 99
+                    .bottom_panel
+                        .settle_panel
+                            .goods_amount
+                                .price
+                                    span 总金额:
+                                    strong &yen;299
+                                .detail
+                                    p
+                                        span 商品总价&yen;2999
+                                        strong +
+                                        span 配送费&yen;5
+                                        strong -
+                                        span 优惠劵&yen;29
+                            .settle_btn
+                                a.button.active_button(href="ad_list.html") 去结算
+                include _footer

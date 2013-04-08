@@ -1,0 +1,54 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title fcode_stylelist f码购买套装选择
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .xm_app
+            .viewport
+                include _header
+                include _crumbs
+                .fcode_stylelist.mlr20.mb20
+                    .radio_02#radio_group_02
+                        .list_nav
+                            ul
+                                li
+                                    .radio.selected(data-type="radio", data-value="01", data-name="a")
+                                        label
+                                            .radio_hbox
+                                                .imgurl
+                                                    img(src="http://p.www.xiaomi.com/images/f/1313_1_1344938702_3.jpg")
+                                                .label
+                                                    h3
+                                                        span.price &yen;1398
+                                                        span.stylelist_name 必备套装
+                                                    .intro
+                                                        | 多彩后盖+多彩后盖+多彩后盖+多彩后盖+多彩后盖+多彩后盖
+                                li
+                                    .radio(data-type="radio", data-value="01", data-name="a")
+                                        label
+                                            .radio_hbox
+                                                .imgurl
+                                                .label
+                                                    h3
+                                                        span.price &yen;1398
+                                                        span.stylelist_name 实用套装
+                                                    .intro
+                                                        | 多彩后盖+多彩后盖+多彩后盖+多彩后盖+多彩后盖+多彩后盖
+                                li
+                                    .radio(data-type="radio", data-value="01", data-name="a")
+                                        label
+                                            .radio_hbox
+                                                .imgurl
+                                                .label
+                                                    h3
+                                                        span.price &yen;1398
+                                                        span.stylelist_name 小米手机1S青春版
+                include _footer

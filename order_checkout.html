@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>order_checkout 购物车-用户结算</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon-precomposed" href="http://p.www.xiaomi.com/m/app/touch-icon.png">
+    <link rel="stylesheet" href="css/xmapp.css?skJHdj">
+  </head>
+  <body>
+    <div class="xm_app">
+      <div class="viewport">
+        <div id="header" class="header">
+          <h1 class="logo"><a href="javascript:;"><img src="images/logo_m.png?skJHdj"></a></h1>
+          <div class="nav">
+            <ul>
+              <li class="user"><a href="javascript:;">账号</a></li>
+              <li class="category"><a href="javascript:;">分类</a></li>
+              <li class="cart"><a href="javascript:;">购物车</a><span id="ShoppingCartNum">2</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="order_checkout mlr20">
+          <div class="box notice">
+            <p> <span>温馨提示： </span>
+              <var>由于第三方快递公司春节放假，您选购的商品可能在春节后（2月16日起）为您发货。为您带来的不便敬请谅解。</var>
+            </p>
+          </div>
+          <div class="box box_01">
+            <div class="title">
+              <h3>收货信息</h3>
+            </div>
+            <div class="list_nav list_address">
+              <ul>
+                <li>
+                  <div class="items"><a href="javascript:;" class="lnk">
+                      <div class="address_info"><span class="province">北京</span><span class="city">北京市</span><span class="district">朝阳区</span></div>
+                      <div class="address_detail"><span class="adrress">望京西路甲50号-1卷石天地大厦A座9层502</span><span class="zipcode"></span><span class="consignee">恩雷</span><span class="tel">13581512104</span></div></a></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="box box_02">
+            <div class="title">
+              <h3>支付</h3>
+            </div>
+            <div id="radio_group_01" class="radio_group_01">
+              <div class="list_nav">
+                <ul>
+                  <li>
+                    <div data-type="radio" data-value="02" data-name="a" class="radio selected">
+                      <label>
+                        <div class="label">在线支付（免费配送）</div>
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="box box_05">
+            <div class="title">
+              <h3>配送</h3>
+            </div>
+            <div id="radio_group_01" class="radio_group_01">
+              <div class="list_nav">
+                <ul>
+                  <li>
+                    <div data-type="radio" data-value="02" data-name="a" class="radio selected">
+                      <label>
+                        <div class="label">快递（免费配送）</div>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div data-type="radio" data-value="02" data-name="a" class="radio">
+                      <label>
+                        <div class="label">
+                          <h3>小米自提（免费配送，需在线支付）</h3>
+                          <p>北京市朝阳区望京西路甲50号-1卷石天地大厦 A座 13层（010-56343701）</p>
+                        </div>
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="box box_03">
+            <div class="title">
+              <h3>送货时间</h3>
+            </div>
+            <div id="radio_group_02" class="radio_group_02">
+              <div class="list_nav">
+                <ul>
+                  <li>
+                    <div data-type="radio" data-value="02" data-name="a" class="radio selected">
+                      <label>
+                        <div class="label">不限送货时间</div>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div data-type="radio" data-value="02" data-name="a" class="radio">
+                      <label>
+                        <div class="label">工作日送货（适合于办公地址）</div>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div data-type="radio" data-value="02" data-name="a" class="radio">
+                      <label>
+                        <div class="label">双休日、假日送货（适合于家庭地址）</div>
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="box box_04">
+            <div class="title">
+              <h3>发票信息</h3>
+            </div>
+            <div id="radio_group_03" class="radio_group_03">
+              <div class="list_nav">
+                <ul>
+                  <li>
+                    <div data-type="radio" data-value="02" data-name="a" class="radio selected">
+                      <label>
+                        <div class="label">不开发票</div>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div data-type="radio" data-value="02" data-name="a" class="radio">
+                      <label>
+                        <div class="label">个人发票</div>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div data-type="radio" data-value="02" data-name="a" class="radio">
+                      <label>
+                        <div class="label">单位发票</div>
+                        <div class="invoice">
+                          <div class="input">
+                            <input type="text" placeholder="填写发票名称">
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="m30"><a href="javascript:;" class="button active_button">下一步</a></div>
+        </div>
+        <div id="footer" class="footer">
+          <div class="box box_01"><a href="javascript:;">登录</a><a href="javascript:;">注册</a><a href="#header">返回顶部</a></div>
+          <div class="box box_02"><a href="javascript:;">电脑版</a></div>
+          <div class="box box_03">
+            <p>&copy;2012 m.xiaomi.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

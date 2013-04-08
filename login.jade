@@ -1,0 +1,26 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title login.html 登陆页面
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .xm_app
+            .viewport
+                include _header
+                // mitu_01 空购物车
+                // mitu_02 系统繁忙
+                .login
+                    .mitu_flower
+                    .loginBtn
+                        .tit 登录小米账户
+                        .topLine
+                        a.button.active_button(href="javascript:;") 登录
+                        a.button.disable_button(href="javascript:;") 注册
+                include _footer

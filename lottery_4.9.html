@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>4.9米粉节 抽奖活动</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon-precomposed" href="http://p.www.xiaomi.com/m/app/touch-icon.png">
+    <link rel="stylesheet" href="css/lottery.css?skJHdj">
+    <script src="jquery.js"></script>
+    <script src="js/mipu.js"></script>
+    <script src="js/lottery.js"></script>
+  </head>
+  <body>
+    <div class="xm_app">
+      <div class="viewport">
+        <div class="lottery_view">
+          <div id="lottery_get" style="display:none" class="lottery_get">
+            <div class="tit">
+              <h1>2小时内支付订单，凭借订单号参与抽奖</h1>
+              <h3>活动时间：4.9日晚8点—4.10日晚8点</h3>
+            </div>
+            <div class="box box_01">
+              <div id="loginOk">
+                <div class="box01">
+                  <div id="items">
+                    <div data-type="select" class="select">
+                      <div data-value="" class="option"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="box02"><a href="javascript:;" id="sj" class="button lottery_button">抽奖按钮</a></div>
+              </div>
+              <div id="login" style="display:none" class="box02"><a href="javascript:;" id="loginBtn" class="button lottery_button">登录</a></div>
+              <div id="join" style="display:none" class="box03">
+                <p>您还没有符合抽奖规则的订单哦~</p><a href="javascript:;" class="button lottery_button">参与米粉节6折特卖</a>
+              </div>
+            </div>
+            <div class="box box_02">
+              <div class="box01">
+                <h3>活动规则</h3>
+                <ol>
+                  <li>1. 活动时间：4月9日20:00—4月10日20:00。</li>
+                  <li>2. 活动说明：活动期间成功下单，且在2小时内支付订单的用户，凭订单号参与抽奖。</li>
+                  <li>3. 抽奖次数：每个订单号只可参与一次抽奖。</li>
+                  <li>4. 奖品形式为优惠券，直接发放到您的个人账号中，可以在我的优惠券中查看。</li>
+                </ol>
+              </div>
+              <div class="box box_02">
+                <div class="box01">
+                  <h3>优惠券使用说明</h3>
+                  <ol>
+                    <li>1. 本次活动所有优惠券有效时间：2013年4月11日—2013年4月17日。</li>
+                    <li>2. 优惠券不可叠加使用，每张订单限用一张，不兑现，不找零。</li>
+                    <li>3. 使用优惠券的订单，如发生退货，退款额为实际支付金额。</li>
+                    <li>4. 现金券或折扣券不能抵运费。</li>
+                    <li>5. 所有现金券或折扣券严禁进行出售或转让等非法操作，如经发现并证实，该券将予以作废处理或其他操作。</li>
+                    <li>6. 优惠券使用的最终解释权归小米网所有。</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lottery_result">
+            <div id="lottery_no" style="display:none" class="lottery_no lottery_ye">
+              <div class="box box_01">
+                <h2>啊哦，运气不太好...</h2>
+                <p id="tips">错误提示信息</p>
+              </div>
+              <div class="box box_04">
+                <div class="imgurl"><img src="images/lottery/bg02.jpg"></div>
+              </div>
+              <div class="box box_03">
+                <div class="box01"><a href="javascript:location.reload();" class="button lottery_button">继续抽奖</a></div>
+                <div class="box02"><a href="javascript:util.goHome();" class="button lottery_button">进入首页</a></div>
+              </div>
+            </div>
+            <div id="lottery_ye" style="display:block" class="lottery_ye">
+              <div class="box box_01">
+                <h2>恭喜! 中奖了!</h2>
+                <p>您获得的是<span id="name">奖品名称</span><br>3分钟后到你的"优惠券"中查看</p>
+              </div>
+              <div class="box box_02">
+                <div class="imgurl"><img src="http://p.www.xiaomi.com/zt/130403/card_3.png" id="prize"></div>
+              </div>
+              <div class="box box_04">
+                <h3>现金券、礼品券、满100减10元劵说明</h3>
+                <dl>
+                  <dt>【现金券】</dt>
+                  <dd>有效期一周：2013.4.11—2013.4.17日</dd>
+                  <dd>仅限在购买配件单品时使用，折扣同等面值金额。</dd>
+                  <dd>现金券不能用于小米手机、小米盒子、配件套餐、秒杀商品。</dd>
+                  <dt>【折扣券】</dt>
+                  <dd>有效期一周：2013.4.11—2013.4.17日</dd>
+                  <dd>适用于购买折扣券指定商品，下单时使用直接抵扣该商品金额。例如，“小米线控通话耳机（黑色）折扣券”只能用于抵扣“小米线控通话耳机（黑色）”一款产品。</dd>
+                  <dt>【满100减10元现金券】</dt>
+                  <dd>有效期一周：2013.4.11—2013.4.17日</dd>
+                  <dd>小米网配件单品购物满100元，可使用本券立减10元。</dd>
+                  <dd>该券不能用于小米手机、小米盒子、配件套餐以及秒杀商品。</dd>
+                </dl>
+              </div>
+              <div class="box box_03">
+                <div class="box01"><a href="javascript:location.reload();" class="button lottery_button">继续抽奖</a></div>
+                <div class="box02"><a href="javascript:util.goHome();" class="button lottery_button">进入首页</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+// loading_view 通用加载loading
+
+.loading_view
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-left: -(388em/2)/20
+    margin-top: -(101em/2)/20
+    z-index: 102
+    .loading_wrap
+        background: rgba(0,0,0,.8)
+        color: $wc
+        +display-box
+        +box-align(center)
+        +box-shadow()
+        .loading_msg
+            font-size: $fz25
+            padding: 0 (80em/25)
+            white-space: nowrap
+        .close
+            display: block
+            padding: (40em/20)
+            border-left: 1px solid rgba(255,255,255,.2)
+            img
+                width: (20em/20)
+                height: (20em/20)

@@ -1,0 +1,88 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title Product-view-2 商品相关/product 通过分类ID获得产品列表
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .xm_app
+            .viewport
+                include _header
+                .product_view
+                    .box.box_01
+                        .product_info
+                            .info
+                                h3.name 马歇尔Marshall Major签名版头戴--白色
+                            .adapt
+                                p
+                                    span 适配机型：
+                                    img(src="images/adapt_1.png#{r}", alt="小米手机1")
+                                    img(src="images/adapt_2.png#{r}", alt="小米手机1S")
+                                    img(src="images/adapt_4.png#{r}", alt="小米手机2")
+                            .price
+                                | &yen; 299
+                                del.market_price &yen; 399
+                        .product_main
+                            // 单品介绍图片
+                            .product_desc
+                                ul
+                                    li
+                                        .imgurl
+                                            img(src="http://p.www.xiaomi.com/images/1202/Marshall-1.jpg")
+                                    li
+                                        .imgurl
+                                    li
+                                        .imgurl
+                                            img(src="http://p.www.xiaomi.com/images/1202/Marshall-2.jpg")
+                            // 产品图片默认隐藏
+                            .product_images.product_desc.hide
+                                ul
+                                    li
+                                        .imgurl
+                                            img(src="http://p.www.xiaomi.com//images//c//1886_1_1357565307_2.jpg")
+                                    li
+                                        .imgurl
+                                    li
+                                        .imgurl
+                                            img(src="http://p.www.xiaomi.com//images//c//1886_1_1357565307_2.jpg")
+                        .desc_more
+                            a.desc_more_button(href="javascript:;") 查看更多
+                        // 点击状态
+                        // .desc_more
+                        //     a.desc_more_button.on(href="javascript:;") 查看更多
+                    .box.box_02
+                        .product_info
+                            .info
+                                h3.name 马歇尔Marshall Major签名版头戴--白色
+                            .adapt
+                                p
+                                    span 适配机型：
+                                    img(src="images/adapt_1.png", alt="小米手机1")
+                                    img(src="images/adapt_2.png", alt="小米手机1S")
+                                    img(src="images/adapt_4.png", alt="小米手机2")
+                            .price
+                                | &yen; 299
+                                del.market_price &yen; 399
+                        .product_pick
+                            .h_box
+                                .flex_1
+                                    .select(data-type="select")
+                                        .option(data-value="01") 北京市
+                                        select
+                                            option(value="01") option1
+                                            option(value="02") option2
+                                .flex_1
+                                    .select(data-type="select")
+                                        .option(data-value="01") 北京市
+                                        select
+                                            option(value="01") option1
+                                            option(value="02") option2
+                        .product_addCart
+                            a.button.active_button(href="ui_list_cart.html?vlkjsdlfjasd") 加入购物车
+                include _footer

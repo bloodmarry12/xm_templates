@@ -1,0 +1,103 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title 小米商城
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/warmup.css#{r}")
+    body
+        .xm_app
+            .viewport
+                .warmup_view.warmup_sview
+                    .logo
+                        a(href="javascript:;") 小米商城
+                    .tit
+                        h3 不要期待太高哦~ 
+                        h1 4月9日米粉节见！
+                    .con
+                        .content
+                            ul
+                                li
+                                    h3 14:00
+                                    .flex_1
+                                        h2 MIUI V5正式版 
+                                        p 北京国家会议中心 - MIUI V5正式版发布。
+                                li
+                                    h3 20:00
+                                    .flex_1
+                                        h2 开放购买
+                                        p 无需预约，不一样的小米手机、小米盒子开放购买。
+                                li
+                                    h3 20:00
+                                    .flex_1
+                                        h2 小米网自有品牌配件全场6折
+                                        p 小米网自有品牌配件全场6折，第三方品牌配件全场8折。
+                            .share
+                                .sbtn
+                                    a#sbtn(href="javascript:;") 分享微博赢手机
+                                .stip
+                                    p
+                                        | 分享期待到新浪微博
+                                        br
+                                        | 带有#米粉节#话题并@小米公司，赢取4台小米手机。
+                    .topbackhome.mlr20.mb20.hide
+                        a(href="http://m.xiaomi.com/#ac=home&op=index1").button.disable_button 进入首页
+        script(src="http://p.www.xiaomi.com/m/oapp/js/jquery.min.js?v20121018")
+        script
+            (function($){
+                $(function(){
+
+                    if(!isNative()){
+                        $('.topbackhome').show();
+                    }else{
+                        WebEventTrigger('bottomstyle','bar');
+                    }
+
+                    function isNative(){
+                        try{
+                            if(!!WE){
+                                return true;
+                            }
+                        }catch(e){}
+                        return false;
+                    }
+
+                    $('#sbtn').click(function(){
+                        goShar();
+                        return false;
+                    });
+
+                    function goShar() {
+                        var r = parseInt(Math.random() * 5);
+                        shareTSina(
+                                '4月9日#米粉节#，我最期待更给力的MIUI V5正式版发布，希望它的界面更好看，操作更流畅。 @小米公司  分享活动地址：http://m.xiaomi.com/',
+                                '',
+                                '',
+                                'http://p.www.xiaomi.com/zt/13040202/weibo/w1_v5.jpg'
+                        );
+                    }
+                    /*title是标题，rLink链接，summary内容，site分享来源，pic分享图片路径*/
+                    /*新浪微博*/
+                    function shareTSina(title, rLink, site, pic) {
+                        if( ! WebEventTrigger('opennew', 'http://service.weibo.com/share/share.php?title=' + encodeURIComponent(title) + '&url=' + encodeURIComponent(rLink) + '&appkey=' + encodeURIComponent(site) + '&pic=' + encodeURIComponent(pic), '_blank', 'scrollbars=no,width=600,height=450,left=75,top=20,status=no,resizable=yes') ){
+                            window.open('http://service.weibo.com/share/share.php?title=' + encodeURIComponent(title) + '&url=' + encodeURIComponent(rLink) + '&appkey=' + encodeURIComponent(site) + '&pic=' + encodeURIComponent(pic), '_blank', 'scrollbars=no,width=600,height=450,left=75,top=20,status=no,resizable=yes');
+                        }
+                    }
+                    function WebEventTrigger(name, data){
+                        try{
+                            if(WE&&WE.trigger){
+                                if(typeof(data)!='string'){
+                                    data = JSON.stringify(data);
+                                }
+                                return WE.trigger(name, data);
+                            }
+                        }catch(e){}
+                        return false;
+                    }
+                });
+            })(jQuery);

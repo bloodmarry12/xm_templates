@@ -1,0 +1,73 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title order_list 订单列表
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .xm_app
+            .viewport
+                include _header
+                .order_list.mlr20
+                    .box
+                        .list_order.list_order_tmp.list_nav
+                            ul
+                                li
+                                    .order.items
+                                        a.lnk(href="javascript:;")
+                                            .imgurl
+                                                img(src="http://p.www.xiaomi.com/images/1/1493_1_1351333878_3.jpg")
+                                            .order_info
+                                                dl
+                                                    dt.add_time 订单日期：2012-11-23 11:15:31
+                                                    dd.order_id 订单编号：1211112298563920
+                                                    dd
+                                                        span.goods_amount 总价：&yen; 229
+                                                        span.order_type 状态：已收货
+                                                        span.note.note_1 代付款
+                                li
+                                    .order.items
+                                        a.lnk(href="javascript:;")
+                                            .imgurl
+                                                img(src="http://p.www.xiaomi.com/images/1/1493_1_1351333878_3.jpg")
+                                            .order_info
+                                                dl
+                                                    dt.add_time 订单日期：2012-11-23 11:15:31
+                                                    dd.order_id 订单编号：1211112298563920
+                                                    dd
+                                                        span.goods_amount 总价：&yen; 229
+                                                        span.order_type 状态：已收货
+                                                        span.note.note_2 已付款
+                                li
+                                    .order.items
+                                        a.lnk(href="javascript:;")
+                                            .imgurl
+                                                img(src="http://p.www.xiaomi.com/images/1/1493_1_1351333878_3.jpg")
+                                            .order_info
+                                                dl
+                                                    dt.add_time 订单日期：2012-11-23 11:15:31
+                                                    dd.order_id 订单编号：1211112298563920
+                                                    dd
+                                                        span.goods_amount 总价：&yen; 229
+                                                        span.order_type 状态：已收货
+                                                        span.note.note_1 代付款
+                                li
+                                    .order.items
+                                        a.lnk(href="javascript:;")
+                                            .imgurl
+                                                img(src="http://p.www.xiaomi.com/images/1/1493_1_1351333878_3.jpg")
+                                            .order_info
+                                                dl
+                                                    dt.add_time 订单日期：2012-11-23 11:15:31
+                                                    dd.order_id 订单编号：1211112298563920
+                                                    dd
+                                                        span.goods_amount 总价：&yen; 229
+                                                        span.order_type 状态：已收货
+                                                        span.note.note_2 已付款
+                include _footer

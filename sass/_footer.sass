@@ -1,0 +1,27 @@
+// footer
+.footer
+    text-align: center
+    border-top: (2em/20) solid #DCDCDC
+    padding: (50em/20) 0
+    .box_01,
+    .box_02
+        a
+            color: #88898D
+            font-size: $fz30
+    .box_01
+        a
+            padding: 0 (24em/30)
+            &:first-child
+                border-right: (2em/30) solid #CCCCCC
+            &:last-child
+                border-left: (2em/30) solid #CCCCCC
+    .box_02
+        margin: (30em/20) 0
+        a
+            padding-left: (50em/30)
+            background: url($imgurl+'pc_icon.png') 0 50% no-repeat
+            +background-size((35em/30) (26em/30))
+    .box_03
+        p
+            font-size: $fz20
+            color: #C5C5C5

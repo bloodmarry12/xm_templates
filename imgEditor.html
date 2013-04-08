@@ -1,0 +1,465 @@
+<html>
+<head>
+    <title>头像编辑</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/mifans.css?BkksJi1">
+    <script type="text/javascript" src="http://p.www.xiaomi.com/m/newUI/js/jquery.min.js"></script>
+    <script type="text/javascript" src="http://p.www.xiaomi.com/m/newUI/js/touch-min-0.2.2.js"></script>
+
+</head>
+<body onselectstart="return false">
+<div id="wrapper" class="xm_app">
+    <div id="viewport" class="viewport">
+        <div class="header_02"><a href="javascript:;" class="back"><img src="images/receive/arrow.png"></a><h3>领取F码</h3></div>
+        <!--筛选弹层 .adapt_panel_on-->
+        <div class="ticket mlr20">
+            <div class="title">
+                <h3>入场时需验证身份，请完善您的信息</h3>
+            </div>
+            <div class="box box_04">
+                <img src="" alt="" id="finishImg" />
+                <p>我们讲一次照片作为您的入场凭证</p>
+                <p>所以请上传您的真是照片</p>
+            </div>
+            <div class="box box_01">
+                <div class="input">
+                    <input type="text" placeholder="姓名" id="name">
+                </div>
+                <div class="input">
+                    <input type="tel" placeholder="电话" id="tel">
+                </div>
+                <div class="input">
+                    <input type="tel" placeholder="米聊号（选填）" id="miliao">
+                </div>
+            </div>
+            <div class="title">
+                <h3>请上传您的真是照片，我们将以此作为您的入场凭证</h3>
+            </div>
+            <div class="box box_02">
+                <input type="file" id="upload"><a href="javascript:;" id="fileBtn" class="button active_button">上传头像</a>
+            </div>
+            <div class="box box_03">
+                <a href="javascript:;" id="upBtn" class="button disable_button">确认上传</a>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="imgSelect" id="imgEditor" data-created="false" style="display:none">
+            <div class="imgWrap">
+                <img id="drag" src="" width="100%" height="auto" alt="">
+                <div class="selectArea"></div>
+                <div class="eventReceiver"></div>
+            </div>
+            <div class="operations">
+                <div class="notice">请确保您的头像充满了选择框<br/>两只手指操作可缩放</div>
+                <div class="buttonWrap h_box">
+                    <div class="h_box">
+                        <a class="button active_button ok">确定</a>
+                        <div class="space">&nbsp;</div>
+                        <a class="button disable_button reset">重置</a>
+                    </div>
+                </div>
+            </div>
+            <canvas id="canvas" style="display:none"></canvas>
+        </div>
+
+
+        <!--<form method="post" action="http://zpf.local/test/test.php" id="bb">-->
+            <!--<input type="text" name="name"/>-->
+            <!--<input type="file" name="img" id=""/>-->
+
+            <!--<input type="button" value="tijiao" id="aa"/>-->
+        <!--</form>-->
+
+
+
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+
+(function(){
+    var data = {a:2};
+    $.ajax({
+        type: 'get',
+        url: 'http://10.237.39.58:3000/test/upload',
+        data: data,
+        dataType: 'jsonp',
+        jsonp: 'callback',
+        success: function(data){
+//            var data = JSON.parse(data);
+            console.log(data.msg);
+        }
+    });
+//    console.log(11111);
+//    xhrr = new XMLHttpRequest();
+//    var f = new FormData();
+//    f.append('a', 1);
+//    xhrr.open('POST', 'http://10.237.39.58:3000/test/upload');
+//    xhrr.send(f);
+//    xhrr.onreadystatechange = function(){
+//        if(xhr.readyState ===4 && xhrr.status ===200){
+//            alert(xhrr.responseText);
+//        }
+//    };
+})();
+
+//$('#aa').on('click', function(){
+//    $('#bb').submit();
+//    return false;
+//});
+
+//创建FormData对象
+var formData = new FormData();
+
+var xhr = new XMLHttpRequest();
+xhr.open('post', 'http://10.237.39.58:3000/test/upload', true);
+//xhr.open('post', 'http://zpf.local/test/test.php', true);
+
+xhr.onreadystatechange = function(){
+    if (xhr.readyState === 4 && xhr.status === 200){
+        var data = xhr.responseText;
+        data = JSON.parse(data);
+        alert(data);
+    }
+};
+xhr.onloadstart = function(){ console.log('xhr start') };
+xhr.upload.onprogress = function(e){ console.log('xhr onprogress') };
+xhr.onloadend = function(){ console.log('xhr onloadend') };
+
+//初始化头像编辑类
+var editor = new ImgEditor();
+
+(function($){
+    var tk;
+    tk = {
+        fileInput: $('#upload'),
+        fileName: $('#name'),
+        fileTel: $('#tel'),
+        fileMiliao: $('#miliao'),
+        fileBtn: $('#fileBtn'),
+        upBtn: $('#upBtn'),
+        v: ['image', 'jpg', 'png', 'jpeg'],
+        uid: 2706923,
+        url: 'http://10.237.39.58:3000/test/user/',
+
+        init: function(){
+            if(this.isLogin()){
+                console.log('已登录');
+                if(this.isMay()){
+                    console.log('有资格');
+
+                    this.isEdit(function(e, data){
+                        if(e){
+                            console.log('已编辑过');
+                            tk.reEdit(data);
+                        }else{
+                            console.log('没有编辑过')
+                        }
+                    });
+                }else{
+                    console.log('无资格');
+                }
+            }else{
+                //没有登录过去登录页面
+                console.log('未登录');
+            }
+        },
+
+        isLogin: function(){
+            // 判断是否登录
+            this.url = this.url + this.uid;
+            return true;
+        },
+
+        isMay: function(){
+            // 判断是否有资格
+            return true;
+        },
+
+        isEdit: function(callback){
+            var e = false;
+            // 判断是否已编辑过
+            $.ajax({
+                type: 'get',
+                url: this.url,
+                dataType: 'jsonp',
+                jsonp: 'callback',
+                success: function(data){
+                    var data = JSON.parse(data);
+                    if(data.code === 1){
+                        e = true;
+                        callback(e, data);
+                    }else{
+                        e = false;
+                        callback(e);
+                    }
+                }
+            });
+        },
+
+        reEdit: function(data){
+            var name, tel, miliao, img;
+            name = data.name;
+            tel = data.tel;
+            miliao = data.miliao;
+            img = data.img;
+
+            this.fileName.val(name);
+            this.fileTel.val(tel);
+            this.fileMiliao.val(miliao);
+        },
+
+        okType: function (file) {
+            var type = file.type;
+            if (type !== '') {
+                if (type.indexOf('image') !== -1) {
+                    return true;
+                }
+            } else {
+                var name = file.name;
+                var s = false;
+                for (var i = 0, k = this.v.length; i < k; i++) {
+                    if (name.indexOf(this.v[i]) > 0) {
+                        s = true;
+                    }
+                }
+                return s;
+            }
+        },
+
+        okSize: function (file) {
+            return true;
+        },
+
+        okImage: function (file, callback) {
+            var data = {};
+            data.err = false;
+
+            if (this.okType(file)) {
+                if (this.okSize(file)) {
+                    data.msg = '图片ok';
+                    if (window.URL) {
+                        src = window.URL.createObjectURL(file);
+                    } else if (window.webkitURL) {
+                        src = window.webkitURL.createObjectURL(file);
+                    }
+                    callback(data, src);
+                } else {
+                    data.err = true;
+                    data.msg = '图片尺寸出错';
+                    callback(data);
+                }
+            } else {
+                data.err = true;
+                data.msg = '图片格式不正确';
+                callback(data);
+            }
+        },
+
+        vrForm: function () {
+            if (this.fileName.val() == '') {
+                alert('请填写姓名');
+                return false;
+            }
+            if (this.fileTel.val() == '') {
+                alert('请填写手机号');
+                return false;
+            }
+            if (this.fileInput.val() == '') {
+                alert('请上传头像');
+                return false;
+            }
+            return true;
+        },
+
+        inData: function (callback) {
+            var data,
+            src = editor.getImgData();
+
+//            data.name = this.fileName.val();
+//            data.src = src;
+
+            formData.append('name', this.fileName.val());
+            formData.append('tel', this.fileTel.val());
+            formData.append('miliao', this.fileMiliao.val());
+//            formData.append('img', src);
+            data = formData;
+
+            callback(data);
+        }
+    };
+
+    tk.fileInput.on('change', function(){
+
+        tk.okImage(this.files[0], function(data, src){
+            if(!data.err){
+                editor.show(src);
+            }else{
+                alert(data.msg);
+            }
+        });
+
+    });
+
+    tk.upBtn.on('click', function(){
+        if (tk.vrForm()){
+            tk.inData(function(data){
+                alert(data);
+//                $.ajax({
+//                    type: 'get',
+//                    url: 'http://10.237.39.58:3000/test/upload',
+//                    data: data,
+//                    dataType: 'jsonp',
+//                    jsonp: 'callback',
+//                    success: function(data){
+//                        alert(data);
+//                    }
+//                });
+
+                $.ajax('http://10.237.39.58:3000/test/upload',{
+                    processData: false,
+                    contentType: false,
+                    data: data
+                });
+
+//                debugger;
+//                // 向服务器发送FormData
+//                xhr.send(data);
+            });
+        }else{
+            alert('验证有问题');
+        }
+    });
+
+    tk.fileBtn.on('click', function(){
+        tk.fileInput.trigger('click');
+    });
+
+//    tk.init();
+
+})(jQuery);
+//头像编辑类
+function ImgEditor () {
+    //局部变量
+    var offsetX = 0;
+    var offsetY = 0;
+    var startX = numberize($('.selectArea').css('left'));
+    var startY = numberize($('.selectArea').css('top'));
+    var editX = 0;
+    var editY = 0;
+
+    var initialX = 0;
+    var initialY = 0;
+    var x = 0;
+    var y = 0;
+
+    var initialScale = 1;
+    var currentScale = 1;
+
+    var drag = $('#drag')[0];
+    var canvas = $('#imgEditor #canvas')[0];
+    canvas.width = $('.selectArea').width();
+    canvas.height = $('.selectArea').width();
+
+    var ctx = canvas.getContext('2d');
+    var img = new Image();
+    var n = 0;
+
+    //工具方法：去掉单位得到数值
+    function numberize (pxStr) {
+        pxStr = pxStr.substr(0, pxStr.length-2);
+        pxNum =  parseInt(pxStr);
+        return pxNum;
+    }
+
+    //重置参数
+    this.reset = function () {
+        offsetX = img.width/n/2-startX;
+        offsetY = img.height/n/2-startY;
+        initialX = 0;
+        initialY = 0;
+        x = 0;
+        y = 0;
+        initialScale = 1;
+        currentScale = 1;
+        drag.style.webkitTransform = 'translate3d(' + x + 'px,' + y + 'px, 0px) '+'scale(' + currentScale + ')';
+    }
+
+    //显示方法
+    this.show = function (src) {
+        this.reset();
+
+        img.src = src;
+        img.onload = function () {
+            n = img.width / $('.imgWrap').width();
+            offsetX = img.width/n/2-startX;
+            offsetY = img.height/n/2-startY;
+        }
+
+        drag.src = src;
+        drag.onload = function () {
+            $('#imgEditor').show();
+        }
+    }
+
+    this.getImgData = function () {
+        return canvas.toDataURL();
+    }
+
+    //绑定确定编辑按钮
+    $('.ok').click(function () {
+        editX = (img.width/n*currentScale/2-offsetX)/currentScale;
+        editY = (img.height/n*currentScale/2-offsetY)/currentScale;
+        if (editX < 0 || editY < 0 || editX+canvas.width>img.width/n*currentScale || editY+canvas.height>img.height/n*currentScale) {
+            alert('头像没有充满选择区域');
+            return;
+        };
+        ctx.drawImage(img,editX*n,editY*n,canvas.width*n/currentScale,canvas.height*n/currentScale,0,0,canvas.width,canvas.height);
+        $('#imgEditor').hide();
+        $('#finishImg')[0].src = canvas.toDataURL();
+    });
+
+    (function (self) {
+        $('.reset').click(function () {
+            self.reset();
+        })
+    })(this);
+
+
+    touch.on('.eventReceiver', 'touchstart', function(ev){
+        ev.originEvent.preventDefault();
+        ev.originEvent.stopPropagation();
+    });
+
+    touch.on('.eventReceiver', 'drag', {interval: 10}, function(ev){
+        x = initialX + ev.distanceX;
+        y = initialY + ev.distanceY;
+        if(ev.fingerStatus === 'end'){
+            initialX += ev.distanceX;
+            initialY += ev.distanceY;
+            offsetX += ev.distanceX;
+            offsetY += ev.distanceY;
+        }
+        drag.style.webkitTransform = 'translate3d(' + x + 'px,' + y + 'px, 0px) '+'scale(' + currentScale + ')';
+    });
+
+    touch.on('.eventReceiver', 'pinch', {interval: 10},function(ev){
+        currentScale = ev.scale - 1;
+        currentScale = initialScale + currentScale;
+        if(ev.fingerStatus === 'end'){
+            initialScale += (ev.scale - 1);
+            initialScale = initialScale > 2.5 ? 2.5 : initialScale;
+        }
+        currentScale = currentScale > 2.5 ? 2.5 : currentScale;
+        currentScale = currentScale < 1 ? 1 : currentScale;
+        drag.style.webkitTransform = 'translate3d(' + x + 'px,' + y + 'px, 0px) '+'scale(' + currentScale + ')';
+    });
+}
+
+</script>
+</html>

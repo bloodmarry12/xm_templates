@@ -1,0 +1,59 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title order_payView 在线支付(订单成功)
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .xm_app
+            .viewport
+                include _header
+                .order_payView
+                    .box.box_01
+                        .envelope_paper
+                            .envelope_paper_bd
+                                .envelope_paper_content
+                                    .title_payView
+                                        h3 订单提交成功，请尽快完成支付
+                                    .order_pay_view
+                                        ul
+                                            li
+                                                strong 订单编号
+                                                span.order_id 3777823987419780234123987
+                                            li
+                                                strong 收货人称
+                                                span.consignee 刁美玲
+                                            li
+                                                strong 手机号码
+                                                span.tel 1501000627356
+                                            li
+                                                strong 收货地址
+                                                span.address 长春大街1177号,住房公积金管理中心南关分中心（中信银行2楼）
+                                            li
+                                                strong 送货时间
+                                                span.best_time 不限
+                                            li
+                                                strong 发票信息
+                                                span.invoice_title 公司发票【小米科技有限责任公司】
+                                            li
+                                                strong 应付金额
+                                                span.goods_amount &yen; 299
+                                    .order_pay_tips
+                                        p *请在24小时内完成支付，超过时间订单会被自动取消。
+                    .box.box_02
+                        .title
+                            h3 在线支付方式
+                        .m20
+                            .select(data-type="select")
+                                .option(data-value="01") 支付宝
+                                select
+                                    option(value="01") 支付宝
+                        .mb20
+                            a.button.active_button(href="javascript:;") 立即支付
+                include _footer

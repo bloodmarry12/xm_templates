@@ -1,0 +1,54 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title 小米盒子
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/hezi.css#{r}")
+        script(src="http://p.www.xiaomi.com/m/oapp/js/jquery.min.js?v20121018")
+        script(src="http://p.www.xiaomi.com/m/oapp/js/lazyload.min.js?v2012120501")
+    body
+        script
+            (function($){
+                $(function(){
+                    $('.hezi_view').find('img').lazyload({effect: 'fadeIn'});
+                });
+            })(jQuery);
+        .xm_app
+            .viewport
+                .hezi_view
+                    .box.box_01
+                        .imgurl
+                            img(src="http://p.www.xiaomi.com/m/app/v2/images/hezi/hz01.jpg")
+                    .box.box_02
+                        .imgurl
+                            img(data-original="http://p.www.xiaomi.com/m/app/v2/images/hezi/hz13.jpg")
+                    .box.box_03
+                        .imgurl
+                            img(data-original="http://p.www.xiaomi.com/m/app/v2/images/hezi/hz03.jpg")
+                    .box.box_04
+                        .imgurl
+                            img(data-original="http://p.www.xiaomi.com/m/app/v2/images/hezi/hz04.jpg")
+                    .box.box_05
+                        .imgurl
+                            img(data-original="http://p.www.xiaomi.com/m/app/v2/images/hezi/hz05.jpg")
+                    .box.box_06
+                        .imgurl
+                            img(data-original="http://p.www.xiaomi.com/m/app/v2/images/hezi/hz12.jpg")
+                    .box.box_07
+                        .imgurl
+                            img(data-original="http://p.www.xiaomi.com/m/app/v2/images/hezi/hz07.jpg")
+                    .box.box_08
+                        .imgurl
+                            img(data-original="http://p.www.xiaomi.com/m/app/v2/images/hezi/hz08.jpg")
+                    .box.box_09
+                        .imgurl
+                            img(data-original="http://p.www.xiaomi.com/m/app/v2/images/hezi/hz09.jpg")
+                    .box.box_10
+                        .imgurl
+                            img(data-original="http://p.www.xiaomi.com/m/app/v2/images/hezi/hz10.jpg")

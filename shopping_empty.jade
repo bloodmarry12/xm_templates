@@ -1,0 +1,23 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title shopping_empty 空购物车 商品相关/shopping
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .xm_app
+            .viewport
+                include _header
+                .shopping_empty.tips_view.mitu_01
+                    .tips_msg
+                        h3 购物车还是空的
+                        p 现在就去选购吧
+                    .tips_btn
+                        a.button.disable_button(href="javascript:;") 去逛逛
+                include _footer

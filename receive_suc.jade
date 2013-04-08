@@ -1,0 +1,35 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title receive_suc.html 预约领取F码成功
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/receive.css#{r}")
+    body
+        .xm_app
+            .viewport
+                include _header2
+                .receive_suc.mlr20
+                    .box.box_01
+                        h3 领取成功
+                        p
+                            | 小米手机2标准版F码已发送到您的手机上，请注意查收。
+                        p
+                            | F码有效期：
+                            span
+                                | 2013年03月01日 - 2013年03月01日
+                    .box.box_02
+                        a(href="javascript:;").button.active_button 立即使用F码
+                    .box.box_03.h_box
+                        .tips
+                            | *温馨提示：
+                        .flex_1
+                            | 请确认短信是否被手机安全软件拦截，如未收到短信，
+                            br
+                            | 可尝试
+                            a(href="javascript:;").oc 重新发送

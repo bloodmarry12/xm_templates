@@ -1,0 +1,33 @@
+// crumbs 面包屑
+.crumbs
+    position: relative
+    ul
+        +display-box
+        li
+            a
+                display: block
+                font-size: $fz30
+                padding-top: (27em/30)
+                padding-bottom: (27em/30)
+                padding-right: (37em/30)
+                margin-right: (14em/30)
+                color: #8C8A87
+                background: url($imgurl+'arrow_3.png') 100% 50% no-repeat
+                +background-size((17em/30) (29em/30))
+                span
+                    display: block
+                    width: (30em/30)
+                    height: (30em/30)
+                    background: url($imgurl+'crumbs_h2.png') 0 0 no-repeat
+                    +background-size(cover)
+                    text-indent: -999em
+                    overflow: hidden
+            &:first-child
+                a
+                    padding-left: (20em/30)
+            &:last-child
+                a
+                    // color: #EF5F09
+                    background: none
+                    padding-right: 0
+                    margin-right: 0

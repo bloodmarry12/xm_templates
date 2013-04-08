@@ -1,0 +1,48 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title shopping_delcart 修改购物车
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .xm_app
+            .viewport
+                include _header
+                .shopping_delcart.mlr20
+                    .box.box_01
+                        .imgurl
+                            img(src="http://p.www.xiaomi.com/images/e/1918_1_1358326738_2.jpg")
+                    .box.box_02
+                        .product_info
+                            .info
+                                h3.name 马歇尔Marshall Major签名版头戴--白色
+                            // .adapt
+                            //     p
+                            //         span 适配机型：
+                            //         img(src="images/adapt_1.png", alt="小米手机1")
+                            //         img(src="images/adapt_2.png", alt="小米手机1S")
+                            //         img(src="images/adapt_4.png", alt="小米手机2")
+                            .price &yen; 666
+                    .box.box_03.mt20.h_box
+                        .flex_1
+                            .select(data-type="select")
+                                .option(data-value="1") 1
+                                select
+                                    option(value="1") 1
+                                    option(value="2") 2
+                        .flex_20 &nbsp;
+                        .flex_1
+                            .select(data-type="select")
+                                .option(data-value="1") 颜色
+                                select
+                                    option(value="1") 黑色
+                                    option(value="2") 白色
+                    .box.box_04.mt20
+                        a.button.disable_button(href="javascript:;") 删除该商品
+                include _footer

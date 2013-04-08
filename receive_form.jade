@@ -1,0 +1,29 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title receive.html 预约领取F码
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/receive.css#{r}")
+    body
+        .xm_app
+            .viewport
+                include _header2
+                .receive_form.mlr20
+                    .input.flex_1.mt40
+                        input(type="tel", placeholder="请填手机号码，F码将以短信的形式发送")
+                    .h_box.mt20
+                        .flex_1
+                            .input
+                                input(type="text", placeholder="请输入验证码")
+                        .spacer &nbsp;
+                        .verifi.flex_1
+                            img(src="http://secode.hd.xiaomi.com/m/order/79/31bf39ca4c9.png").verifimg
+                            a(href="javascript:;").verifcode 换一换
+                    .mt40
+                        a(href="javascript:;").button.active_button 立即领取

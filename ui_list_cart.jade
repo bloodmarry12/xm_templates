@@ -1,0 +1,238 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title Ui
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+        style
+            h3{ background: #F60; color: #FFF; margin:  20px }
+            // .imgurl img{ width: 80px; height: 80px; }
+        script
+            function a(){
+                var a = document.getElementsByClassName('mask');
+                var b = document.getElementsByClassName('pop_panel');
+                a[0].style.display = 'none';
+                b[0].style.display = 'none';
+            }
+    body.has_bottom_panel
+
+        .mask
+        .pop_panel
+            .content
+                .bd
+                    p 内容部分
+            a.close(href="javascript:;", onclick="a()")
+                img(src="images/close.png")
+        .bottom_panel
+            .settle_panel
+                .goods_amount
+                    .price
+                        |应付金额
+                        strong &yen;299
+                    .detail
+                        p
+                            span 商品总价&yen;2999
+                            strong +
+                            span 配送费&yen;5
+                            strong -
+                            span 优惠劵&yen;29
+                .settle_btn
+                    a.button.active_button(href="ad_list.html") 去结算
+                    
+
+        h3 .list_nav 导航列表
+        .list_nav
+            ul
+                li
+                    .items
+                        a.lnk(href="javascript:;") aaaa
+                li
+                    .items
+                        a.lnk(href="javascript:;") aaaa
+        br
+        h3 .list_nav_tmp
+        .list_nav.list_nav_tmp
+            ul
+                li
+                    .items
+                        a.lnk(href="ui_form.html?dasljflasjdf")
+                            span.name 使用优惠劵
+        br
+        .list_order.list_order_tmp
+            ul
+                li
+                    .order.items
+                        a.lnk(href="javascript:;")
+                            .imgurl
+                                img(src="http://p.www.xiaomi.com/images/1/1493_1_1351333878_3.jpg")
+                            .order_info
+                                dl
+                                    dt.add_time 订单日期：2012-11-23 11:15:31
+                                    dd.order_id 订单编号：1211112298563920
+                                    dd
+                                        span.goods_amount 总价：&yen; 229
+                                        span.order_type 状态：已收货
+                                        span.note.note_1 代付款
+        br
+        h3 .list_order 订单列表
+        .list_order.list_order_tmp
+            ul
+                li
+                    .order.items
+                        a.lnk(href="javascript:;")
+                            .imgurl
+                                img(src="http://p.www.xiaomi.com/images/1/1493_1_1351333878_3.jpg")
+                            .order_info
+                                dl
+                                    dt.add_time 订单日期：2012-11-23 11:15:31
+                                    dd.order_id 订单编号：1211112298563920
+                                    dd
+                                        span.goods_amount 总价：&yen; 229
+                                        span.order_type 状态：已收货
+                                        span.note.note_1 代付款
+                li
+                    .order.items
+                        a.lnk(href="javascript:;")
+                            .imgurl
+                            .order_info
+                                dl
+                                    dt.add_time 订单日期：2012-11-23 11:15:31
+                                    dd.order_id 订单编号：1211112298563920
+                                    dd
+                                        span.goods_amount 总价：&yen; 229
+                                        span.order_type 状态：已收货
+                li
+                    .order.items
+                        a.lnk(href="javascript:;")
+                            .imgurl
+                                img(src="http://p.www.xiaomi.com/images/f/1313_1_1344938702_3.jpg")
+                            .order_info
+                                dl
+                                    dt.add_time 订单日期：2012-11-23 11:15:31
+                                    dd.order_id 订单编号：1211112298563920
+                                    dd
+                                        span.goods_amount 总价：&yen; 229
+                                        span.order_type 状态：已收货
+                                        span.note.note_2 代付款
+        h3 .list_nav_tmp 继承.list_nav导航列表
+        .list_nav.list_nav_tmp
+            ul
+                li
+                    .items
+                        a.lnk(href="javascript:;")
+                            span.note.note_1 43
+                            span.name 代付款订单
+                li
+                    .items
+                        a.lnk(href="javascript:;")
+                            span.note.note_2 已付款
+                            span.name 代付款订单
+                li
+                    .items
+                        a.lnk(href="javascript:;")
+                            span.note.note_1 代付款
+                            span.name 代付款订单
+        br
+        .list_nav.list_nav_tmp
+            ul
+                li
+                    .items
+                        a.lnk(href="javascript:;")
+                            span.name 收货地址
+        h3 .list_order_tmp 继承.list_nav 订单列表模板
+        .list_order_tmp
+            ul
+                li
+                    .items
+                        a.lnk(href="ad_list.html")
+                            .imgurl
+                                img(src="http://p.www.xiaomi.com/images/c/1468_1_1351516045_3.jpg")
+                            .info
+                                p.name AKG K420折叠式头戴动圈耳机
+                                .order_items
+                                    .price_info
+                                        span.sale_price 售价：&yen; 98
+                                        span.num 数量：1
+                                        span.subtotal 小计：&yen; 99
+                li
+                    .items.gift
+                        a.lnk(href="javascript:;")
+                            .imgurl
+                            .info
+                                p.name AKG K420折叠式头戴动圈耳机
+                                .order_items
+                                    .price_info
+                                        span.sale_price 售价：&yen; 98
+                                        span.num 数量：1
+                                        span.subtotal 小计：&yen; 99
+                li
+                    .items.h_box
+                        .imgurl
+                            img(src="http://p.www.xiaomi.com/images/4/1059_1_1345618309_3.jpg")
+                        .info
+                            p.name AKG K420折叠式头戴动圈耳机
+                            .order_items
+                                .price_info
+                                    span.sale_price 售价：&yen; 98
+                                    span.num 数量：1
+                                    span.subtotal 小计：&yen; 99
+        br
+        .list_order_tmp
+            ul
+                li
+                    .items
+                        a.lnk(href="javascript:;")
+                            .imgurl
+                                img(src="http://p.www.xiaomi.com/images/a/1299_1_1344938511_3.jpg")
+                            .info
+                                p.name AKG K420折叠式头戴动圈耳机
+                                .order_items
+                                    .price_info
+                                        span.sale_price 售价：&yen; 98
+                                        span.num 数量：1
+                                        span.subtotal 小计：&yen; 99
+        br
+        .list_order_tmp
+            ul
+                li
+                    .items.gift.h_box
+                        .imgurl
+                            img(src="http://p.www.xiaomi.com/images/0/1338_1_1345647550_3.jpg")
+                        .info
+                            p.name AKG K4200折叠式头戴动圈折叠式头戴动圈耳机
+                            .order_items
+                                .price_info
+                                    span.sale_price 售价：&yen; 98
+                                    span.num 数量：1
+                                    span.subtotal 小计：&yen; 99
+        br
+        .list_nav.address_list
+            ul
+                li
+                    .items
+                        a.lnk(href="javascript:;")
+                            div
+                                span.province 陕西
+                                span.city 阳泉市
+                                span.district
+                            p 望京西路甲50号-1卷石天地大厦A座9层502 刁美玲 184123123
+        .list_cart_submit(style="display:none")
+            ul
+                li
+                    .cart
+                        a(href="javascript:;")
+                            .imgurl
+                                img(src="http://p.www.xiaomi.com/images/0/1338_1_1345647550_3.jpg")
+                            .info
+                                p.name AKG K420折叠式头戴动圈耳机
+                                .order_items
+                                    .price_info
+                                        span.sale_price 售价：&yen; 98
+                                        span.num 数量：1
+                                        span.subtotal 小计：&yen; 99

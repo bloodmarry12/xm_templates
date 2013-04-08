@@ -1,0 +1,288 @@
+// msgMask 正在支付
+#msgMask
+    position: fixed
+    left: 50%
+    top: 30%
+    width: (460em/20)
+    margin-left: -(460em/2)/20
+    background: rgba(255,255,255,1)
+    padding: (20em/20)
+    +box-sizing(border-box)
+    +border-radius((5em/20))
+    +box-shadow(#333 0 0 (5em/30))
+    .msg_pay
+        p
+            text-align: center
+            font-size: $fz25
+            color: $gc
+            margin-bottom: (20em/25)
+// 抢购遮罩
+#maskLoading
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: rgba(0,0,0,.7)
+    z-index: 101
+    .loading
+        position: absolute
+        z-index: 102
+        display: block
+        top: 50%
+        left: 0
+        width: 100%
+        height: (20em/20)
+        margin-top: -(10em/20)
+        color: $wc
+        text-align: center
+// panel控件
+.mask
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: rgba(0,0,0,.7)
+    z-index: 11
+    &.gray
+        background: rgba(0,0,0,.4)
+        span
+            position: absolute
+            z-index: 12
+            display: block
+            top: 50%
+            left: 0
+            width: 100%
+            height: (20em/20)
+            margin-top: -(10em/20)
+            color: $wc
+            text-align: center
+// request的蒙板
+.maskLoad
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: rgba(0,0,0,.05)
+    z-index: 11
+    span
+        font-size: $fz25
+        color: $wc
+        background: rgba(0,0,0,.8)
+        display: block
+        white-space: nowrap
+        padding: (40em/25) (80em/25)
+        +box-shadow()
+        +box-sizing(border-box)
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-left: -(278em/25)/2
+        margin-top: -(109em/25)/2
+        z-index: 12
+#popup
+    position: fixed
+    z-index: 20
+    bottom: (20em/20)
+    width: 100%
+    color: $wc
+    text-align: center
+    p
+        +inline-block
+        font-size: $fz30
+        padding: (10em/30) (20em/30)
+        background: rgba(0,0,0,.8)
+        +opacity(.9)
+        +border-radius((5em/30))
+        +box-shadow(#333 0 0 (5em/30))
+        +box-sizing(border-box)
+
+.style_panel
+    position: fixed
+    top: (38em/20)
+    left: 50%
+    z-index: 12
+    width: (660em/20)
+    margin-left: -(660em/20)/2
+    +box-shadow(rgba(0,0,0,.4) 0 0 (20em/20))
+.pop_panel
+    position: fixed
+    top: 50%
+    left: 50%
+    z-index: 12
+    width: (660em/20)
+    margin-left: -(660em/20)/2
+    margin-top: -(370em/20)/2
+    background: $wc
+    +border-radius((8em/20))
+    +box-shadow(rgba(0,0,0,.4) 0 0 (20em/20))
+    .close
+        display: block
+        width: (62em/20)
+        height: (62em/20)
+        position: absolute
+        top: -(28em/20)
+        left: -(24em/20)
+        img
+            width: 100%
+            height: 100%
+    .content
+        height: 100%
+        padding: (40em/20)
+        +box-sizing(border-box)
+
+// 底部fixed box
+.bottom_panel
+    height: (126em/20)
+    width: (100%)
+    border-top: 1px solid $bc4
+    +background-image(linear-gradient(#F8F8F8, #EAEAEC))
+    +box-shadow(rgba(0,0,0,.2) 0 (-(1em/20)) (6em/20), rgba(255,255,255,1) 0 1px 0 0 inset)
+    position: fixed
+    z-index: 10
+    bottom: 0
+    left: 0
+.has_bottom_panel
+    padding-bottom: (150em/20)
+// 结算框
+.settle_panel
+    +display-box
+    +box-align(center)
+    height: 100%
+    width: 100%
+    .goods_amount
+        +box-flex(1)
+        margin-left: (20em/20)
+        .price
+            font-size: $fz34
+            font-weight: 700
+            margin-bottom: (8em/34)
+            color: #51545B
+            strong
+                margin-left: (10em/34)
+                color: #EC6008
+        .detail
+            font-size: $fz20
+            color: #50535A
+            strong
+                margin: 0 (7em/20)
+    .settle_btn
+        width: (208em/20)
+        margin-right: (20em/20)
+// 物流查询
+.express_panel
+    height: 100%
+    background: url($imgurl+'bg_6.png') (20em/20) 50% no-repeat
+    +background-size((73em/20) (73em/20))
+    a.lnk
+        +display-box
+        height: 100%
+        padding: 0 (20em/20)
+        background: url($imgurl+'arrow.png') 100% 50% no-repeat
+        +box-align(center)
+        +background-size((19em/20) (33em/20))
+        +background-origin(content-box)
+    .items
+        padding-left: (93em/20)
+    h3,
+    p
+        +text-shadow(rgba(255,255,255,.8) 0 1px 0)
+    h3
+        font-size: $fz25
+        color: #515459
+        margin-bottom: (10em/25)
+    p
+        font-size: $fz20
+        color: #87888C
+// 订单详情 支付panel
+.pay_panel
+    height: 100%
+    +box-align(center)
+    padding: 0 (20em/20)
+    .flex_1
+        &:first-child
+            margin-right: (10em/20)
+        &:last-child
+            margin-left: (10em/20)
+// 机型选择弹出层
+.pick_panel
+    background: #E4E4E4
+    dt,
+    dd
+        border-bottom: 1px solid #D4D4D4
+        border-top: 1px solid $wc
+        a
+            display: block
+            font-size: $fz30
+            color: #52555A
+            padding: (40em/30) 0
+            +text-shadow(rgba(255,255,255,.8) 0 1px 0)
+            padding-left: (130em/30)
+    dt
+        &:first-child
+            border-top: none
+        a
+            background: url($imgurl+'adapt_5.png') (40em/30) 50% no-repeat
+            +background-size((53em/30) (39em/30))
+            &:hover,
+            &:active
+                background-color: #D9D9D9
+    dd
+        &:last-child
+            border-bottom: none
+        &.xm_1
+            a
+                background: url($imgurl+'adapt_1.png') (40em/30) 50% no-repeat
+                +background-size((53em/30) (31em/30))
+                &:hover,
+                &:active
+                    background-color: #D9D9D9
+        &.xm_1s
+            a
+                background: url($imgurl+'adapt_2.png') (40em/30) 50% no-repeat
+                +background-size((53em/30) (31em/30))
+                &:hover,
+                &:active
+                    background-color: #D9D9D9
+        &.xm_2
+            a
+                background: url($imgurl+'adapt_4.png') (40em/30) 50% no-repeat
+                +background-size((53em/30) (31em/30))
+                &:hover,
+                &:active
+                    background-color: #D9D9D9
+        &.xm_box
+            a
+                background: url($imgurl+'adapt_8.png') (40em/30) 50% no-repeat
+                +background-size((53em/30) (31em/30))
+                &:hover,
+                &:active
+                    background-color: #D9D9D9
+// overlay_panel
+// Fpopanel 购买F码弹出框
+.Fpopanel
+    &.pop_panel
+        margin-top: -(236em/20)
+    .box_01
+        text-align: center
+        h3
+            font-size: $fz34
+            color: #515459
+        p
+            font-size: $fz25
+            color: #88888A
+            margin-top: (20em/25)
+    .box_04
+        text-align: center
+    .verifcode
+        font-size: $fz30
+        color: #515459
+        margin-left: (20em/30)
+    .verifimg
+        width: (160em/20)
+        height: (80em/20)
+    .h_box
+        +box-align(center)
+// Fpopanel 购买F码弹出框

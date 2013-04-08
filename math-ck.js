@@ -1,0 +1,1 @@
+define(["jquery"],function(e){console.dir(e);var t=1,n=function(e,n){return e+n+t};return{add:n}});

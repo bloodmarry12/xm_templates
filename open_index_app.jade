@@ -1,0 +1,53 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title open_index 开放购买
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .xm_app
+            .viewport
+                .open_view.open_view_app
+                    .topbackhome
+                        a(href="javascript:;") &nbsp;
+                    .box.box_01
+                        h3
+                            | 带着小米手机
+                        h4 文文字文字文字字
+                        p
+                            | 3月12日中午12点，25万台小米手机开放购买
+                            br
+                            | 20万台小米手机2 标准版、电信版 &yen; 1999起
+                    .box.box_02
+                        .imgurl
+                            img(src="images/index_318b.jpg")
+                    .box.box_03
+                        #countdownBtn
+                            a(href="javascript:;")
+                                span#timeOut
+                                    ins 10
+                                    小时
+                                    ins 30
+                                    分
+                                    ins 12
+                                    秒
+                                    | 后开始
+                        a(href="javascript:;", style="display:none")#purchaseBtn.button.active_button 立即抢购
+                        a(href="#ac=home&op=Stylerecommendpresent", style="display:none")#paymentBtn.button.active_button 抢购成功用户下单
+                    .box.box_04
+                        .h_box
+                            .flex_1
+                                a(href="javascript:Mipu.open('http://bbs.xiaomi.cn/thread-6553340-1-1.html',true)") 查询预约资格
+                            .flex_1
+                                a(href="javascript:;")#loginStatus 提前登录
+        script
+            window.onload = function(){
+                var bd = document.getElementsByTagName('body')[0];
+                bd.style.backgroundColor = '#FFF';
+            }

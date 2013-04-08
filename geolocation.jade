@@ -1,0 +1,45 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title Product-list 商品相关/product 通过分类ID获得产品列表
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .mask.loading(style="display:none")
+            span &nbsp;
+        .xm_app
+            .viewport
+                include _header
+                include _crumbs
+                //筛选弹层 .adapt_panel_on
+                .geolocation(style="height: 200px")
+                    div
+                        | 纬度：
+                        span#latitude
+                    div
+                        | 经度：
+                        span#longitude
+                    div
+                        | 所在地区时间：
+                        span#timestamp
+                    div
+                        | 精度：
+                        span#accuracy
+                    div
+                        | 海拔：
+                        span#altitude
+                    div
+                        | 移动方向：
+                        span#heading
+                    div
+                        | 移动速度：
+                        span#speed
+
+                include _footer
+        script(src="require.js", data-main="geolocation")

@@ -1,0 +1,1 @@
+require(["jquery","domReady","./download"],function(e,t,n){t(function(){var e=!1;n.init(e)})});

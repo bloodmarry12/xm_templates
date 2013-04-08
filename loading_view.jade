@@ -1,0 +1,28 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title loading_view 通用正在加载
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .xm_app
+            .viewport
+                include _header
+                div(style="height:500px")
+                include _footer
+        .mask(style="display:none")
+        #maskLoad.maskLoad
+            span 正在加载...
+        .loading_view(style="display:none")
+            .loading_wrap
+                .loading_msg
+                    | 正在加载 ...
+                a.close(href="javascript:;")
+                    img(src="images/loadingClose.png")
+        script(src="require.js", data-main="main3")

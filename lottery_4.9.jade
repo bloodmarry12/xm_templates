@@ -1,0 +1,100 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title 4.9米粉节 抽奖活动
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/lottery.css#{r}")
+        script(src="jquery.js")
+        script(src="js/mipu.js")
+        script(src="js/lottery.js")
+    body
+        .xm_app
+            .viewport
+                .lottery_view
+                    .lottery_get#lottery_get(style="display:none")
+                        .tit
+                            h1 2小时内支付订单，凭借订单号参与抽奖
+                            h3 活动时间：4.9日晚8点—4.10日晚8点
+                        .box.box_01
+                            #loginOk
+                                .box01
+                                    #items
+                                        .select(data-type="select")
+                                            .option(data-value="")
+                                .box02
+                                    a(href="javascript:;").button.lottery_button#sj 抽奖按钮
+                            .box02#login(style="display:none")
+                                a(href="javascript:;")#loginBtn.button.lottery_button 登录
+                            .box03#join(style="display:none")
+                                p 您还没有符合抽奖规则的订单哦~
+                                a(href="javascript:;").button.lottery_button 参与米粉节6折特卖
+                        .box.box_02
+                            .box01
+                                h3 活动规则
+                                ol
+                                    li 1. 活动时间：4月9日20:00—4月10日20:00。
+                                    li 2. 活动说明：活动期间成功下单，且在2小时内支付订单的用户，凭订单号参与抽奖。
+                                    li 3. 抽奖次数：每个订单号只可参与一次抽奖。
+                                    li 4. 奖品形式为优惠券，直接发放到您的个人账号中，可以在我的优惠券中查看。
+                            .box.box_02
+                                .box01
+                                    h3 优惠券使用说明
+                                    ol
+                                        li 1. 本次活动所有优惠券有效时间：2013年4月11日—2013年4月17日。
+                                        li 2. 优惠券不可叠加使用，每张订单限用一张，不兑现，不找零。
+                                        li 3. 使用优惠券的订单，如发生退货，退款额为实际支付金额。
+                                        li 4. 现金券或折扣券不能抵运费。
+                                        li 5. 所有现金券或折扣券严禁进行出售或转让等非法操作，如经发现并证实，该券将予以作废处理或其他操作。
+                                        li 6. 优惠券使用的最终解释权归小米网所有。
+                    .lottery_result
+                        .lottery_no.lottery_ye#lottery_no(style="display:none")
+                            .box.box_01
+                                h2 啊哦，运气不太好...
+                                p#tips 错误提示信息
+                            .box.box_04
+                                .imgurl
+                                    img(src="images/lottery/bg02.jpg")
+                            .box.box_03
+                                .box01
+                                    a(href="javascript:location.reload();").button.lottery_button 继续抽奖
+                                .box02
+                                    a(href="javascript:util.goHome();").button.lottery_button 进入首页
+                        .lottery_ye#lottery_ye(style="display:block")
+                            .box.box_01
+                                h2 恭喜! 中奖了!
+                                p
+                                    | 您获得的是
+                                    span#name 奖品名称
+                                    br
+                                    | 3分钟后到你的"优惠券"中查看
+                            .box.box_02
+                                .imgurl
+                                    img(src="http://p.www.xiaomi.com/zt/130403/card_3.png")#prize
+                            .box.box_04
+                                h3 现金券、礼品券、满100减10元劵说明
+                                dl
+                                    dt 【现金券】
+                                    dd 有效期一周：2013.4.11—2013.4.17日
+                                    dd 仅限在购买配件单品时使用，折扣同等面值金额。
+                                    dd 现金券不能用于小米手机、小米盒子、配件套餐、秒杀商品。
+
+                                    dt 【折扣券】
+                                    dd 有效期一周：2013.4.11—2013.4.17日
+                                    dd 适用于购买折扣券指定商品，下单时使用直接抵扣该商品金额。例如，“小米线控通话耳机（黑色）折扣券”只能用于抵扣“小米线控通话耳机（黑色）”一款产品。
+
+                                    dt 【满100减10元现金券】
+                                    dd 有效期一周：2013.4.11—2013.4.17日
+                                    dd 小米网配件单品购物满100元，可使用本券立减10元。
+                                    dd 该券不能用于小米手机、小米盒子、配件套餐以及秒杀商品。
+
+                            .box.box_03
+                                .box01
+                                    a(href="javascript:location.reload();").button.lottery_button 继续抽奖
+                                .box02
+                                    a(href="javascript:util.goHome();").button.lottery_button 进入首页

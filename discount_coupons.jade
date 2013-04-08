@@ -1,0 +1,51 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title discount_coupons 使用优惠劵
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .xm_app
+            .viewport
+                include _header
+                .discount_coupons.mlr20
+                    .box.box_01
+                        .title
+                            h3 选择要使用的优惠劵
+                    .box.box_02
+                        .list_nav
+                            ul
+                                li
+                                    .radio(data-type="radio", data-value="01", data-name="1")
+                                        label
+                                            .label
+                                                .coupon_info
+                                                    span.expired_time 2013/01/19 前有效
+                                                    span.coupon_name 50元配件券
+                                                .coupon_tips
+                                                    span.usable_range 仅限购买配件时使用
+                                li
+                                    .radio(data-type="radio", data-value="01", data-name="1")
+                                        label
+                                            .label
+                                                .coupon_info
+                                                    span.expired_time 2013/01/19 前有效
+                                                    span.coupon_name 50元配件券
+                                                .coupon_tips
+                                                    span.usable_range 仅限购买配件时使用
+                                li
+                                    .radio.selected(data-type="radio", data-value="01", data-name="1")
+                                        label
+                                            .label 我有优惠码
+                                            .coupon_code
+                                                .input
+                                                    input(type="text", placeholder="填写优惠码")
+                    .box.box_03.mt20
+                        a.button.active_button(href="javascript:;") 确认使用
+                include _footer

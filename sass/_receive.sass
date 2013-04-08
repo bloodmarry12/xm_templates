@@ -1,0 +1,92 @@
+// 不在m中，预约领取F码
+@import "compass/utilities"
+@import "compass/css3"
+// reset
+@import "_variables"
+@import "_base"
+// 变量
+@import "_button"
+@import "_form"
+@import "_tips"
+@import "_header02"
+
+body
+    background: #F2F2F2
+.imgurl
+    display: block
+    background: $imgc url($imgurl+'img_bg2.png') 50% 50% no-repeat
+    +background-size((190em/20) (190em/20))
+    width: 100%
+    img
+        width: 100%
+.receive_view
+    .imgurl
+        height: (537em/20)
+    .receive_ft
+        +background-image(linear-gradient(rgba(195,195,195,1), rgba(195,195,195,0)))
+        padding: (80em/20) (20em/20)
+    .receive_tit
+        text-align: center
+        margin-top: (110em/20)
+        margin-bottom: (60em/20)
+        h3
+            color: #ED5F09
+            font-size: $fz34
+            font-weight: 700
+            margin-bottom: (24em/34)
+        p
+            color: #9D9D9D
+            font-size: $fz25
+            line-height: (42em/25)
+.receive_form
+    .h_box
+        +box-align(center)
+    .verifimg
+        width: (180em/20)
+        height: (68em/20)
+    .verifcode
+        font-size: $fz30
+        color: #515459
+        margin-left: (20em/30)
+        white-space: nowrap
+.receive_suc
+    .box_01
+        text-align: center
+        &:before
+            content: '\0020'
+            display: block
+            width: (355em/20)
+            height: (404em/20)
+            margin: (100em/20) auto (40em/20)
+            background: url($imgurl+'receive/bg2.png') 0 0 no-repeat
+            +background-size(cover)
+        h3
+            color: #ED5F09
+            font-size: $fz34
+            font-weight: 700
+            margin-bottom: (24em/34)
+        p
+            color: #9D9D9D
+            font-size: $fz25
+            line-height: (42em/25)
+    .box_02
+        margin: (44em/20) 0 (38em/20)
+    .box_03
+        color: #9D9D9D
+        font-size: $fz20
+        line-height: (42em/20)
+        margin-bottom: (80em/20)
+        .oc
+            color: #ED5F09 
+        .tips
+            width: (158em/20)
+            text-align: right
+.tips_view
+    .tips_msg
+        .oc
+            color: #ED5F09
+        p
+            font-size: $fz20
+            line-height: (30em/20)
+// media query
+@import "_media"

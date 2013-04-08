@@ -1,0 +1,31 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title receive.html 预约领取F码
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/receive.css#{r}")
+    body
+        .xm_app
+            .viewport
+                include _header2
+                .receive_view
+                    .receive_tit
+                        h3 这一次，咱有特权！
+                        p
+                            | 您多次未能购买到小米手机2，特送F码1枚
+                            br
+                            | 如果您已经领取过，欢迎您继续预约
+                    .receive_bd
+                        .imgurl
+                            img(src="images/receive/bg1.jpg")
+                    .receive_ft
+                        .h_box
+                            a(href="javascript:;").flex_1.button.disable_button 继续预约
+                            .spacer &nbsp;
+                            a(href="javascript:;").flex_1.button.active_button 立即领取

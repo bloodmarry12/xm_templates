@@ -1,0 +1,75 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title static_mi2 米2产品介绍页
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+        style
+            h3.a{ background: #F60; color: #FFF; }
+        - var mi2 = {result:"ok",description:"",data:{product_id:1468,focus_img:"http://p.www.xiaomi.com/m/images/appad/20130114/m21.jpg",media:[{img:"http://p.www.xiaomi.com/m/images/appad/20130114/video1.jpg",url:"http://v.youku.com/v_show/id_XNDM5Njg0Mzg4.html",text:"小米手机2硬件视频"},{img:"http://p.www.xiaomi.com/m/images/appad/20130114/video2.jpg",url:"http://v.youku.com/v_show/id_XNDM5NjgxMzQw.html",text:"MIUI系统自由桌面视频"},{img:"http://p.www.xiaomi.com/m/images/appad/20130114/video3.jpg",url:"http://v.youku.com/v_show/id_XNDQwMjQzNzI0.html",text:"小米2012新品发布会视频"},{img:"http://p.www.xiaomi.com/m/images/appad/20130114/video4.jpg",url:"http://bbs.xiaomi.cn/thread-4368393-1-1.html",text:"下载新品发布会讲稿"}],features:[{feature_name:"图2",img:"http://p.www.xiaomi.com/m/images/appad/20130114/m22.jpg",details:[""]},{feature_name:"图3",img:"http://p.www.xiaomi.com/m/images/appad/20130114/m23.jpg",details:[""]},{feature_name:"图4",img:"http://p.www.xiaomi.com/m/images/appad/20130114/m24.jpg",details:[""]},{feature_name:"图5",img:"http://p.www.xiaomi.com/m/images/appad/20130114/m25.jpg",details:[""]}],gallery:[{product_id:"1336",product_name:"小米手机1S青春版",product_brief:"最超值的双核发烧手机",product_price:"1299",product_img:"http://p.www.xiaomi.com/m/images/appad/20130114/m1sy.jpg"},{product_id:"1338",product_name:"小米手机1S",product_brief:"全球主频最快双核手机",product_price:"1499",product_img:"http://p.www.xiaomi.com/m/images/appad/20130114/m1s.jpg"},{product_id:"1468",product_name:"小米手机2",product_brief:"28纳米全球首发，发烧级四核手机",product_price:"1999",product_img:"http://p.www.xiaomi.com/m/images/appad/20130114/m2.jpg"}]}};
+              data = mi2.data;
+              id = '1468';
+    body
+        h3.a .static_mi2 米2产品介绍页
+        .xm_app
+            .viewport
+                .static_mi2
+                    .box.box_01
+                        ul
+                            li
+                                .imgurl
+                                    img(src="#{data.focus_img}")
+                            each feature, i in data.features
+                                li
+                                    .imgurl
+                                        img(src="#{feature.img}")
+                    .box.box_02
+                        if data.media.length == 4
+                            ul.media_4
+                                each media, i in data.media
+                                    li
+                                        .items
+                                            a.lnk(href="#{media.text}")
+                                                .imgurl
+                                                    img(src="#{media.img}")
+                                                .text #{media.text}
+                        if data.media.length == 3
+                            ul.media_3
+                                each media, i in data.media
+                                    li
+                                        .items
+                                            a.lnk(href="#{media.text}")
+                                                .imgurl
+                                                    img(src="#{media.img}")
+                                                .text #{media.text}
+                    .box.box_03
+                        each product, i in data.gallery
+                            if product.product_id == id
+                                .product_info
+                                    h3.product_name #{product.product_name}
+                                    p.product_price &yen;#{product.product_price}
+                    .box.box_04
+                        a.button.disable_button(href="javascript:;") F码购买
+                    div
+                        .static_tit
+                            h3 您可能感兴趣
+                        div
+                            .list_nav.list_static
+                                ul
+                                    each product, i in data.gallery
+                                        if product.product_id !== id
+                                            li
+                                                .items
+                                                    a.lnk(href="static_#{product.product_id}.html")
+                                                        .imgurl
+                                                            img(src="#{product.product_img}")
+                                                        .product_info
+                                                            h3.product_name #{product.product_name}（&yen;#{product.product_price}）
+                                                            p.product_brief #{product.product_brief} 
+                include _footer

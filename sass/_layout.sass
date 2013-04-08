@@ -1,0 +1,1008 @@
+/* 定义各页面的样式
+ * ad_list                首页推荐列表
+ * user_view              用户账号
+ * tips_view              提示信息
+ * product_category       分类浏览
+ * product_list           分类列表
+ * product_view           商品详情
+ * shopping_cartlist      我的购物车
+ * shopping_delcart       修改购物车
+ * shopping_stylelist     套餐列表
+ * shopping_empty         空购物车
+ * order_checkout         配送信息
+ * order_submit           确认提交订单
+ * order_payView          在线支付
+ * order_list             订单列表
+ * order_view             订单详情
+ * coupons_list           优惠券列表
+ * repair_list            维修单列表
+ * repair_view            维修单详情
+ * address_list           收货地址列表
+ * address_save           修改收货地址
+ * address_add            新增收货地址
+ * static_mi2             米2产品介绍页
+ * static_mi1s            米1s产品介绍页
+ * static_mi1sy           米1青春版产品介绍页
+ * discount_coupons       修改收货地址 
+ * check_fcode            F码购买通道 
+ * fcode_stylelist        F码购买套装选择 
+ * taozhuang_checkbox     购买选择套装页面 */
+
+// ad_list 首页推荐列表 S
+.ad_list
+    .imgurl
+        width: (678em/20)
+        height: (381em/20)
+        overflow: hidden
+        & > img
+            width: (678em/20)
+            height: (381em/20)
+    ul
+        margin: (20em/20)
+    li
+        // _variables.sass 边框1像素带下投影的盒子
+        @include boxsh
+        &:last-child
+            margin-bottom: 0
+    a
+        display: block
+    .type_ad,
+    .type_product
+        background: $wc
+    .product_name
+        font-size: $fz27
+        color: $c
+        font-weight: 700
+        margin-bottom: (13em/27)
+        .price
+            float: right
+            color: $oc
+    .product_detail
+        font-size: $fz20
+        color: $gc
+        .market_price
+            float: right
+    .product_name,
+    .product_detail
+        overflow: hidden
+    .type_product,
+    .type_ad
+        .info
+            padding: (20em/20)
+        // type_0 礼品季
+        // type_1 特惠
+        // type_2 新品
+        &.type_0
+            &:after
+                background: url($imgurl+'activity_type_0.png') 0 0 no-repeat
+        &.type_1
+            &:after
+                background: url($imgurl+'activity_type_1.png') 0 0 no-repeat
+        &.type_2
+            &:after
+                background: url($imgurl+'activity_type_2.png') 0 0 no-repeat
+        &.type_0,
+        &.type_1,
+        &.type_2
+            position: relative
+            &:after
+                content: '\0020'
+                display: block
+                width: (112em/20)
+                height: (112em/20)
+                +background-size(cover)
+                position: absolute
+                top: 0
+                left: 0
+// ad_list 首页推荐列表 E
+// product_category 分类浏览 继承list_tmp _components.sass S
+.product_category
+    .list_category
+        text-align: center
+        .category
+            background: $wc
+            padding: 1px
+            height: (389em/20)
+            overflow: hidden
+            a
+                background: $gc2
+            .imgurl
+                height: (308.5em/20)
+                overflow: hidden
+            .name
+                font-size: $fz27
+                margin-top: (20em/27)
+                font-weight: 700
+                color: $c
+// product_category 分类浏览 E
+// product_product 子分类浏览 继承list_tmp _components.sass S
+.product_product
+    position: relative
+    .list_product
+        .product
+            background: $wc
+            height: (394em/20)
+            overflow: hidden
+            a
+                padding: (25em/20) (25em/20) (25em/20)
+            .imgurl
+                height: (278em/20)
+                overflow: hidden
+            .info
+                font-size: $fz20
+                margin-top: (10em/20)
+            .name
+                color: $c
+                white-space: nowrap
+                overflow: hidden
+                text-overflow: ellipsis
+                margin-bottom: (10em/20)
+            .price
+                color: $oc
+                margin-right: (10em/20)
+            .market_price,
+            .cos
+                color: $gc
+                margin-right: (10em/20)
+            &.is_cos
+                .price
+                    color: $gc
+            &.is_discount
+                position: relative
+                &:after
+                    content: '\0020'
+                    display: block
+                    width: (112em/20)
+                    height: (112em/20)
+                    background: url($imgurl+'activity_type_1.png') 0 0 no-repeat
+                    +background-size(cover)
+                    position: absolute
+                    top: 0
+                    left: 0
+// product_product 子分类浏览 E
+// product_view 商品详情 S
+.product_view
+    .box_01
+        background: $wc
+    .box_02
+        .product_info
+            padding-top: 0
+    .product_pick
+        padding: 0 (20em/20)
+        .h_box
+            .flex_1
+                &:first-child
+                    margin-right: (10em/20)
+                &:last-child
+                    margin-left: (10em/20)
+    .product_info
+        padding: (25em/20) (25em/20) (30em/20)
+        .info
+            margin-bottom: (10em/20)
+            .name
+                font-size: $fz32
+                font-weight: 700
+        .price
+            font-size: $fz30
+            color: $oc3
+            margin-top: (10em/20)
+            .market_price
+                font-size: (24em/30)
+                font-weight: 400
+                color: $gc3
+        .adapt
+            font-size: $fz27
+            height: (31em/27)
+            color: $gc
+            img
+                width: (53em/27)
+                height: (31em/27)
+                margin: 0 (2.5em/27)
+    .product_nav
+        border-top: 1px solid $bc
+        height: (88em/20)
+        background: url($imgurl+'bg_1.png') 0 0 repeat-x
+        +background-size(1px (88em/20))
+        ul
+            +display-box
+            li
+                +box-flex(1)
+                text-align: center
+                height: (88em/20)
+                line-height: (80em/20)
+                a
+                    font-size: $fz30
+                    color: $gc3
+                &.on
+                    background: url($imgurl+'bg_2.png') 50% 0 no-repeat
+                    +background-size((59em/20) (88em/20))
+                    a
+                        color: $c
+    .product_main
+        padding: 0 (20em/20) 0
+        .product_desc
+            ul
+                overflow: hidden
+            li
+                margin-bottom: (15em/20)
+            .imgurl
+                min-height: (200em/20)
+        .product_images
+            .imgurl
+                min-height: (680em/20)
+    .desc_more
+        height: (75em/20)
+        background: url($imgurl+'bg_3.png') 0 0 repeat-x
+        +background-size(1px (75em/20))
+        position: relative
+        .desc_more_button
+            display: block
+            height: (75em/20)
+            background: url($imgurl+'desc_button_01.png') 50% 0 no-repeat
+            +background-size((67em/20) (75em/20))
+            text-indent: -999em
+            &.on
+                background-image: url($imgurl+'desc_button_02.png')
+    .product_addCart
+        margin: (30em/20) (20em/20)
+// product_view 商品详情 E
+// user_view 我的账户 S
+.user_view
+    padding: (20em/20) 0
+    .user_show
+        +display-box
+        +box-align(center)
+        width: 100%
+        padding: (13em/20)
+        padding-right: (28em/20)
+        .user_info
+            +display-box
+            +box-align(center)
+            +box-flex(1)
+        .avatar
+            width: (85em/20)
+            height: (85em/20)
+            margin-right: (22em/20)
+            background: url($imgurl+'user_bg.png') 0 0 no-repeat
+            +background-size(cover)
+        .user_name
+            font-size: $fz30
+            font-weight: 700
+        .login_out
+            a
+                font-size: $fz30
+                color: $c
+                display: block
+                line-height: (70em/30)
+                padding-left: (28em/30)
+                border-left: 1px solid $bc
+// user_view 我的账户 E
+// shopping_cartlist 购物车 S
+.shopping_cartlist
+// shopping_cartlist 购物车 E
+// order_checkout 购物车 用户结算 S
+.order_checkout
+    .notice
+        @include boxsh
+        +border-radius(8em/20)
+        background: $wc
+        padding: (30em/20)
+        margin-top: (20em/20)
+        line-height: (40em/20)
+        p
+            font-size: $fz30
+            color: #51545a
+            span
+                color: #f60
+    .list_nav
+        h3
+            font-weight: 700
+    .box_04
+        .invoice
+            padding-right: (30em/20)
+            margin-top: (20em/20)
+            .input
+                width: 100%
+// order_checkout 购物车 用户结算 E
+// select_address 选择收货地址 S
+.select_address
+    padding: (20em/20) 0
+    .box
+        margin-bottom: (20em/20)
+        &:last-child
+            margin-bottom: 0
+// select_address 选择收货地址 E
+// address_add 新增收货地址 S
+.address_add
+    .input,
+    .textarea
+        width: 100%
+    .textarea
+        textarea
+            height: (140em/30)
+    .box_05
+        margin-top: (40em/20)
+        margin-bottom: (20em/20)
+    .box_02_02,
+    .box_02_03
+        margin-top: (20em/20)
+    .box_02_01
+        .flex_1
+            &:first-child
+                margin-right: (10em/20)
+        .flex_1
+            &:last-child
+                margin-left: (10em/20)
+// address_add 新增收货地址 E
+// shopping_delcart 修改购物车 S
+.shopping_delcart
+    padding: (20em/20) 0
+    .box_01
+        .imgurl
+            @include boxsh
+            height: (678em/20)
+            overflow: hidden
+    .box_02
+        .product_info
+            .info
+                margin-bottom: (10em/20)
+                .name
+                    font-size: $fz32
+                    font-weight: 700
+                // .price
+                //     font-size: $fz27
+                //     line-height: $fz32
+                //     float: right
+                //     color: $oc2
+                //     margin-left: (10em/27)
+            .adapt
+                font-size: $fz27
+                height: (31em/27)
+                color: $gc
+                img
+                    width: (53em/27)
+                    height: (31em/27)
+                    margin: 0 (2.5em/27)
+            .price
+                font-size: $fz30
+                color: $oc3
+                margin-top: (10em/20)
+// shopping_delcart 修改购物车 E
+// order_list 订单列表 S
+.order_list
+    padding: (20em/20) 0
+// order_list 订单列表 E
+// repair_list 维修单列表 S
+.repair_list
+    padding: (20em/20) 0
+    .order_info
+        dt
+            color: $oc3
+            font-size: $fz30
+            margin-bottom: (6em/30)
+        dd
+            font-size: $fz20
+            color: $gc
+            margin-bottom: (4em/20)
+            &:last-child
+                margin-bottom: 0
+// repair_list 维修单列表 E
+// repair_submit 确认提交订单 S
+.order_submit
+    padding-top: (20em/20)
+// order_submit 确认提交订单 E
+// order_submit_02 订单详情 S
+.order_submit_02
+    .envelope_paper_bd
+        padding-bottom: (20em/20)
+    .coupon_list
+        margin-top: -(20em/20)
+        .items
+            background: url($imgurl+'bg_7.png') (83em/20)/2 50% no-repeat
+            +background-size((53em/20) (48em/20))
+        a.lnk
+            display: block
+            padding: (40em/20) 0
+            color: #515459
+            background: url($imgurl+'arrow.png') 100% 50% no-repeat
+            +background-size((19em/20) (33em/20))
+            padding-left: (146em/20)
+        .name
+            font-size: $fz30
+        li
+            border-bottom: 1px solid #E5E5E5
+    .list_order_tmp
+        li
+            border-bottom: (2em/20) dashed #E5E5E5
+    .box_03
+        strong,
+        span
+            font-size: $fz25
+            color: #88898D
+            display: block
+            text-align: right
+            padding: (20em/20)
+            +box-sizing(border-box)
+        & > ul
+            li
+                +display-box
+                border-bottom: 1px solid #EBEBEB
+                strong
+                    width: (180em/25)
+                    border-right: 1px solid #EBEBEB
+                span
+                    +box-flex(1)
+                &:last-child
+                    border-bottom: none
+                    strong,
+                    span
+                        color: $oc3
+// order_submit_02 订单详情 E
+// discount_coupons 使用优惠券 S
+.discount_coupons
+    padding: (20em/20) 0
+    .box_01
+        .title
+            margin-top: 0
+    .coupon_info
+        .expired_time
+            color: $gc
+            float: right
+            font-size: (20em/32)
+    .coupon_tips
+        .usable_range
+            color: $gc
+            font-size: (27em/32)
+    .coupon_code
+        margin-top: (20em/20)
+        .input
+            width: 100%
+// discount_coupons 使用优惠券 E
+// order_payView 在线支付订单成功 S
+.order_payView
+    .order_pay_tips
+        border-top: 1px solid #ECECEC
+        color: #7A7B7F
+        padding-top: (18em/20)
+        padding-left: (20em/20)
+    .title_payView
+        border-bottom: 1px solid #ECECEC
+        padding-bottom: (38em/20)
+        padding-top: (10em/20)
+        padding-left: (20em/20)
+        h3
+            font-size: $fz36
+            color: #88B24B
+            +text-shadow(rgba(0,0,0,.1) 0 -1px 0)
+            background: url($imgurl+'bg_4.png') 0 50% no-repeat
+            +background-size((44em/36) (33em/36))
+            padding-left: (76em/36)
+    .order_pay_view
+        border-top: 1px solid #ECECEC
+        border-bottom: 1px solid #ECECEC
+        margin-top: (4em/20)
+        margin-bottom: (4em/20)
+        ul
+            padding: (28em/20) 0
+        li
+            +display-box
+            color: #7A7B7F
+            margin-bottom: (28em/20)
+            &:last-child
+                margin-bottom: 0
+            strong,
+            span
+                display: block
+                font-size: $fz25
+            strong
+                margin-right: (50em/25)
+                padding-left: (20em/25)
+            span
+                +box-flex(1)
+                padding-right: (20em/25)
+                &.goods_amount
+                    color: $oc3
+    .box_01
+        margin-bottom: (40em/20)
+    .box_02
+        padding: 0 (20em/20)
+
+// order_payView 在线支付订单成功 E
+// order_express 物流信息 S
+.order_express
+    padding: (20em/20) 0
+.express_trace
+    .track
+        padding: (30em/20) (30em/20) (30em/20) (100em/20)
+        background: url($imgurl+'bg_4.png') (56em/20)/2 50% no-repeat
+        +background-size((44em/20) (33em/20))
+        h3
+            font-size: $fz25
+            line-height: (34em/25)
+            color: #51565C
+        p
+            font-size: $fz20
+            line-height: (30em/20)
+            color: #88898D
+    li
+        &:first-child
+            .track
+                background: url($imgurl+'bg_5.png') (56em/20)/2 50% no-repeat
+                +background-size((44em/20) (33em/20))
+                h3,
+                p
+                    color: #FF781E
+// order_express 物流信息 E
+// address_list 地址列表 S
+.address_list
+    padding: (20em/20) 0
+// address_list 地址列表 E
+// order_view 订单详情 S
+.order_view
+    .envelope_paper_bd
+        padding-bottom: (40em/20)
+    .box
+        border-bottom: (2em/20) dashed #E5E5E5
+        &:last-child
+            border-bottom: none
+    .order_tit,
+    .order_info
+        & > ul
+            li
+                +display-box
+                width: 100%
+                span,
+                strong
+                    display: block
+                    color: #51545B
+                span
+                    +box-flex(1)
+    .order_tit
+        padding-bottom: (10em/20)
+        position: relative
+        ul
+            li
+                line-height: (40em/20)
+                span
+                    color: $oc3
+        strong,
+        span
+            font-size: $fz30
+        strong
+            margin-right: (10em/30)
+        .del_order
+            display: block
+            width: (60em/20)
+            height: (60em/20)
+            text-indent: -999em
+            overflow: hidden
+            background: url($imgurl+'rubbish_03.png') 0 0 no-repeat
+            +background-size((60em/20) (120em/20))
+            position: absolute
+            right: 0
+            top: 0
+            &:active,
+            &:hover
+                background-position: 0 (-(60em/20))
+    .order_info
+        padding: (10em/20) 0
+        li
+            line-height: (44em/20)
+        strong,
+        span
+            font-size: $fz25
+        strong
+            margin-right: (10em/25)
+    .list_order_tmp
+        .name
+            width: (459em/32)
+        li
+            border-bottom: (2em/20) dashed #E5E5E5
+            &:last-child
+                border-bottom: none
+    .express_info
+        padding-right: (10em/20)
+        .lnk
+            display: block
+            padding: (10em/20) 0
+            background: url($imgurl+'arrow.png') 100% 50% no-repeat
+            +background-size((19em/20) (33em/20))
+        li
+            line-height: (44em/20)
+        strong,
+        span
+            font-size: $fz25
+            color: $c
+        strong
+            margin-right: (10em/25)
+// order_view 订单详情 E
+// shopping_empty 空购物车 S
+// .shopping_empty
+//     .box_01
+//         text-align: center
+//         &:before
+//             content: '\0020'
+//             display: block
+//             width: (361em/20)
+//             height: (336em/20)
+//             margin: (140em/20) auto (60em/20)
+//             background: url($imgurl+'emptycart.png') 0 0 no-repeat
+//             +background-size(cover)
+//         h3
+//             font-size: $fz34
+//             color: #50555B
+//             margin-bottom: (15em/34)
+//         p
+//             font-size: $fz25
+//             color: #87888C
+//     .box_02
+//         width: (340em/20)
+//         margin: (100em/20) auto (100em/20)
+// shopping_empty 空购物车 E
+// shopping_stylelist 套餐选择 S
+.list_stylelist_tmp
+    .h_box
+        +box-align(center)
+    .items
+        padding: (10em/20) (20em/20) (10em/20) (10em/20)
+    .imgurl
+        width: (180em/20)
+        height: (180em/20)
+        margin-right: (20em/20)
+    .stylelist_info
+        +box-flex(1)
+    .product_name
+        font-size: $fz30
+        color: #51545B
+        margin-bottom: (20em/30)
+.shopping_stylelist
+    padding: (20em/20) 0
+// shopping_stylelist 套餐选择 E
+// coupons_list 优惠券列表 S
+.coupons_list
+    padding: (20em/20) 0
+    // .list_nav
+    //     &>ul>li
+    //         height: (114em/20)
+    .items
+        padding: (20em/20)
+        +display-box
+        +box-align(center)
+        width: 100%
+        +box-sizing(border-box)
+        &.used
+            background: url($imgurl+'coupon_used.png') 100% 100% no-repeat
+            +background-size((134em/20) (127em/20))
+        &.expired
+            background: url($imgurl+'coupon_expired.png') 100% 100% no-repeat
+            +background-size((134em/20) (127em/20))
+    .coupon_info
+        +box-flex(1)
+        height: (74em/20)
+        .coupon_name
+            margin-bottom: (6em/20)
+            width: (518em/20)
+            p
+                font-size: $fz32
+                white-space: nowrap
+                overflow: hidden
+                text-overflow: ellipsis
+        .coupon_tips
+            .usable_range
+                color: $gc
+                font-size: (27em/20)
+    .expired_time
+        color: $gc
+        font-size: (20em/20)
+        line-height: (26em/20)
+        text-align: right
+        width: (120em/20)
+// coupons_list 优惠券列表 E
+// static_mi2 米2产品介绍页 S
+.static_mi2
+    .box_01
+        .imgurl
+            min-height: (350em/20)
+    .box_02
+        margin: (20em/20) 0
+        ul
+            +legacy-pie-clearfix
+            padding: 0 (10em/20)
+            +box-sizing(border-box)
+            li
+                float: left
+                .items
+                    text-align: center
+                    padding: 0 (10em/20)
+                    +box-sizing(border-box)
+                .text
+                    font-size: $fz20
+                    padding: (14em/20) 0
+                    color: #88878C
+                    white-space: nowrap
+                    overflow: hidden
+                    text-overflow: ellipsis
+            &.media_4
+                li
+                    width: 50%
+            &.media_3
+                li
+                    width: (100%/3)
+    .box_03
+        border-top: 1px solid $bc
+        padding: (40em/20) (20em/20) 0
+        .product_info
+            .name,
+            .price
+                font-size: $fz36
+                font-weight: 700
+            .name
+                color: #50555B
+                margin-bottom: (10em/36)
+            .price
+                color: $oc3
+    .box_04
+        margin-top: (40em/20)
+        margin-bottom: (80em/20)
+        padding: 0 (20em/20)
+        .button
+            &:first-child
+                margin-right: (10em/34)
+            &:last-child
+                margin-left: (10em/34)
+    .box_05
+        .static_tit
+            background: #EBEBEB
+            border-top: 1px solid #DADADA
+            border-bottom: 1px solid #DADADA
+            line-height: (58em/20)
+            padding: 0 (20em/20)
+            h3
+                font-size: $fz27
+                color: #88898D
+                +text-shadow(rgba(255,255,255,1) 0 1px 0)
+        .box_05_01
+            li
+                border-bottom: 1px solid #DADADA
+                &:last-child
+                    border-bottom: none
+            .items
+                background: #F3F3F3
+                padding: (10em/20) (20em/20) (10em/20) 0
+            .imgurl
+                width: (117em/20)
+                height: (117em/20)
+            a.lnk
+                +display-box
+                +box-align(center)
+                width: 100%
+                background: url($imgurl+'arrow_2.png') 100% 50% no-repeat
+                +background-size((19em/20) (33em/20))
+            .info
+                +box-flex(1)
+                .name
+                    font-size: $fz30
+                    color: #515459
+                    margin-bottom: (10em/30)
+                .brief
+                    font-size: $fz25
+                    color: #87888D
+// static_mi2 米2产品介绍页 E
+// taozhuang_checkbox 购买前预约套餐的引导页 S
+.taozhuang_checkbox
+    .label
+        +display-box
+        +box-align(center)
+        .imgurl
+            width: (136em/30)
+            height: (136em/30)
+            margin-right: (15em/30)
+            +background-size(cover)
+            img
+                width: 100%
+                height: 100%
+        .info
+            +box-flex(1)
+            .name
+                font-size: (32em/30)
+                font-weight: 700
+                color: $c
+                white-space: nowrap
+                overflow: hidden
+                text-overflow: ellipsis
+                margin-bottom: (6em/32)
+            .price_info
+                font-size: (25em/30)
+                margin-bottom: (6em/25)
+                .market_price
+                    color: #94959a
+                    margin-right: (10em/25)
+                .price
+                    color: #FC6500
+            .intro
+                font-size: (20em/30)
+                color: #b5b5b5
+                line-height: 1.2em
+    .onlyone
+        padding-top: 2.5em
+        label
+            padding-left: 4.2em
+        .imgurl
+            width: 26em
+            height: 26em
+            margin: 0 auto
+            margin-bottom: 2em
+        .label1 
+            margin-bottom: 2em
+            .info
+                padding-right: 3em
+                .name
+                    font-size: (50em/30)
+                    font-weight: 700
+                    color: $c
+                    white-space: nowrap
+                    overflow: hidden
+                    text-overflow: ellipsis
+                    margin-bottom: (6em/32)
+                .price_info
+                    font-size: (40em/30)
+                    margin-bottom: (6em/30)
+                    .market_price
+                        color: #94959a
+                        margin-right: (10em/25)
+                    .price
+                        color: #FC6500
+                .intro
+                    font-size: (35em/30)
+                    color: #b5b5b5
+                    line-height: 1.2em
+// taozhuang_checkbox 购买前预约套餐的引导页 E
+
+// selectVersion 选择版本（或套餐） S
+.selectVersion
+    padding: (20em/20)
+    h2
+        font-size: (26em/20)
+        margin-bottom: (20em/26)
+        color: #87888c
+        +text-shadow(0px 1px 1px rgba(255,255,255,.5))
+    .radio_02
+        .soldOver 
+            .radio_hbox
+                background: #eee
+            label
+                background: #eee
+        .radio_hbox
+            .imgurl 
+                +display-box
+                +box-align(center)
+                +box-pack(center)
+                background: none
+                img
+                    display: block
+                    width: 80%
+            .name
+                border: none
+                padding: 0
+                line-height: 1em
+                .h_box_left
+                    +box-flex(1)
+                    display: block
+                    width: 60%
+                    var
+                        display: block
+                        font-size: (26em/26)
+                        color: #51545a
+                        +text-shadow(0px 1px 1px rgba(255,255,255,.5))
+                        margin-bottom: (5em/26)
+                        font-weight: bold
+                        white-space: nowrap
+                        overflow: hidden
+                        text-overflow: ellipsis
+                    em
+                        display: block
+                        font-size: (17em/26)
+                        color: #87888c
+                        +text-shadow(0px 1px 1px rgba(255,255,255,.5))
+                        line-height: (33em/26)
+                .h_box_right
+                    +box-flex(1)
+                    display: block
+                    color: #FC6500
+                    text-align: right
+                    padding-right: (20em/20)
+                    line-height: 1.3em
+            .soldout
+                font-size: 1.6em
+                margin-left: 4em
+    a.button
+        margin-top: (20em/20)
+    .ext_1
+        color: #87888c
+        +text-shadow(0px 1px 1px rgba(255,255,255,.5))
+        margin-top: (25em/20)
+        font-size: 1.25em
+        h4
+            margin-bottom: (7em/20)
+        p
+            line-height: (25em/20)
+// selectVersion 选择版本（或套餐） E
+// 注册页面样式 S
+.register
+    padding: 0 1em
+    strong
+        display: block
+        margin-bottom: 0.4em
+    .tit
+        font-size: 1.8em
+        color: #888
+        margin-bottom: 0.625em
+    .intro
+        font-size: 1.5em
+        line-height: 1.5em
+        margin-bottom: 1em
+    .yidong
+        font-size: 1.5em
+        margin-bottom: 1em
+        span
+            color: #E56000
+    .liantong
+        font-size: 1.5em
+        margin-bottom: 1em
+        span
+            color: #E56000
+    .notice
+        font-size: 1.5em
+    .info
+        font-size: 1.5em
+        line-height: 1.5em
+// 注册页面样式 E
+// 您还没有该订单，没有优惠券 文字样式 S
+.no_order
+    font-size: 1.5em
+// 您还没有该订单，没有优惠券 文字样式 E
+// check_fcode F码购买通道 S
+.check_fcode
+    .input
+        width: 100%
+    .h_box
+        +box-align(center)
+        +box-pack(center)
+    .get_code_img
+        width: (150em/20)
+        img
+            width: (150em/20)
+            height: (75em/20)
+    .post_check_code
+        +box-flex(1)
+        margin: 0 (20em/20)
+    .get_check_code
+        width: (156em/20)
+    .box
+        margin-bottom: (20em/20)
+    .box_04
+        dl
+            font-size: $fz20
+            line-height: (24em/20)
+            color: $gc
+// check_fcode F码购买通道 E
+// fcode_style F码购买套装选择 S
+.fcode_stylelist
+    .radio_hbox
+        .label
+            +box-flex(1)
+        h3
+            +legacy-pie-clearfix
+            .price
+                float: right
+                color: $oc3
+        .intro
+            font-size: (25em/32)
+            color: #b5b5b5
+            margin-top: (10em/32)
+// fcode_style F码购买套装选择 E
+// hezi_view 小米盒子 S
+.hezi_view
+    .imgurl
+        min-height: (988em/20)
+// hezi_view 小米盒子 E

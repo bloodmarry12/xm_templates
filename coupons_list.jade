@@ -1,0 +1,51 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title coupons_list 优惠劵列表
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+    body
+        .xm_app
+            .viewport
+                include _header
+                .coupons_list.mlr20
+                    .list_nav
+                        ul
+                            // stat 优惠券状态 .used 已使用 .expired 已过期
+                            li
+                                .items.used
+                                    .coupon_info
+                                        .coupon_name
+                                            p 550元配件券50元
+                                        .coupon_tips
+                                            span.usable_range 仅限购买配件时使用
+                                    .expired_time
+                                        p 2013/01/19
+                                        p 2013/01/19
+                            li
+                                .items.expired
+                                    .coupon_info
+                                        .coupon_name
+                                            p 5550元配件券50元550元配件券50元550元配件券50元50元配件券50元
+                                        .coupon_tips
+                                            span.usable_range 仅限购买配件时使用
+                                    .expired_time
+                                        p 2013/01/19
+                                        p 2013/01/19
+                            li
+                                .items
+                                    .coupon_info
+                                        .coupon_name
+                                            p 550元配件券50元
+                                        .coupon_tips
+                                            span.usable_range 仅限购买配件时使用
+                                    .expired_time
+                                        p 2013/01/19
+                                        p 2013/01/19
+                include _footer

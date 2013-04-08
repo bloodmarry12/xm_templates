@@ -1,0 +1,189 @@
+include _head
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title Ui
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="apple-touch-icon-precomposed", href="http://p.www.xiaomi.com/m/app/touch-icon.png")
+        link(rel="stylesheet", href="css/xmapp.css#{r}")
+        style
+            // h3{ background: #F60; color: #FFF; }
+            .imgurl img{ width: 80px; height: 80px; }
+    body
+
+        h3 .prodcut_view 商品详情
+        .product_view
+            .product_info
+                .info
+                    span.price &yen; 666
+                    h3.name 马歇尔Marshall Major签名版头戴耳机--白色
+                .adapt
+                    p
+                        span 适配机型：
+                        img(src="images/adapt_1.png", alt="小米手机1")
+                        img(src="images/adapt_2.png", alt="小米手机1S")
+                        img(src="images/adapt_4.png", alt="小米手机2")
+            .product_nav
+                ul
+                    li 商品信息
+                    li 评价（30）
+            .product_main
+                // 单品介绍图片
+                .product_desc
+                    ul
+                        li
+                            .imgurl
+                                img(src="http://p.www.xiaomi.com/images/1202/Marshall-1.jpg")
+                    .desc_more
+                        a.more_button(href="javascript:;") 查看更多
+                .product_comment
+                    p 评论
+            .product_addCart
+                a.button.active_button(href="javascript:;") 加入购物车
+
+        h3 .list_tmp 分类
+        .list_tmp.list_column
+            ul
+                li
+                    .items
+                        a(href="javascript:;")
+                            p content
+                li
+                    .items
+                        a(href="javascript:;")
+                            p content
+        h3 .list_category 分类列表
+        .list_category.list_column
+            ul
+                li
+                    .category
+                        a(href="javascript:;")
+                            .imgurl
+                                img(src="http://p.www.xiaomi.com/images/d/1148_1_1322228520_3.jpg")
+                            p.name 耳机与音响
+                li
+                    .category
+                        a(href="javascript:;")
+                            .imgurl
+                                img(src="http://p.www.xiaomi.com/images/d/1148_1_1322228520_3.jpg")
+                            p.name 耳机与音响
+
+        h3 .list_column .list_product 子分类列表
+        .list_product.list_column
+            ul
+                li
+                    a(href="javascript:;")
+                        // 缺货
+                        .product.is_cos
+                            .imgurl
+                                img(src="http://p.www.xiaomi.com/images/d/1148_1_1322228520_3.jpg")
+                            .info
+                                p.name ideaSkin 小米手机全身皮肤贴纸（鲸鱼）
+                                .price_info
+                                    del.market_price &yen; 38
+                                    span.price &yen; 38
+                                    span.cos 暂时缺货
+                li
+                    a(href="javascript:;")
+                        .product
+                            .imgurl
+                                img(src="http://p.www.xiaomi.com/images/d/1148_1_1322228520_3.jpg")
+                            .info
+                                p.name ideaSkin 小米手机全身皮肤贴纸（鲸鱼）
+                                .price_info
+                                    del.market_price &yen; 38
+                                    span.price &yen; 38
+
+        h3 .list_cart 购物车订单
+        .list_cart
+            ul
+                li
+                    a(href="javascript:;")
+                        .cart
+                            .imgurl
+                                img(src="http://p.www.xiaomi.com/images/d/1148_1_1322228520_3.jpg")
+                            .info
+                                p.name AKG K420折叠式头戴动圈耳机
+                                .items
+                                    .price_info
+                                        span.sale_price 售价：&yen; 98
+                                        span.num 数量：1
+                                        span.subtotal 小计：&yen; 99
+                li
+                    a(href="javascript:;")
+                        // 赠品
+                        .cart.is_gift
+                            .imgurl
+                                img(src="http://p.www.xiaomi.com/images/d/1148_1_1322228520_3.jpg")
+                            .info
+                                p.name （赠品）AKG K420折叠式头戴动圈耳机
+                                .items
+                                    .price_info
+                                        span.sale_price 售价：&yen; 98
+                                        span.num 数量：1
+                                        span.subtotal 小计：&yen; 99
+
+        h3 .list_cart_submit 购物车订单提交无连接
+        .list_cart_submit
+            ul
+                li
+                    .cart
+                        .imgurl
+                            img(src="http://p.www.xiaomi.com/images/d/1148_1_1322228520_3.jpg")
+                        .info
+                            p.name AKG K420折叠式头戴动圈耳机
+                            .items
+                                .price_info
+                                    span.sale_price 售价：&yen; 98
+                                    span.num 数量：1
+                                    span.subtotal 小计：&yen; 99
+        h3 .list_order 订单
+        .list_order
+            ul
+                li
+                    a(href="javascript:;")
+                        .order
+                            .imgurl
+                                img(src="http://p.www.xiaomi.com/images/d/1148_1_1322228520_3.jpg")
+                            .order_info
+                                ul
+                                    li.order_id 1211112298563920
+                                    li.add_time 时间：2012-11-23 11:15:31
+                                    li.goods_amount 总价：&yen; 2229
+                                    li.order_type 状态：已收货
+
+        h3 .list_address 收货地址
+        .list_address
+            ul
+                li
+                    .address
+                        ul
+                            li.user_name 名字
+                            li.tel 13581412182
+                            li.address_info
+                                span.province 北京，
+                                span.city 北京市，
+                                span.district 朝阳区
+                            li.address_detail
+                                | 人民大街4372号，东北电力
+                                span.zipcode 130000
+                    .address_modify
+                        a.address_save_button(href="javascript:;") 修改
+                        a.address_del_button(href="javascript:;") 删除
+
+        h3 .list_stylelist 套餐列表
+        .list_stylelist
+            ul
+                li
+                    .stylelist
+                        .imgurl
+                            img(src="http://p.www.xiaomi.com/images/d/1148_1_1322228520_3.jpg")
+                        .info
+                            p.name MI2亮彩高光后盖（水蓝）
+                            .select
+                                select
+                                    option(value="1") 1
